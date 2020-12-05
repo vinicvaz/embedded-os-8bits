@@ -1,0 +1,46 @@
+/**
+ * Projeto Sistema Operacional Embarcado @2020 
+ *  
+ */
+
+#include <xc.h>
+#include "types.h"
+#include "kernel.h"
+#include "tasks.h"
+#include "config.h"
+#include "mcu_config.h"
+#include "mm.h"
+
+// Fila de tarefas aptas a serem executadas
+fila_aptos_t f_aptos;
+fila_clothes_t f_clothes;
+
+void main(void)
+{
+   // Configura o SO antes da execu��o
+   os_config();
+   f_clothes.fila_size = 0;
+   f_clothes.clothes_finished_size = 0;
+
+   // Cria mem�ria heap
+   //SRAMInitHeap();
+
+   // Criar as tarefas de usu�rio
+   // task_create(2, &task_1);
+   // task_create(2, &task_2);
+   // task_create(3, &task_3);
+
+   task_create(3, &task_read_buttons);
+   task_create(2, &check_wash);
+   task_create(2, &check_ironing);
+
+   // Ativa o escalonador
+   os_start();
+
+   while (1)
+   {
+      ;
+   }
+
+   return;
+}
