@@ -78,7 +78,7 @@ void os_start()
  */
 void os_config()
 {
-   __asm("GLOBAL _task_idle, _task_read_buttons, _check_wash");
+   __asm("GLOBAL _task_idle, _task_read_buttons, _check_wash, _check_ironing");
 
    // Configura as estruturas de dados do kernel
    f_aptos.task_running = 0;
@@ -104,7 +104,8 @@ void task_idle()
    while (1)
    {
       //Nop();
-      PORTDbits.RD3 = ~PORTDbits.RD3;
+      ;
+      //PORTDbits.RD3 = ~PORTDbits.RD3;
    }
 }
 
