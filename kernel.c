@@ -7,8 +7,10 @@
 #include "dispatcher.h"
 #include "timer.h"
 #include "tasks.h"
+//#include "tasks.c"
 
 extern fila_aptos_t f_aptos;
+extern fila_clothes_t f_clothes;
 
 // Chamadas de sistema
 
@@ -53,7 +55,7 @@ void task_create(u_int prior, task_ptr func)
    new_task.task_stack.size = 0;
 
    // Incui a tarefa na fila de aptos
-   f_aptos.ready_queue[f_aptos.ready_queue_size + 1] = new_task;
+   f_aptos.ready_queue[f_aptos.ready_queue_size + 1] = new_task; // [f_aptos.ready_queue_size]
    f_aptos.ready_queue_size++;
 }
 
@@ -81,6 +83,8 @@ void os_config()
    // Configura as estruturas de dados do kernel
    f_aptos.task_running = 0;
    f_aptos.ready_queue_size = 0;
+   f_clothes.fila_size = 0;
+   f_clothes.clothes_finished_size = 0;
 
    // Configura o timer
    setup_timer_0();

@@ -16,8 +16,8 @@
 void config_tasks();
 void task_read_buttons();
 void check_wash();
-void run_wash(clothes_control_t clothes_washing);
+void run_wash(); //clothes_control_t clothes_washing
 void check_ironing();
-void run_ironing(clothes_control_t clothes_ironing);
+void run_ironing(); //clothes_control_t clothes_ironing
 
 #endif /* TASKS_H */

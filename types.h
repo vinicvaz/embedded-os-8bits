@@ -77,6 +77,7 @@ typedef struct fila_clothes
     clothes_control_t clothes_waiting[MAX_CLOTHES]; //fila de roupas prontas para serem lavadas
     u_int fila_size;                                // tamanho da fila
     clothes_control_t clothes_washing;
+    clothes_control_t clothes_ironing;
     clothes_control_t clothes_finished[MAX_CLOTHES];
     u_int clothes_finished_size;
 

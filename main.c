@@ -19,9 +19,7 @@ void main(void)
 {
    // Configura o SO antes da execu��o
    os_config();
-   f_clothes.fila_size = 0;
-   f_clothes.clothes_finished_size = 0;
-
+   
    // Cria mem�ria heap
    //SRAMInitHeap();
 
