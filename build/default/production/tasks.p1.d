@@ -4,4 +4,5 @@ tasks.h  \
 types.h  \
 config.h  \
 kernel.h  \
-mm.h 
+mm.h  \
+resources.h 

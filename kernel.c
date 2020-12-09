@@ -7,10 +7,13 @@
 #include "dispatcher.h"
 #include "timer.h"
 #include "tasks.h"
+#include "resources.h"
 //#include "tasks.c"
 
 extern fila_aptos_t f_aptos;
 extern fila_clothes_t f_clothes;
+extern wash_machine_t w_machine;
+extern iron_machine_t i_machine;
 
 // Chamadas de sistema
 
@@ -55,7 +58,7 @@ void task_create(u_int prior, task_ptr func)
    new_task.task_stack.size = 0;
 
    // Incui a tarefa na fila de aptos
-   f_aptos.ready_queue[f_aptos.ready_queue_size + 1] = new_task; // [f_aptos.ready_queue_size]
+   f_aptos.ready_queue[f_aptos.ready_queue_size] = new_task; // [f_aptos.ready_queue_size]
    f_aptos.ready_queue_size++;
 }
 
@@ -85,6 +88,10 @@ void os_config()
    f_aptos.ready_queue_size = 0;
    f_clothes.fila_size = 0;
    f_clothes.clothes_finished_size = 0;
+   w_machine.cunter_wash = 0;
+   w_machine.flag_wash = 0; //desocupada
+   i_machine.counter_iron = 0;
+   i_machine.flag_iron = 0; //decoupado
 
    // Configura o timer
    setup_timer_0();

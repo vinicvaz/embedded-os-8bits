@@ -13,7 +13,7 @@ int quantum = QUANTUM;
 
 void setup_timer_0()
 {
-   // Configura��o do timer 0
+   // Configuracao do timer 0
    INTCONbits.TMR0IE = 1;
    INTCONbits.PEIE = 1;
    T0CONbits.T0CS = 0;

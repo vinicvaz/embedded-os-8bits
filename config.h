@@ -12,7 +12,7 @@
 #define RR_SCHED ON
 #define PRIOR_SCHED OFF
 #define QUANTUM 12
-#define MAX_CLOTHES 5
+#define MAX_CLOTHES 8
 
 #define _XTAL_FREQ 4000000
 

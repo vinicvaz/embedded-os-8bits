@@ -8,12 +8,12 @@
 #include "kernel.h"
 #include "dispatcher.h"
 
-// Implementaï¿½ï¿½o das rotinas de manipulaï¿½ï¿½o do semï¿½foro
+// Implementação das rotinas de manipulação do semaforo
 void sem_init(sem_t *sem, u_int valor)
 {
    DISABLE_INTERRUPTS();
 
-   // Inicializa o semï¿½foro
+   // Inicializa o semaforo
    sem->contadorSem = valor;
    sem->fila.queue_size = 0;
    sem->fila.next_to_free = 0;

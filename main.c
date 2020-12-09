@@ -10,10 +10,13 @@
 #include "config.h"
 #include "mcu_config.h"
 #include "mm.h"
+#include "resources.h"
 
 // Fila de tarefas aptas a serem executadas
 fila_aptos_t f_aptos;
 fila_clothes_t f_clothes;
+wash_machine_t w_machine;
+iron_machine_t i_machine;
 
 void main(void)
 {

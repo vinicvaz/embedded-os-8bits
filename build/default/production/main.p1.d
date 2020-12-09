@@ -5,4 +5,5 @@ config.h  \
 kernel.h  \
 tasks.h  \
 mcu_config.h  \
-mm.h 
+mm.h  \
+resources.h 

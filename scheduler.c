@@ -23,7 +23,7 @@ u_int rr_scheduler()
 
    do
    {
-      next_task = (next_task + 1) % (f_aptos.ready_queue_size + 1);
+      next_task = (next_task + 1) % f_aptos.ready_queue_size;
    } while (f_aptos.ready_queue[next_task].task_state != READY);
 
    return next_task;
@@ -50,16 +50,3 @@ u_int prior_scheduler() // inversamente proporcional
 
    return next_task;
 }
-
-/*
-u_int prior_scheduler()
-{
-   u_int next_task = 0;
-   
-   // Todo: falta implementar o escalonador baseado em prioridades
-   // � necess�rio definir a metodologia da prioridade (inversamente ou diretamente)
-   // proporcional
-   
-   return next_task;
-}
- */

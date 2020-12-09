@@ -6,4 +6,5 @@ config.h  \
 dispatcher.h  \
 scheduler.h  \
 timer.h  \
-tasks.h 
+tasks.h  \
+resources.h 
