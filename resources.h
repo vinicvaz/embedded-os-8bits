@@ -10,20 +10,12 @@
 
 #include "types.h"
 
-
-typedef struct wash_machine
+typedef struct machine
 {
-    u_int cunter_wash;
-    u_int flag_wash; //0->desocupada; 1->ocupada;
-} wash_machine_t;
-
-typedef struct iron_machine
-{
-    u_int counter_iron;
-    u_int flag_iron; //0->desocupada; 1->ocupada;
-} iron_machine_t;
-
-
+    u_int counter;
+    u_int flag; //0->desocupada; 1->ocupada;
+        
+} machine_t;
 
 #endif	/* RESOURCES_H */
 

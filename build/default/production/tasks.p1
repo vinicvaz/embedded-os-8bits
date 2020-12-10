@@ -48,23 +48,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15 tasks.c
 [; ;tasks.c: 15: extern fila_clothes_t f_clothes;
 [v _f_clothes `S285 ~T0 @X0 0 e ]
-"15 ./resources.h
-[; ;./resources.h: 15: {
+"14 ./resources.h
+[; ;./resources.h: 14: {
 [s S288 `ui 1 `ui 1 ]
-[n S288 wash_machine cunter_wash flag_wash ]
+[n S288 machine counter flag ]
 "16 tasks.c
-[; ;tasks.c: 16: extern wash_machine_t w_machine;
+[; ;tasks.c: 16: extern machine_t w_machine;
 [v _w_machine `S288 ~T0 @X0 0 e ]
 "22 ./tasks.h
 [; ;./tasks.h: 22: void run_wash();
 [v _run_wash `(v ~T0 @X0 0 e? ]
-"21 ./resources.h
-[; ;./resources.h: 21: {
-[s S289 `ui 1 `ui 1 ]
-[n S289 iron_machine counter_iron flag_iron ]
 "17 tasks.c
-[; ;tasks.c: 17: extern iron_machine_t i_machine;
-[v _i_machine `S289 ~T0 @X0 0 e ]
+[; ;tasks.c: 17: extern machine_t i_machine;
+[v _i_machine `S288 ~T0 @X0 0 e ]
 "24 ./tasks.h
 [; ;./tasks.h: 24: void run_ironing(clothes_control_t clothes_ironing);
 [v _run_ironing `(v ~T0 @X0 0 ef1`S284 ]
@@ -513,7 +509,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _TRISDbits 1 4 -> -> 0 `i `uc ]
 "28
 [; ;tasks.c: 28: }
-[e :UE 290 ]
+[e :UE 289 ]
 }
 "30
 [; ;tasks.c: 30: void task_read_buttons()
@@ -525,13 +521,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "32
 [; ;tasks.c: 32:    while (1)
-[e :U 293 ]
+[e :U 292 ]
 "33
 [; ;tasks.c: 33:    {
 {
 "34
 [; ;tasks.c: 34:       if (PORTDbits.RD0 == 0 && PORTDbits.RD1 == 0){
-[e $ ! && == -> . . _PORTDbits 0 0 `i -> 0 `i == -> . . _PORTDbits 0 1 `i -> 0 `i 295  ]
+[e $ ! && == -> . . _PORTDbits 0 0 `i -> 0 `i == -> . . _PORTDbits 0 1 `i -> 0 `i 294  ]
 {
 "35
 [; ;tasks.c: 35:          flag = 0;
@@ -539,10 +535,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36
 [; ;tasks.c: 36:       }
 }
-[e :U 295 ]
+[e :U 294 ]
 "38
 [; ;tasks.c: 38:       if (PORTDbits.RD0 == 1 && f_clothes.fila_size < 8 && flag == 0)
-[e $ ! && && == -> . . _PORTDbits 0 0 `i -> 1 `i < . _f_clothes 1 -> -> 8 `i `ui == _flag -> -> 0 `i `ui 296  ]
+[e $ ! && && == -> . . _PORTDbits 0 0 `i -> 1 `i < . _f_clothes 1 -> -> 8 `i `ui == _flag -> -> 0 `i `ui 295  ]
 "39
 [; ;tasks.c: 39:       {
 {
@@ -570,11 +566,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49
 [; ;tasks.c: 49:       }
 }
-[e $U 297  ]
+[e $U 296  ]
 "50
 [; ;tasks.c: 50:       else if (PORTDbits.RD1 == 1 && f_clothes.fila_size < 8 && flag == 0)
-[e :U 296 ]
-[e $ ! && && == -> . . _PORTDbits 0 1 `i -> 1 `i < . _f_clothes 1 -> -> 8 `i `ui == _flag -> -> 0 `i `ui 298  ]
+[e :U 295 ]
+[e $ ! && && == -> . . _PORTDbits 0 1 `i -> 1 `i < . _f_clothes 1 -> -> 8 `i `ui == _flag -> -> 0 `i `ui 297  ]
 "51
 [; ;tasks.c: 51:       {
 {
@@ -602,17 +598,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "61
 [; ;tasks.c: 61:       }
 }
-[e :U 298 ]
 [e :U 297 ]
+[e :U 296 ]
 "62
 [; ;tasks.c: 62:    }
 }
-[e :U 292 ]
-[e $U 293  ]
-[e :U 294 ]
+[e :U 291 ]
+[e $U 292  ]
+[e :U 293 ]
 "63
 [; ;tasks.c: 63: }
-[e :UE 291 ]
+[e :UE 290 ]
 }
 "65
 [; ;tasks.c: 65: void check_wash()
@@ -624,13 +620,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "67
 [; ;tasks.c: 67:    while (1)
-[e :U 301 ]
+[e :U 300 ]
 "68
 [; ;tasks.c: 68:    {
 {
 "70
-[; ;tasks.c: 70:       if (w_machine.flag_wash == 0 && f_clothes.fila_size > 0)
-[e $ ! && == . _w_machine 1 -> -> 0 `i `ui > . _f_clothes 1 -> -> 0 `i `ui 303  ]
+[; ;tasks.c: 70:       if (w_machine.flag == 0 && f_clothes.fila_size > 0)
+[e $ ! && == . _w_machine 1 -> -> 0 `i `ui > . _f_clothes 1 -> -> 0 `i `ui 302  ]
 "71
 [; ;tasks.c: 71:       {
 {
@@ -643,9 +639,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i - -> 8 `i -> 1 `i 304  ]
-[e $U 305  ]
-[e :U 304 ]
+[e $ < _i - -> 8 `i -> 1 `i 303  ]
+[e $U 304  ]
+[e :U 303 ]
 "76
 [; ;tasks.c: 76:          {
 {
@@ -656,8 +652,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;tasks.c: 78:          }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i - -> 8 `i -> 1 `i 304  ]
-[e :U 305 ]
+[e $ < _i - -> 8 `i -> 1 `i 303  ]
+[e :U 304 ]
 }
 "80
 [; ;tasks.c: 80:          f_clothes.fila_size--;
@@ -666,7 +662,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;tasks.c: 81:          f_clothes.clothes_washing = next_clothes;
 [e = . _f_clothes 2 _next_clothes ]
 "82
-[; ;tasks.c: 82:          w_machine.flag_wash = 1;
+[; ;tasks.c: 82:          w_machine.flag = 1;
 [e = . _w_machine 1 -> -> 1 `i `ui ]
 "83
 [; ;tasks.c: 83:          PORTDbits.RD4 = ~PORTDbits.RD4;
@@ -680,10 +676,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "88
 [; ;tasks.c: 88:       }
 }
-[e :U 303 ]
+[e :U 302 ]
 "90
-[; ;tasks.c: 90:       if (w_machine.flag_wash == 1 && f_clothes.clothes_washing.state == 0)
-[e $ ! && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 0 `i `ui 307  ]
+[; ;tasks.c: 90:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 0)
+[e $ ! && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 0 `i `ui 306  ]
 "91
 [; ;tasks.c: 91:       {
 {
@@ -693,16 +689,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "93
 [; ;tasks.c: 93:       }
 }
-[e :U 307 ]
+[e :U 306 ]
 "94
 [; ;tasks.c: 94:    }
 }
-[e :U 300 ]
-[e $U 301  ]
-[e :U 302 ]
+[e :U 299 ]
+[e $U 300  ]
+[e :U 301 ]
 "95
 [; ;tasks.c: 95: }
-[e :UE 299 ]
+[e :UE 298 ]
 }
 "97
 [; ;tasks.c: 97: void run_wash()
@@ -713,8 +709,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _run_wash ]
 [f ]
 "99
-[; ;tasks.c: 99:    if (w_machine.cunter_wash < 2000)
-[e $ ! < . _w_machine 0 -> -> 2000 `i `ui 309  ]
+[; ;tasks.c: 99:    if (w_machine.counter < 2000)
+[e $ ! < . _w_machine 0 -> -> 2000 `i `ui 308  ]
 "100
 [; ;tasks.c: 100:    {
 {
@@ -722,15 +718,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;tasks.c: 101:       PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
 "102
-[; ;tasks.c: 102:       w_machine.cunter_wash++;
+[; ;tasks.c: 102:       w_machine.counter++;
 [e ++ . _w_machine 0 -> -> 1 `i `ui ]
 "103
 [; ;tasks.c: 103:    }
 }
-[e :U 309 ]
+[e :U 308 ]
 "105
-[; ;tasks.c: 105:    if (w_machine.cunter_wash >= 2000)
-[e $ ! >= . _w_machine 0 -> -> 2000 `i `ui 310  ]
+[; ;tasks.c: 105:    if (w_machine.counter >= 2000)
+[e $ ! >= . _w_machine 0 -> -> 2000 `i `ui 309  ]
 "106
 [; ;tasks.c: 106:    {
 {
@@ -741,21 +737,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;tasks.c: 108:       f_clothes.clothes_washing.state = 1;
 [e = . . _f_clothes 2 2 -> -> 1 `i `ui ]
 "109
-[; ;tasks.c: 109:       w_machine.cunter_wash = 0;
+[; ;tasks.c: 109:       w_machine.counter = 0;
 [e = . _w_machine 0 -> -> 0 `i `ui ]
 "110
-[; ;tasks.c: 110:       w_machine.flag_wash = 1;
+[; ;tasks.c: 110:       w_machine.flag = 1;
 [e = . _w_machine 1 -> -> 1 `i `ui ]
 "111
-[; ;tasks.c: 111:       i_machine.flag_iron = 0;
+[; ;tasks.c: 111:       i_machine.flag = 0;
 [e = . _i_machine 1 -> -> 0 `i `ui ]
 "112
 [; ;tasks.c: 112:    }
 }
-[e :U 310 ]
+[e :U 309 ]
 "113
 [; ;tasks.c: 113: }
-[e :UE 308 ]
+[e :UE 307 ]
 }
 "115
 [; ;tasks.c: 115: void check_ironing()
@@ -767,13 +763,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "117
 [; ;tasks.c: 117:    while (1)
-[e :U 313 ]
+[e :U 312 ]
 "118
 [; ;tasks.c: 118:    {
 {
 "119
-[; ;tasks.c: 119:       if (w_machine.flag_wash == 1 && f_clothes.clothes_washing.state == 1 && i_machine.flag_iron == 0)
-[e $ ! && && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 0 `i `ui 315  ]
+[; ;tasks.c: 119:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 1 && i_machine.flag == 0)
+[e $ ! && && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 0 `i `ui 314  ]
 "120
 [; ;tasks.c: 120:       {
 {
@@ -781,10 +777,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;tasks.c: 123:          f_clothes.clothes_ironing = f_clothes.clothes_washing;
 [e = . _f_clothes 3 . _f_clothes 2 ]
 "124
-[; ;tasks.c: 124:          w_machine.flag_wash = 0;
+[; ;tasks.c: 124:          w_machine.flag = 0;
 [e = . _w_machine 1 -> -> 0 `i `ui ]
 "125
-[; ;tasks.c: 125:          i_machine.flag_iron = 1;
+[; ;tasks.c: 125:          i_machine.flag = 1;
 [e = . _i_machine 1 -> -> 1 `i `ui ]
 "126
 [; ;tasks.c: 126:          run_ironing(f_clothes.clothes_ironing);
@@ -792,10 +788,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "127
 [; ;tasks.c: 127:       }
 }
-[e :U 315 ]
+[e :U 314 ]
 "129
-[; ;tasks.c: 129:       if (f_clothes.clothes_washing.state == 1 && i_machine.flag_iron == 1)
-[e $ ! && == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 1 `i `ui 316  ]
+[; ;tasks.c: 129:       if (f_clothes.clothes_washing.state == 1 && i_machine.flag == 1)
+[e $ ! && == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 1 `i `ui 315  ]
 "130
 [; ;tasks.c: 130:       {
 {
@@ -805,16 +801,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "134
 [; ;tasks.c: 134:       }
 }
-[e :U 316 ]
+[e :U 315 ]
 "135
 [; ;tasks.c: 135:    }
 }
-[e :U 312 ]
-[e $U 313  ]
-[e :U 314 ]
+[e :U 311 ]
+[e $U 312  ]
+[e :U 313 ]
 "136
 [; ;tasks.c: 136: }
-[e :UE 311 ]
+[e :UE 310 ]
 }
 "138
 [; ;tasks.c: 138: void run_ironing(clothes_control_t clothes_ironing)
@@ -830,8 +826,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;tasks.c: 139: {
 [f ]
 "140
-[; ;tasks.c: 140:    if (i_machine.counter_iron < 2000)
-[e $ ! < . _i_machine 0 -> -> 2000 `i `ui 318  ]
+[; ;tasks.c: 140:    if (i_machine.counter < 2000)
+[e $ ! < . _i_machine 0 -> -> 2000 `i `ui 317  ]
 "141
 [; ;tasks.c: 141:    {
 {
@@ -839,15 +835,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;tasks.c: 142:       PORTDbits.RD3 = 1;
 [e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
 "143
-[; ;tasks.c: 143:       i_machine.counter_iron++;
+[; ;tasks.c: 143:       i_machine.counter++;
 [e ++ . _i_machine 0 -> -> 1 `i `ui ]
 "144
 [; ;tasks.c: 144:    }
 }
-[e :U 318 ]
+[e :U 317 ]
 "146
-[; ;tasks.c: 146:    if (i_machine.counter_iron >= 2000)
-[e $ ! >= . _i_machine 0 -> -> 2000 `i `ui 319  ]
+[; ;tasks.c: 146:    if (i_machine.counter >= 2000)
+[e $ ! >= . _i_machine 0 -> -> 2000 `i `ui 318  ]
 "147
 [; ;tasks.c: 147:    {
 {
@@ -855,10 +851,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;tasks.c: 148:       PORTDbits.RD3 = 0;
 [e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
 "149
-[; ;tasks.c: 149:       i_machine.flag_iron = 0;
+[; ;tasks.c: 149:       i_machine.flag = 0;
 [e = . _i_machine 1 -> -> 0 `i `ui ]
 "150
-[; ;tasks.c: 150:       i_machine.counter_iron = 0;
+[; ;tasks.c: 150:       i_machine.counter = 0;
 [e = . _i_machine 0 -> -> 0 `i `ui ]
 "151
 [; ;tasks.c: 151:       f_clothes.clothes_washing.state = 2;
@@ -872,8 +868,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "154
 [; ;tasks.c: 154:    }
 }
-[e :U 319 ]
+[e :U 318 ]
 "155
 [; ;tasks.c: 155: }
-[e :UE 317 ]
+[e :UE 316 ]
 }

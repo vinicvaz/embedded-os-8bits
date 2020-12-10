@@ -4810,26 +4810,21 @@ void SRAMInitHeap(void);
 # 12 "main.c" 2
 
 # 1 "./resources.h" 1
-# 14 "./resources.h"
-typedef struct wash_machine
+# 13 "./resources.h"
+typedef struct machine
 {
-    u_int cunter_wash;
-    u_int flag_wash;
-} wash_machine_t;
+    u_int counter;
+    u_int flag;
 
-typedef struct iron_machine
-{
-    u_int counter_iron;
-    u_int flag_iron;
-} iron_machine_t;
+} machine_t;
 # 13 "main.c" 2
 
 
 
 fila_aptos_t f_aptos;
 fila_clothes_t f_clothes;
-wash_machine_t w_machine;
-iron_machine_t i_machine;
+machine_t w_machine;
+machine_t i_machine;
 
 void main(void)
 {

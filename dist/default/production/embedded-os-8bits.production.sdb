@@ -111,7 +111,7 @@ FINISHED 4
 [v _IRQ_Timer0 IRQ_Timer0 `IIH(v  1 e 1 0 ]
 "14 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits/dispatcher.h
 [v _index index `i  1 e 2 0 ]
-[s S333 . 1 `uc 1 RD0 1 0 :1:0 
+[s S327 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -121,7 +121,7 @@ FINISHED 4
 `uc 1 RD7 1 0 :1:7 
 ]
 "669 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
-[s S373 . 1 `uc 1 PSP0 1 0 :1:0 
+[s S367 . 1 `uc 1 PSP0 1 0 :1:0 
 `uc 1 PSP1 1 0 :1:1 
 `uc 1 PSP2 1 0 :1:2 
 `uc 1 PSP3 1 0 :1:3 
@@ -130,17 +130,17 @@ FINISHED 4
 `uc 1 PSP6 1 0 :1:6 
 `uc 1 PSP7 1 0 :1:7 
 ]
-[s S382 . 1 `uc 1 . 1 0 :5:0 
+[s S376 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 P1B 1 0 :1:5 
 `uc 1 P1C 1 0 :1:6 
 `uc 1 P1D 1 0 :1:7 
 ]
-[s S387 . 1 `uc 1 . 1 0 :7:0 
+[s S381 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 SS2 1 0 :1:7 
 ]
-[u S390 . 1 `S333 1 . 1 0 `S373 1 . 1 0 `S382 1 . 1 0 `S387 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES390  1 e 1 @3971 ]
-[s S324 . 1 `uc 1 TRISD0 1 0 :1:0 
+[u S384 . 1 `S327 1 . 1 0 `S367 1 . 1 0 `S376 1 . 1 0 `S381 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES384  1 e 1 @3971 ]
+[s S318 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -150,9 +150,9 @@ FINISHED 4
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "2175
-[u S342 . 1 `S324 1 . 1 0 `S333 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES342  1 e 1 @3989 ]
-[s S208 . 1 `uc 1 T0PS 1 0 :3:0 
+[u S336 . 1 `S318 1 . 1 0 `S327 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES336  1 e 1 @3989 ]
+[s S205 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -160,15 +160,15 @@ FINISHED 4
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "6191
-[s S215 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S212 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 `uc 1 T0PS3 1 0 :1:3 
 `uc 1 . 1 0 :2:4 
 `uc 1 T016BIT 1 0 :1:6 
 ]
-[u S222 . 1 `S208 1 . 1 0 `S215 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES222  1 e 1 @4053 ]
+[u S219 . 1 `S205 1 . 1 0 `S212 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES219  1 e 1 @4053 ]
 "6258
 [v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
 "6272
@@ -177,7 +177,7 @@ FINISHED 4
 [v _BSR BSR `VEuc  1 e 1 @4064 ]
 "6462
 [v _WREG WREG `VEuc  1 e 1 @4072 ]
-[s S148 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S145 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -187,7 +187,7 @@ FINISHED 4
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "6724
-[s S157 . 1 `uc 1 . 1 0 :1:0 
+[s S154 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -196,12 +196,12 @@ FINISHED 4
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S166 . 1 `uc 1 . 1 0 :6:0 
+[s S163 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S170 . 1 `S148 1 . 1 0 `S157 1 . 1 0 `S166 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES170  1 e 1 @4082 ]
+[u S167 . 1 `S145 1 . 1 0 `S154 1 . 1 0 `S163 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES167  1 e 1 @4082 ]
 "6904
 [v _STKPTR STKPTR `VEuc  1 e 1 @4092 ]
 "6977
@@ -215,12 +215,11 @@ FINISHED 4
 "17
 [s S52 fila_clothes 112 `[8]S48 1 clothes_waiting 48 0 `ui 1 fila_size 2 48 `S48 1 clothes_washing 6 50 `S48 1 clothes_ironing 6 56 `[8]S48 1 clothes_finished 48 62 `ui 1 clothes_finished_size 2 110 ]
 [v _f_clothes f_clothes `S52  1 e 112 0 ]
-[s S59 wash_machine 4 `ui 1 cunter_wash 2 0 `ui 1 flag_wash 2 2 ]
+[s S59 machine 4 `ui 1 counter 2 0 `ui 1 flag 2 2 ]
 "18
 [v _w_machine w_machine `S59  1 e 4 0 ]
-[s S62 iron_machine 4 `ui 1 counter_iron 2 0 `ui 1 flag_iron 2 2 ]
 "19
-[v _i_machine i_machine `S62  1 e 4 0 ]
+[v _i_machine i_machine `S59  1 e 4 0 ]
 "18 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\tasks.c
 [v _flag flag `ui  1 e 2 0 ]
 "12 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c

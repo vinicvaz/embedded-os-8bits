@@ -12,8 +12,8 @@
 
 extern fila_aptos_t f_aptos;
 extern fila_clothes_t f_clothes;
-extern wash_machine_t w_machine;
-extern iron_machine_t i_machine;
+extern machine_t w_machine;
+extern machine_t i_machine;
 
 // Chamadas de sistema
 
@@ -88,10 +88,10 @@ void os_config()
    f_aptos.ready_queue_size = 0;
    f_clothes.fila_size = 0;
    f_clothes.clothes_finished_size = 0;
-   w_machine.cunter_wash = 0;
-   w_machine.flag_wash = 0; //desocupada
-   i_machine.counter_iron = 0;
-   i_machine.flag_iron = 0; //decoupado
+   w_machine.counter = 0;
+   i_machine.counter = 0;
+   w_machine.flag = 0;
+   i_machine.flag = 0;
 
    // Configura o timer
    setup_timer_0();

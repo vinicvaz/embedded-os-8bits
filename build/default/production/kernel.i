@@ -4760,26 +4760,21 @@ void run_ironing(clothes_control_t clothes_ironing);
 # 9 "kernel.c" 2
 
 # 1 "./resources.h" 1
-# 14 "./resources.h"
-typedef struct wash_machine
+# 13 "./resources.h"
+typedef struct machine
 {
-    u_int cunter_wash;
-    u_int flag_wash;
-} wash_machine_t;
+    u_int counter;
+    u_int flag;
 
-typedef struct iron_machine
-{
-    u_int counter_iron;
-    u_int flag_iron;
-} iron_machine_t;
+} machine_t;
 # 10 "kernel.c" 2
 
 
 
 extern fila_aptos_t f_aptos;
 extern fila_clothes_t f_clothes;
-extern wash_machine_t w_machine;
-extern iron_machine_t i_machine;
+extern machine_t w_machine;
+extern machine_t i_machine;
 
 
 
@@ -4854,10 +4849,10 @@ void os_config()
    f_aptos.ready_queue_size = 0;
    f_clothes.fila_size = 0;
    f_clothes.clothes_finished_size = 0;
-   w_machine.cunter_wash = 0;
-   w_machine.flag_wash = 0;
-   i_machine.counter_iron = 0;
-   i_machine.flag_iron = 0;
+   w_machine.counter = 0;
+   i_machine.counter = 0;
+   w_machine.flag = 0;
+   i_machine.flag = 0;
 
 
    setup_timer_0();

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
-                                                                                               Wed Dec 09 17:35:22 2020
+                                                                                               Wed Dec 09 17:47:23 2020
 
 Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1 
      1                           	processor	18F4520
@@ -427,19 +427,19 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    410  000D64  6BEE               	clrf	(_f_clothes+110)& (0+255),b
    411  000D66  6BEF               	clrf	(_f_clothes+111)& (0+255),b
    412                           
-   413                           ;kernel.c: 91:    w_machine.cunter_wash = 0;
+   413                           ;kernel.c: 91:    w_machine.counter = 0;
    414  000D68  6A33               	clrf	_w_machine^0,c
    415  000D6A  6A34               	clrf	(_w_machine+1)^0,c
    416                           
-   417                           ;kernel.c: 92:    w_machine.flag_wash = 0;
-   418  000D6C  6A35               	clrf	(_w_machine+2)^0,c
-   419  000D6E  6A36               	clrf	(_w_machine+3)^0,c
+   417                           ;kernel.c: 92:    i_machine.counter = 0;
+   418  000D6C  6A2F               	clrf	_i_machine^0,c
+   419  000D6E  6A30               	clrf	(_i_machine+1)^0,c
    420                           
-   421                           ;kernel.c: 93:    i_machine.counter_iron = 0;
-   422  000D70  6A2F               	clrf	_i_machine^0,c
-   423  000D72  6A30               	clrf	(_i_machine+1)^0,c
+   421                           ;kernel.c: 93:    w_machine.flag = 0;
+   422  000D70  6A35               	clrf	(_w_machine+2)^0,c
+   423  000D72  6A36               	clrf	(_w_machine+3)^0,c
    424                           
-   425                           ;kernel.c: 94:    i_machine.flag_iron = 0;
+   425                           ;kernel.c: 94:    i_machine.flag = 0;
    426  000D74  6A31               	clrf	(_i_machine+2)^0,c
    427  000D76  6A32               	clrf	(_i_machine+3)^0,c
    428  000D78                     
@@ -1145,8 +1145,8 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1113  000560  22E2               	addwfc	fsr1h,f,c
   1114  000562                     l145:
   1115  000562                     
-  1116                           ;tasks.c: 68:    {;tasks.c: 70:       if (w_machine.flag_wash == 0 && f_clothes.fila_siz
-      +                          e > 0)
+  1116                           ;tasks.c: 68:    {;tasks.c: 70:       if (w_machine.flag == 0 && f_clothes.fila_size > 0
+      +                          )
   1117  000562  5035               	movf	(_w_machine+2)^0,w,c
   1118  000564  1036               	iorwf	(_w_machine+3)^0,w,c
   1119  000566  A4D8               	btfss	status,2,c
@@ -1291,7 +1291,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1256  000666  E2FC               	bc	u30_21
   1257  000668                     
   1258                           ; BSR set to: 0
-  1259                           ;tasks.c: 82:          w_machine.flag_wash = 1;
+  1259                           ;tasks.c: 82:          w_machine.flag = 1;
   1260  000668  0E00               	movlw	0
   1261  00066A  6E36               	movwf	(_w_machine+3)^0,c
   1262  00066C  0E01               	movlw	1
@@ -1336,8 +1336,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1301  0006A6  EC5C  F006         	call	_run_wash	;wreg free
   1302  0006AA                     l1239:
   1303                           
-  1304                           ;tasks.c: 90:       if (w_machine.flag_wash == 1 && f_clothes.clothes_washing.state == 0
-      +                          )
+  1304                           ;tasks.c: 90:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 0)
   1305  0006AA  0435               	decf	(_w_machine+2)^0,w,c
   1306  0006AC  1036               	iorwf	(_w_machine+3)^0,w,c
   1307  0006AE  A4D8               	btfss	status,2,c
@@ -1407,7 +1406,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1370  000CB8                     _run_wash:
   1371                           	callstack 23
   1372  000CB8                     
-  1373                           ;tasks.c: 99:    if (w_machine.cunter_wash < 2000)
+  1373                           ;tasks.c: 99:    if (w_machine.counter < 2000)
   1374  000CB8  0ED0               	movlw	208
   1375  000CBA  5C33               	subwf	_w_machine^0,w,c
   1376  000CBC  0E07               	movlw	7
@@ -1422,12 +1421,12 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1385                           ;tasks.c: 100:    {;tasks.c: 101:       PORTDbits.RD2 = 1;
   1386  000CCE  8483               	bsf	131,2,c	;volatile
   1387  000CD0                     
-  1388                           ;tasks.c: 102:       w_machine.cunter_wash++;
+  1388                           ;tasks.c: 102:       w_machine.counter++;
   1389  000CD0  4A33               	infsnz	_w_machine^0,f,c
   1390  000CD2  2A34               	incf	(_w_machine+1)^0,f,c
   1391  000CD4                     l1113:
   1392                           
-  1393                           ;tasks.c: 105:    if (w_machine.cunter_wash >= 2000)
+  1393                           ;tasks.c: 105:    if (w_machine.counter >= 2000)
   1394  000CD4  0ED0               	movlw	208
   1395  000CD6  5C33               	subwf	_w_machine^0,w,c
   1396  000CD8  0E07               	movlw	7
@@ -1450,18 +1449,18 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1413  000CF4  6FB6               	movwf	(_f_clothes+54)& (0+255),b
   1414  000CF6                     
   1415                           ; BSR set to: 0
-  1416                           ;tasks.c: 109:       w_machine.cunter_wash = 0;
+  1416                           ;tasks.c: 109:       w_machine.counter = 0;
   1417  000CF6  6A33               	clrf	_w_machine^0,c
   1418  000CF8  6A34               	clrf	(_w_machine+1)^0,c
   1419                           
-  1420                           ;tasks.c: 110:       w_machine.flag_wash = 1;
+  1420                           ;tasks.c: 110:       w_machine.flag = 1;
   1421  000CFA  0E00               	movlw	0
   1422  000CFC  6E36               	movwf	(_w_machine+3)^0,c
   1423  000CFE  0E01               	movlw	1
   1424  000D00  6E35               	movwf	(_w_machine+2)^0,c
   1425  000D02                     
   1426                           ; BSR set to: 0
-  1427                           ;tasks.c: 111:       i_machine.flag_iron = 0;
+  1427                           ;tasks.c: 111:       i_machine.flag = 0;
   1428  000D02  6A31               	clrf	(_i_machine+2)^0,c
   1429  000D04  6A32               	clrf	(_i_machine+3)^0,c
   1430  000D06                     l157:
@@ -1510,8 +1509,8 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1471                           	callstack 23
   1472  000A00                     l160:
   1473  000A00                     
-  1474                           ;tasks.c: 118:    {;tasks.c: 119:       if (w_machine.flag_wash == 1 && f_clothes.clothe
-      +                          s_washing.state == 1 && i_machine.flag_iron == 0)
+  1474                           ;tasks.c: 118:    {;tasks.c: 119:       if (w_machine.flag == 1 && f_clothes.clothes_was
+      +                          hing.state == 1 && i_machine.flag == 0)
   1475  000A00  0435               	decf	(_w_machine+2)^0,w,c
   1476  000A02  1036               	iorwf	(_w_machine+3)^0,w,c
   1477  000A04  A4D8               	btfss	status,2,c
@@ -1552,12 +1551,12 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1511  000A48  E2FC               	bc	u37_21
   1512  000A4A                     
   1513                           ; BSR set to: 0
-  1514                           ;tasks.c: 124:          w_machine.flag_wash = 0;
+  1514                           ;tasks.c: 124:          w_machine.flag = 0;
   1515  000A4A  6A35               	clrf	(_w_machine+2)^0,c
   1516  000A4C  6A36               	clrf	(_w_machine+3)^0,c
   1517  000A4E                     
   1518                           ; BSR set to: 0
-  1519                           ;tasks.c: 125:          i_machine.flag_iron = 1;
+  1519                           ;tasks.c: 125:          i_machine.flag = 1;
   1520  000A4E  0E00               	movlw	0
   1521  000A50  6E32               	movwf	(_i_machine+3)^0,c
   1522  000A52  0E01               	movlw	1
@@ -1574,8 +1573,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1533  000A66  ECA0  F005         	call	_run_ironing	;wreg free
   1534  000A6A                     l1259:
   1535                           
-  1536                           ;tasks.c: 129:       if (f_clothes.clothes_washing.state == 1 && i_machine.flag_iron == 
-      +                          1)
+  1536                           ;tasks.c: 129:       if (f_clothes.clothes_washing.state == 1 && i_machine.flag == 1)
   1537  000A6A  0100               	movlb	0	; () banked
   1538  000A6C  05B6               	decf	(_f_clothes+54)& (0+255),w,b
   1539  000A6E  11B7               	iorwf	(_f_clothes+55)& (0+255),w,b
@@ -1651,7 +1649,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1607                           	callstack 23
   1608  000B40                     
   1609                           ;tasks.c: 138: void run_ironing(clothes_control_t clothes_ironing);tasks.c: 139: {;tasks
-      +                          .c: 140:    if (i_machine.counter_iron < 2000)
+      +                          .c: 140:    if (i_machine.counter < 2000)
   1610  000B40  0ED0               	movlw	208
   1611  000B42  5C2F               	subwf	_i_machine^0,w,c
   1612  000B44  0E07               	movlw	7
@@ -1666,12 +1664,12 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1621                           ;tasks.c: 141:    {;tasks.c: 142:       PORTDbits.RD3 = 1;
   1622  000B56  8683               	bsf	131,3,c	;volatile
   1623  000B58                     
-  1624                           ;tasks.c: 143:       i_machine.counter_iron++;
+  1624                           ;tasks.c: 143:       i_machine.counter++;
   1625  000B58  4A2F               	infsnz	_i_machine^0,f,c
   1626  000B5A  2A30               	incf	(_i_machine+1)^0,f,c
   1627  000B5C                     l1129:
   1628                           
-  1629                           ;tasks.c: 146:    if (i_machine.counter_iron >= 2000)
+  1629                           ;tasks.c: 146:    if (i_machine.counter >= 2000)
   1630  000B5C  0ED0               	movlw	208
   1631  000B5E  5C2F               	subwf	_i_machine^0,w,c
   1632  000B60  0E07               	movlw	7
@@ -1686,11 +1684,11 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1641                           ;tasks.c: 147:    {;tasks.c: 148:       PORTDbits.RD3 = 0;
   1642  000B72  9683               	bcf	131,3,c	;volatile
   1643                           
-  1644                           ;tasks.c: 149:       i_machine.flag_iron = 0;
+  1644                           ;tasks.c: 149:       i_machine.flag = 0;
   1645  000B74  6A31               	clrf	(_i_machine+2)^0,c
   1646  000B76  6A32               	clrf	(_i_machine+3)^0,c
   1647                           
-  1648                           ;tasks.c: 150:       i_machine.counter_iron = 0;
+  1648                           ;tasks.c: 150:       i_machine.counter = 0;
   1649  000B78  6A2F               	clrf	_i_machine^0,c
   1650  000B7A  6A30               	clrf	(_i_machine+1)^0,c
   1651  000B7C                     
@@ -3163,7 +3161,7 @@ Pointer List with Targets:
     p.buffer	PTR unsigned char  size(2) Largest target is 512
 		 -> _uDynamicHeap(BIGRAM[512]), NULL(NULL[0]), 
 
-    S797pipe$buffer	PTR unsigned char  size(2) Largest target is 512
+    S788pipe$buffer	PTR unsigned char  size(2) Largest target is 512
 		 -> _uDynamicHeap(BIGRAM[512]), NULL(NULL[0]), 
 
     p.buffer	PTR unsigned char  size(2) Largest target is 512
@@ -3620,7 +3618,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.20 build 20200408173844 
-Symbol Table                                                                                   Wed Dec 09 17:35:22 2020
+Symbol Table                                                                                   Wed Dec 09 17:47:23 2020
 
                         l25 0D4C                          l26 0D4C                          l82 09F6  
                         l91 0DB8                          l92 0DB8                          l85 0DB6  

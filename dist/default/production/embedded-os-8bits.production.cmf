@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Giulio\AppData\Local\Temp\shd4.o
+$C:\Users\Giulio\AppData\Local\Temp\srks.o
 idloc IDLOC 5 200000 200000 8 1
 stack STACK 2 3EA 3EA 216 1
 init CODE 0 C C 8 1
@@ -86,7 +86,7 @@ MEDIUMCONST DC6-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\embedded-os-8bits.production.o
-8 intcode CODE >4900:C:\Users\Giulio\AppData\Local\Temp\shd4.s
+8 intcode CODE >4900:C:\Users\Giulio\AppData\Local\Temp\srks.s
 8 intcode CODE >46:C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 AAA text17 CODE >15:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\Umul16.c
 AAE text17 CODE >37:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\Umul16.c
@@ -257,49 +257,49 @@ D34 text0 CODE >36:C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\main.c
 D48 text0 CODE >39:C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\main.c
 D4C text0 CODE >41:C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\main.c
 D4C text0 CODE >44:C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\main.c
-C62 cinit CODE >2440:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C62 cinit CODE >2442:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C62 cinit CODE >2445:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C62 cinit CODE >2493:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C64 cinit CODE >2494:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C66 cinit CODE >2495:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C68 cinit CODE >2496:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C6A cinit CODE >2497:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C6C cinit CODE >2498:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C6E cinit CODE >2499:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C70 cinit CODE >2500:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C74 cinit CODE >2501:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C76 cinit CODE >2502:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C7A cinit CODE >2506:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C7E cinit CODE >2507:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C82 cinit CODE >2508:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C82 cinit CODE >2509:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C84 cinit CODE >2510:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C86 cinit CODE >2511:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C88 cinit CODE >2512:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C8A cinit CODE >2513:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C8C cinit CODE >2514:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C8E cinit CODE >2517:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C92 cinit CODE >2518:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C94 cinit CODE >2519:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C94 cinit CODE >2520:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C96 cinit CODE >2521:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C98 cinit CODE >2522:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C9A cinit CODE >2525:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-C9E cinit CODE >2526:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CA0 cinit CODE >2527:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CA0 cinit CODE >2528:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CA2 cinit CODE >2529:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CA4 cinit CODE >2530:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CA6 cinit CODE >2533:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CAA cinit CODE >2534:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CAC cinit CODE >2535:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CAC cinit CODE >2536:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CAE cinit CODE >2537:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CB0 cinit CODE >2538:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CB2 cinit CODE >2544:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CB2 cinit CODE >2546:C:\Users\Giulio\AppData\Local\Temp\shd4.s
-CB4 cinit CODE >2547:C:\Users\Giulio\AppData\Local\Temp\shd4.s
+C62 cinit CODE >2440:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C62 cinit CODE >2442:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C62 cinit CODE >2445:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C62 cinit CODE >2493:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C64 cinit CODE >2494:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C66 cinit CODE >2495:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C68 cinit CODE >2496:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C6A cinit CODE >2497:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C6C cinit CODE >2498:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C6E cinit CODE >2499:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C70 cinit CODE >2500:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C74 cinit CODE >2501:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C76 cinit CODE >2502:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C7A cinit CODE >2506:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C7E cinit CODE >2507:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C82 cinit CODE >2508:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C82 cinit CODE >2509:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C84 cinit CODE >2510:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C86 cinit CODE >2511:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C88 cinit CODE >2512:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C8A cinit CODE >2513:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C8C cinit CODE >2514:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C8E cinit CODE >2517:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C92 cinit CODE >2518:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C94 cinit CODE >2519:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C94 cinit CODE >2520:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C96 cinit CODE >2521:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C98 cinit CODE >2522:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C9A cinit CODE >2525:C:\Users\Giulio\AppData\Local\Temp\srks.s
+C9E cinit CODE >2526:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CA0 cinit CODE >2527:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CA0 cinit CODE >2528:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CA2 cinit CODE >2529:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CA4 cinit CODE >2530:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CA6 cinit CODE >2533:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CAA cinit CODE >2534:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CAC cinit CODE >2535:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CAC cinit CODE >2536:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CAE cinit CODE >2537:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CB0 cinit CODE >2538:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CB2 cinit CODE >2544:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CB2 cinit CODE >2546:C:\Users\Giulio\AppData\Local\Temp\srks.s
+CB4 cinit CODE >2547:C:\Users\Giulio\AppData\Local\Temp\srks.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -318,7 +318,7 @@ __Hspace_1 3EA 0 ABS 0 - dist/default/production\embedded-os-8bits.production.o
 __Hspace_2 600 0 ABS 0 - dist/default/production\embedded-os-8bits.production.o
 __Hspace_4 60000E 0 ABS 0 - dist/default/production\embedded-os-8bits.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\embedded-os-8bits.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Giulio\AppData\Local\Temp\shd4.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Giulio\AppData\Local\Temp\srks.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\embedded-os-8bits.production.o
 ltemp0 1 0 COMRAM 1 temp dist/default/production\embedded-os-8bits.production.o
 ltemp1 5 0 COMRAM 1 temp dist/default/production\embedded-os-8bits.production.o
@@ -326,13 +326,13 @@ ltemp2 9 0 COMRAM 1 temp dist/default/production\embedded-os-8bits.production.o
 _task_create 928 0 CODE 0 text3 dist/default/production\embedded-os-8bits.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\embedded-os-8bits.production.o
 _WREG FE8 0 ABS 0 - dist/default/production\embedded-os-8bits.production.o
-___sp 3EA 0 STACK 2 stack C:\Users\Giulio\AppData\Local\Temp\shd4.o
+___sp 3EA 0 STACK 2 stack C:\Users\Giulio\AppData\Local\Temp\srks.o
 _flag 37 0 COMRAM 1 bssCOMRAM dist/default/production\embedded-os-8bits.production.o
 _main D08 0 CODE 0 text0 dist/default/production\embedded-os-8bits.production.o
 btemp 1 0 COMRAM 1 temp dist/default/production\embedded-os-8bits.production.o
 __end_of_setup_timer_0 DA6 0 CODE 0 text4 dist/default/production\embedded-os-8bits.production.o
 __HbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\embedded-os-8bits.production.o
-start C 0 CODE 0 init C:\Users\Giulio\AppData\Local\Temp\shd4.o
+start C 0 CODE 0 init C:\Users\Giulio\AppData\Local\Temp\srks.o
 __size_of_main 0 0 ABS 0 - dist/default/production\embedded-os-8bits.production.o
 __size_of___lwmod 0 0 ABS 0 - dist/default/production\embedded-os-8bits.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\embedded-os-8bits.production.o
@@ -352,11 +352,11 @@ ttemp7 9 0 COMRAM 1 temp dist/default/production\embedded-os-8bits.production.o
 __end_of_IRQ_Timer0 3B8 0 CODE 0 intcode_body dist/default/production\embedded-os-8bits.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\embedded-os-8bits.production.o
 __LbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\embedded-os-8bits.production.o
-__accesstop 80 0 ABS 0 - C:\Users\Giulio\AppData\Local\Temp\shd4.o
-intlevel0 0 0 CODE 0 text C:\Users\Giulio\AppData\Local\Temp\shd4.o
-intlevel1 0 0 CODE 0 text C:\Users\Giulio\AppData\Local\Temp\shd4.o
-intlevel2 0 0 CODE 0 text C:\Users\Giulio\AppData\Local\Temp\shd4.o
-intlevel3 0 0 CODE 0 text C:\Users\Giulio\AppData\Local\Temp\shd4.o
+__accesstop 80 0 ABS 0 - C:\Users\Giulio\AppData\Local\Temp\srks.o
+intlevel0 0 0 CODE 0 text C:\Users\Giulio\AppData\Local\Temp\srks.o
+intlevel1 0 0 CODE 0 text C:\Users\Giulio\AppData\Local\Temp\srks.o
+intlevel2 0 0 CODE 0 text C:\Users\Giulio\AppData\Local\Temp\srks.o
+intlevel3 0 0 CODE 0 text C:\Users\Giulio\AppData\Local\Temp\srks.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\embedded-os-8bits.production.o
 _task_read_buttons 3B8 0 CODE 0 text7 dist/default/production\embedded-os-8bits.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\embedded-os-8bits.production.o
@@ -370,8 +370,8 @@ wtemp8 2 0 COMRAM 1 temp dist/default/production\embedded-os-8bits.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\embedded-os-8bits.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\embedded-os-8bits.production.o
 __pidataCOMRAM DC4 0 CODE 0 idataCOMRAM dist/default/production\embedded-os-8bits.production.o
-___inthi_sp 49C 0 STACK 2 stack C:\Users\Giulio\AppData\Local\Temp\shd4.o
-___intlo_sp 54E 0 STACK 2 stack C:\Users\Giulio\AppData\Local\Temp\shd4.o
+___inthi_sp 49C 0 STACK 2 stack C:\Users\Giulio\AppData\Local\Temp\srks.o
+___intlo_sp 54E 0 STACK 2 stack C:\Users\Giulio\AppData\Local\Temp\srks.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\embedded-os-8bits.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\embedded-os-8bits.production.o
 _w_machine 33 0 COMRAM 1 bssCOMRAM dist/default/production\embedded-os-8bits.production.o
@@ -419,7 +419,7 @@ __Htext8 0 0 ABS 0 text8 dist/default/production\embedded-os-8bits.production.o
 __Htext9 0 0 ABS 0 text9 dist/default/production\embedded-os-8bits.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\embedded-os-8bits.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\embedded-os-8bits.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Giulio\AppData\Local\Temp\shd4.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Giulio\AppData\Local\Temp\srks.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\embedded-os-8bits.production.o
 __Hconfig 30000E 0 CONFIG 4 config dist/default/production\embedded-os-8bits.production.o
 __size_of_IRQ_Timer0 0 0 ABS 0 - dist/default/production\embedded-os-8bits.production.o
@@ -534,8 +534,8 @@ __end_of_rr_scheduler C62 0 CODE 0 text14 dist/default/production\embedded-os-8b
 __size_of_config_tasks 0 0 ABS 0 - dist/default/production\embedded-os-8bits.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\embedded-os-8bits.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\embedded-os-8bits.production.o
-stackhi 5FF 0 ABS 0 - C:\Users\Giulio\AppData\Local\Temp\shd4.o
-stacklo 3EA 0 ABS 0 - C:\Users\Giulio\AppData\Local\Temp\shd4.o
+stackhi 5FF 0 ABS 0 - C:\Users\Giulio\AppData\Local\Temp\srks.o
+stacklo 3EA 0 ABS 0 - C:\Users\Giulio\AppData\Local\Temp\srks.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\embedded-os-8bits.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\embedded-os-8bits.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\embedded-os-8bits.production.o
@@ -582,7 +582,7 @@ __Ltext16 0 0 ABS 0 text16 dist/default/production\embedded-os-8bits.production.
 __Ltext17 0 0 ABS 0 text17 dist/default/production\embedded-os-8bits.production.o
 __Ltext18 0 0 ABS 0 text18 dist/default/production\embedded-os-8bits.production.o
 __size_of_run_ironing 0 0 ABS 0 - dist/default/production\embedded-os-8bits.production.o
-__ramtop 600 0 RAM 0 ramtop C:\Users\Giulio\AppData\Local\Temp\shd4.o
+__ramtop 600 0 RAM 0 ramtop C:\Users\Giulio\AppData\Local\Temp\srks.o
 __end_of_os_config D96 0 CODE 0 text2 dist/default/production\embedded-os-8bits.production.o
 __Lpowerup C 0 CODE 0 powerup dist/default/production\embedded-os-8bits.production.o
 _check_ironing A00 0 CODE 0 text10 dist/default/production\embedded-os-8bits.production.o

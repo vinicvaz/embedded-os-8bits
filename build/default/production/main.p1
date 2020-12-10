@@ -24,14 +24,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./types.h: 76: {
 [s S285 `S284 -> 8 `i `ui 1 `S284 1 `S284 1 `S284 -> 8 `i `ui 1 ]
 [n S285 fila_clothes clothes_waiting fila_size clothes_washing clothes_ironing clothes_finished clothes_finished_size ]
-"15 ./resources.h
-[; ;./resources.h: 15: {
+"14 ./resources.h
+[; ;./resources.h: 14: {
 [s S288 `ui 1 `ui 1 ]
-[n S288 wash_machine cunter_wash flag_wash ]
-"21
-[; ;./resources.h: 21: {
-[s S289 `ui 1 `ui 1 ]
-[n S289 iron_machine counter_iron flag_iron ]
+[n S288 machine counter flag ]
 [p mainexit ]
 "16 ./kernel.h
 [; ;./kernel.h: 16: void os_config();
@@ -43,15 +39,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20 ./tasks.h
 [; ;./tasks.h: 20: void task_read_buttons();
 [v _task_read_buttons `(v ~T0 @X0 0 e? ]
-[v F2648 `(v ~T0 @X0 0 tf ]
+[v F2644 `(v ~T0 @X0 0 tf ]
 "23
 [; ;./tasks.h: 23: void check_ironing();
 [v _check_ironing `(v ~T0 @X0 0 e? ]
-[v F2650 `(v ~T0 @X0 0 tf ]
+[v F2646 `(v ~T0 @X0 0 tf ]
 "21
 [; ;./tasks.h: 21: void check_wash();
 [v _check_wash `(v ~T0 @X0 0 e? ]
-[v F2652 `(v ~T0 @X0 0 tf ]
+[v F2648 `(v ~T0 @X0 0 tf ]
 "15 ./kernel.h
 [; ;./kernel.h: 15: void os_start();
 [v _os_start `(v ~T0 @X0 0 e? ]
@@ -542,11 +538,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 17: fila_clothes_t f_clothes;
 [v _f_clothes `S285 ~T0 @X0 1 e ]
 "18
-[; ;main.c: 18: wash_machine_t w_machine;
+[; ;main.c: 18: machine_t w_machine;
 [v _w_machine `S288 ~T0 @X0 1 e ]
 "19
-[; ;main.c: 19: iron_machine_t i_machine;
-[v _i_machine `S289 ~T0 @X0 1 e ]
+[; ;main.c: 19: machine_t i_machine;
+[v _i_machine `S288 ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "21
 [; ;main.c: 21: void main(void)
@@ -561,32 +557,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _os_config ..  ]
 "34
 [; ;main.c: 34:    task_create(3, &task_read_buttons);
-[e ( _task_create (2 , -> -> 3 `i `ui -> &U _task_read_buttons `*F2648 ]
+[e ( _task_create (2 , -> -> 3 `i `ui -> &U _task_read_buttons `*F2644 ]
 "35
 [; ;main.c: 35:    task_create(2, &check_ironing);
-[e ( _task_create (2 , -> -> 2 `i `ui -> &U _check_ironing `*F2650 ]
+[e ( _task_create (2 , -> -> 2 `i `ui -> &U _check_ironing `*F2646 ]
 "36
 [; ;main.c: 36:    task_create(2, &check_wash);
-[e ( _task_create (2 , -> -> 2 `i `ui -> &U _check_wash `*F2652 ]
+[e ( _task_create (2 , -> -> 2 `i `ui -> &U _check_wash `*F2648 ]
 "39
 [; ;main.c: 39:    os_start();
 [e ( _os_start ..  ]
 "41
 [; ;main.c: 41:    while (1)
-[e :U 292 ]
+[e :U 291 ]
 "42
 [; ;main.c: 42:    {
 {
 "44
 [; ;main.c: 44:    }
 }
-[e :U 291 ]
-[e $U 292  ]
-[e :U 293 ]
+[e :U 290 ]
+[e $U 291  ]
+[e :U 292 ]
 "46
 [; ;main.c: 46:    return;
-[e $UE 290  ]
+[e $UE 289  ]
 "47
 [; ;main.c: 47: }
-[e :UE 290 ]
+[e :UE 289 ]
 }
