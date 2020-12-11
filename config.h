@@ -13,6 +13,7 @@
 #define PRIOR_SCHED OFF
 #define QUANTUM 12
 #define MAX_CLOTHES 8
+#define CYCLES_LIFE 10000
 
 #define _XTAL_FREQ 4000000
 

@@ -25,22 +25,33 @@ void config_tasks()
    TRISDbits.RD2 = 0; // maquina
    TRISDbits.RD3 = 0; // ferro de passar
    TRISDbits.RD4 = 0; // tudo ligado
+   TRISCbits.RC0 = 0;
+   TRISCbits.RC1 = 0;
+   TRISCbits.RC2 = 0;
+   TRISCbits.RC3 = 0;
+   TRISCbits.RC4 = 0;
+   TRISCbits.RC5 = 0;
+   TRISCbits.RC6 = 0;
+   TRISCbits.RC7 = 0;
+
 }
 
 void task_read_buttons()
 {
    while (1)
    {
-      if (PORTDbits.RD0 == 0 && PORTDbits.RD1 == 0){
+      if (PORTDbits.RD0 == 0 && PORTDbits.RD1 == 0)
+      {
          flag = 0;
       }
+
       //PORTDbits.RD4 = ~PORTDbits.RD4;
       if (PORTDbits.RD0 == 1 && f_clothes.fila_size < MAX_CLOTHES && flag == 0)
       {
          // CRIA STRUCT ROUPA COLORIDA
          clothes_control_t clothes;
          clothes.color = 0;
-         clothes.washing_cicles = 1;
+         clothes.washing_cycles = 1;
          clothes.state = 0;
 
          f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
@@ -52,7 +63,7 @@ void task_read_buttons()
          // CRIA STRUCT ROUPA BRANCA
          clothes_control_t clothes;
          clothes.color = 1;
-         clothes.washing_cicles = 2;
+         clothes.washing_cycles = 2;
          clothes.state = 0;
 
          f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
@@ -69,7 +80,7 @@ void check_wash()
       // tentando botar roupa na maquina
       if (w_machine.flag == 0 && f_clothes.fila_size > 0)
       {
-           
+
          clothes_control_t next_clothes = f_clothes.clothes_waiting[0];
 
          for (int i = 0; i < MAX_CLOTHES - 1; i++)
@@ -84,31 +95,42 @@ void check_wash()
 
          // Variaveis da roupa a ser lavada
          next_clothes.state = 0; //roupa suja
-         run_wash(); //next_clothes
+         run_wash();             //next_clothes
       }
 
       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 0)
       {
-         run_wash();//f_clothes.clothes_washing
+         run_wash(); //f_clothes.clothes_washing
       }
    }
 }
 
 void run_wash() //clothes_control_t clothes_washing
 {
-   if (w_machine.counter < 2000)
-   {  //Se contador < 2000 a roupa ainda ta suja
+   if (w_machine.counter < CYCLES_LIFE)
+   { //Se contador < 2000 a roupa ainda ta suja
+      PORTCbits.RC4 = 1;
+      PORTCbits.RC5 = 1;
       PORTDbits.RD2 = 1;
       w_machine.counter++;
    }
-   
-   if (w_machine.counter >= 2000)
-   {  //desligar led indicador da maquina sendo usada
+   if (w_machine.counter >= CYCLES_LIFE && f_clothes.clothes_washing.washing_cycles == 1)
+   //if (w_machine.counter >= CYCLES_LIFE)
+   { //desligar led indicador da maquina sendo usada
+      PORTCbits.RC4 = 0;
+      PORTCbits.RC5 = 0;
+      
       PORTDbits.RD2 = 0;
       f_clothes.clothes_washing.state = 1; //roupa limpa
       w_machine.counter = 0;
       w_machine.flag = 1;
       i_machine.flag = 0;
+   }
+   if (w_machine.counter >= CYCLES_LIFE && f_clothes.clothes_washing.washing_cycles > 1)
+   {
+      PORTDbits.RD2 = 0;
+      f_clothes.clothes_washing.washing_cycles--;
+      w_machine.counter = 0;
    }
 }
 
@@ -125,7 +147,7 @@ void check_ironing()
          i_machine.flag = 1;
          run_ironing(f_clothes.clothes_ironing);
       }
-      //else 
+      //else
       if (f_clothes.clothes_washing.state == 1 && i_machine.flag == 1)
       {
          //PORTDbits.RD3 = 1;
@@ -137,13 +159,13 @@ void check_ironing()
 
 void run_ironing(clothes_control_t clothes_ironing)
 {
-   if (i_machine.counter < 2000)
+   if (i_machine.counter < CYCLES_LIFE)
    {
       PORTDbits.RD3 = 1;
       i_machine.counter++;
    }
-   
-   if (i_machine.counter >= 2000)
+
+   if (i_machine.counter >= CYCLES_LIFE)
    {
       PORTDbits.RD3 = 0;
       i_machine.flag = 0;

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\embedded-os-8bits.production.hex">
+  <executable name="dist/default/production\ProjetoSOE.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>3522</used>
-      <free>29246</free>
+      <used>3622</used>
+      <free>29146</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

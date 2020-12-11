@@ -67,7 +67,7 @@ typedef struct clothes_control
     //u_int id;
     u_int color; //colorida = 0; branca = 1;
     //u_int qtd; //quantidade pode ser usada pra saber o tempo de lavagem e de passagem
-    u_int washing_cicles; //ciclo de lavagem
+    u_int washing_cycles; //ciclo de lavagem
     u_int state;          // 0 suja; 1 limpa; 2 pronta
 
 } clothes_control_t;

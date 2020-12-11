@@ -29,8 +29,6 @@ u_int rr_scheduler()
    return next_task;
 }
 
-u_int
-
 u_int prior_scheduler() // inversamente proporcional
 {
    u_int next_task = f_aptos.task_running;
