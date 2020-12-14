@@ -73,7 +73,12 @@ void os_start()
    ENABLE_INTERRUPTS();
 
    // Inicia o TIMER0
-   T0CONbits.TMR0ON = 1;
+   T0CONbits.TMR0ON = 1;   
+   
+   //setar periféricos (enable)
+   INTCONbits.PEIE = 1; //enable nas interrupções perifericas
+   INTCONbits.INT0IE = 1; //enable na porta int0
+   INTCON3bits.INT1E = 1; // enable na porta int1
 }
 
 /**
@@ -81,9 +86,13 @@ void os_start()
  */
 void os_config()
 {
-   __asm("GLOBAL _task_idle, _task_read_buttons, _check_wash, _check_ironing");
+   __asm("GLOBAL _task_idle, _check_wash, _check_ironing");
 
+   //setar registrador de interrupt
+   
+   
    // Configura as estruturas de dados do kernel
+   
    f_aptos.task_running = 0;
    f_aptos.ready_queue_size = 0;
    f_clothes.fila_size = 0;

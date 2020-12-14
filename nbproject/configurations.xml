@@ -49,7 +49,7 @@
         <targetDevice>PIC18F4520</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>VSMViewerPlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.20</languageToolchainVersion>
         <platform>3</platform>
@@ -76,7 +76,6 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -164,6 +163,11 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <VSMViewerPlatformTool>
+        <property key="design.file" value="../../esquematic.pdsprj"/>
+        <property key="target.ip.address" value="localhost"/>
+        <property key="target.ip.port" value="8001"/>
+      </VSMViewerPlatformTool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
       </XC8-CO>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\ProjetoSOE.X.production.hex">
+  <executable name="dist/default/production\embedded-os-8bits.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>3622</used>
-      <free>29146</free>
+      <used>3434</used>
+      <free>29334</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>1536</length>
-      <used>918</used>
-      <free>618</free>
+      <used>930</used>
+      <free>606</free>
     </memory>
   </executable>
 </project>

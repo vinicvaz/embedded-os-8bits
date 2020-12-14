@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ProjetoSOE.X
+PROJECTNAME=embedded-os-8bits
 
 # Active Configuration
 DEFAULTCONF=default

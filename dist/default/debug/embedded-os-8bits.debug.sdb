@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F4520 ]
 [d frameptr 4065 ]
-"16 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\main.c
+"16 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\main.c
 [e E2558 . `uc
 READY 0
 RUNNING 1
@@ -11,7 +11,7 @@ WAITING_SEM 2
 WAITING_DELAY 3
 FINISHED 4
 ]
-"25 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\kernel.c
+"25 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\kernel.c
 [e E2558 . `uc
 READY 0
 RUNNING 1
@@ -19,7 +19,7 @@ WAITING_SEM 2
 WAITING_DELAY 3
 FINISHED 4
 ]
-"22 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\scheduler.c
+"22 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\scheduler.c
 [e E2558 . `uc
 READY 0
 RUNNING 1
@@ -27,7 +27,7 @@ WAITING_SEM 2
 WAITING_DELAY 3
 FINISHED 4
 ]
-"32 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\timer.c
+"38 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [e E2558 . `uc
 READY 0
 RUNNING 1
@@ -35,7 +35,7 @@ WAITING_SEM 2
 WAITING_DELAY 3
 FINISHED 4
 ]
-"36 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\semaforo.c
+"36 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\semaforo.c
 [e E2558 . `uc
 READY 0
 RUNNING 1
@@ -71,47 +71,45 @@ FINISHED 4
 [v ___lmul __lmul `R(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `R(uo  1 e 8 0 ]
-"50 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\kernel.c
+"50 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\kernel.c
 [v _task_create task_create `R(v  1 e 1 0 ]
 "68
 [v _os_start os_start `R(v  1 e 1 0 ]
-"82
+"87
 [v _os_config os_config `R(v  1 e 1 0 ]
-"109
+"118
 [v _task_idle task_idle `R(v  1 e 1 0 ]
-"130
+"139
 [v _who who `R(ui  1 e 2 0 ]
-"21 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\main.c
+"21 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\main.c
 [v _main main `R(v  1 e 1 0 ]
-"146 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\mm.c
+"146 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\mm.c
 [v _SRAMalloc SRAMalloc `R(*.39uc  1 e 2 0 ]
 "314
 [v __SRAMmerge _SRAMmerge `R(uc  1 e 1 0 ]
-"11 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\scheduler.c
+"11 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\scheduler.c
 [v _scheduler scheduler `R(ui  1 e 2 0 ]
 "20
 [v _rr_scheduler rr_scheduler `R(ui  1 e 2 0 ]
-"21 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\tasks.c
+"21 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\tasks.c
 [v _config_tasks config_tasks `R(v  1 e 1 0 ]
-"39
-[v _task_read_buttons task_read_buttons `R(v  1 e 1 0 ]
-"76
+"89
 [v _check_wash check_wash `R(v  1 e 1 0 ]
-"108
+"116
 [v _run_wash run_wash `R(v  1 e 1 0 ]
-"137
+"143
 [v _check_ironing check_ironing `R(v  1 e 1 0 ]
-"160
+"162
 [v _run_ironing run_ironing `R(v  1 e 1 0 ]
-"14 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\timer.c
+"23 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [v _setup_timer_0 setup_timer_0 `R(v  1 e 1 0 ]
-"25
+"33
 [v _controle_delay controle_delay `R(ui  1 e 2 0 ]
-"46
+"50
 [v _IRQ_Timer0 IRQ_Timer0 `IIH(v  1 e 1 0 ]
-"14 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X/dispatcher.h
+"14 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits/dispatcher.h
 [v _index index `i  1 e 2 0 ]
-[s S367 . 1 `uc 1 RC0 1 0 :1:0 
+[s S527 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -120,8 +118,8 @@ FINISHED 4
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-"497 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
-[s S485 . 1 `uc 1 T1OSO 1 0 :1:0 
+"497 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
+[s S536 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 SCK 1 0 :1:3 
@@ -130,7 +128,7 @@ FINISHED 4
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S494 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S545 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SCL 1 0 :1:3 
@@ -139,17 +137,17 @@ FINISHED 4
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S503 . 1 `uc 1 T1CKI 1 0 :1:0 
+[s S554 . 1 `uc 1 T1CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 ]
-[s S507 . 1 `uc 1 . 1 0 :1:0 
+[s S558 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[u S511 . 1 `S367 1 . 1 0 `S485 1 . 1 0 `S494 1 . 1 0 `S503 1 . 1 0 `S507 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES511  1 e 1 @3970 ]
-[s S327 . 1 `uc 1 RD0 1 0 :1:0 
+[u S562 . 1 `S527 1 . 1 0 `S536 1 . 1 0 `S545 1 . 1 0 `S554 1 . 1 0 `S558 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES562  1 e 1 @3970 ]
+[s S378 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -159,7 +157,7 @@ FINISHED 4
 `uc 1 RD7 1 0 :1:7 
 ]
 "669
-[s S407 . 1 `uc 1 PSP0 1 0 :1:0 
+[s S474 . 1 `uc 1 PSP0 1 0 :1:0 
 `uc 1 PSP1 1 0 :1:1 
 `uc 1 PSP2 1 0 :1:2 
 `uc 1 PSP3 1 0 :1:3 
@@ -168,29 +166,38 @@ FINISHED 4
 `uc 1 PSP6 1 0 :1:6 
 `uc 1 PSP7 1 0 :1:7 
 ]
-[s S416 . 1 `uc 1 . 1 0 :5:0 
+[s S483 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 P1B 1 0 :1:5 
 `uc 1 P1C 1 0 :1:6 
 `uc 1 P1D 1 0 :1:7 
 ]
-[s S421 . 1 `uc 1 . 1 0 :7:0 
+[s S488 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 SS2 1 0 :1:7 
 ]
-[u S424 . 1 `S327 1 . 1 0 `S407 1 . 1 0 `S416 1 . 1 0 `S421 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES424  1 e 1 @3971 ]
-[s S358 . 1 `uc 1 TRISC0 1 0 :1:0 
-`uc 1 TRISC1 1 0 :1:1 
-`uc 1 TRISC2 1 0 :1:2 
-`uc 1 TRISC3 1 0 :1:3 
-`uc 1 TRISC4 1 0 :1:4 
-`uc 1 TRISC5 1 0 :1:5 
-`uc 1 TRISC6 1 0 :1:6 
-`uc 1 TRISC7 1 0 :1:7 
+[u S491 . 1 `S378 1 . 1 0 `S474 1 . 1 0 `S483 1 . 1 0 `S488 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES491  1 e 1 @3971 ]
+[s S409 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
 ]
-"1953
-[u S376 . 1 `S358 1 . 1 0 `S367 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES376  1 e 1 @3988 ]
-[s S318 . 1 `uc 1 TRISD0 1 0 :1:0 
+"1731
+[s S418 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+[u S427 . 1 `S409 1 . 1 0 `S418 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES427  1 e 1 @3987 ]
+[s S369 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -200,9 +207,9 @@ FINISHED 4
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "2175
-[u S336 . 1 `S318 1 . 1 0 `S327 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES336  1 e 1 @3989 ]
-[s S205 . 1 `uc 1 T0PS 1 0 :3:0 
+[u S387 . 1 `S369 1 . 1 0 `S378 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES387  1 e 1 @3989 ]
+[s S200 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -210,15 +217,15 @@ FINISHED 4
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "6191
-[s S212 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S207 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 `uc 1 T0PS3 1 0 :1:3 
 `uc 1 . 1 0 :2:4 
 `uc 1 T016BIT 1 0 :1:6 
 ]
-[u S219 . 1 `S205 1 . 1 0 `S212 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES219  1 e 1 @4053 ]
+[u S214 . 1 `S200 1 . 1 0 `S207 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES214  1 e 1 @4053 ]
 "6258
 [v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
 "6272
@@ -227,7 +234,28 @@ FINISHED 4
 [v _BSR BSR `VEuc  1 e 1 @4064 ]
 "6462
 [v _WREG WREG `VEuc  1 e 1 @4072 ]
-[s S145 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S232 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 INT2IF 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 INT1IE 1 0 :1:3 
+`uc 1 INT2IE 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 INT1IP 1 0 :1:6 
+`uc 1 INT2IP 1 0 :1:7 
+]
+"6557
+[s S241 . 1 `uc 1 INT1F 1 0 :1:0 
+`uc 1 INT2F 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 INT1E 1 0 :1:3 
+`uc 1 INT2E 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 INT1P 1 0 :1:6 
+`uc 1 INT2P 1 0 :1:7 
+]
+[u S250 . 1 `S232 1 . 1 0 `S241 1 . 1 0 ]
+[v _INTCON3bits INTCON3bits `VES250  1 e 1 @4080 ]
+[s S140 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -237,7 +265,7 @@ FINISHED 4
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "6724
-[s S154 . 1 `uc 1 . 1 0 :1:0 
+[s S149 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -246,18 +274,18 @@ FINISHED 4
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S163 . 1 `uc 1 . 1 0 :6:0 
+[s S158 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S167 . 1 `S145 1 . 1 0 `S154 1 . 1 0 `S163 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES167  1 e 1 @4082 ]
+[u S162 . 1 `S140 1 . 1 0 `S149 1 . 1 0 `S158 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES162  1 e 1 @4082 ]
 "6904
 [v _STKPTR STKPTR `VEuc  1 e 1 @4092 ]
 "6977
 [v _TOS TOS `VEum  1 e 3 @4093 ]
 [s S31 task_stack 34 `[32]uc 1 stack 32 0 `ui 1 size 2 32 ]
-"16 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\main.c
+"16 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\main.c
 [s S34 tcb 46 `ui 1 task_id 2 0 `E2558 1 task_state 1 2 `ui 1 task_prior 2 3 `*.37R(v 1 task_func 2 5 `S31 1 task_stack 34 7 `uc 1 bsr_reg 1 41 `uc 1 w_reg 1 42 `uc 1 status_reg 1 43 `ui 1 delay 2 44 ]
 [s S44 fila_aptos 234 `[5]S34 1 ready_queue 230 0 `ui 1 ready_queue_size 2 230 `ui 1 task_running 2 232 ]
 [v _f_aptos f_aptos `S44  1 e 234 0 ]
@@ -270,24 +298,22 @@ FINISHED 4
 [v _w_machine w_machine `S59  1 e 4 0 ]
 "19
 [v _i_machine i_machine `S59  1 e 4 0 ]
-"18 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\tasks.c
-[v _flag flag `ui  1 e 2 0 ]
-"12 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\timer.c
+"21 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [v _quantum quantum `i  1 e 2 0 ]
-"21 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\main.c
+"21 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\main.c
 [v _main main `R(v  1 e 1 0 ]
 {
 "47
 } 0
-"68 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\kernel.c
+"68 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\kernel.c
 [v _os_start os_start `R(v  1 e 1 0 ]
 {
-"77
-} 0
 "82
+} 0
+"87
 [v _os_config os_config `R(v  1 e 1 0 ]
 {
-"104
+"113
 } 0
 "50
 [v _task_create task_create `R(v  1 e 1 0 ]
@@ -301,64 +327,59 @@ FINISHED 4
 [v _func func `*.37R(v  1 p 2 -4 ]
 "63
 } 46
-"14 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\timer.c
+"23 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [v _setup_timer_0 setup_timer_0 `R(v  1 e 1 0 ]
 {
-"23
+"31
 } 0
-"21 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\tasks.c
+"21 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\tasks.c
 [v _config_tasks config_tasks `R(v  1 e 1 0 ]
 {
-"37
+"31
 } 0
-"109 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\kernel.c
+"118 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\kernel.c
 [v _task_idle task_idle `R(v  1 e 1 0 ]
 {
-"117
+"126
 } 0
-"39 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\tasks.c
-[v _task_read_buttons task_read_buttons `R(v  1 e 1 0 ]
-{
-[s S48 clothes_control 6 `ui 1 color 2 0 `ui 1 washing_cycles 2 2 `ui 1 state 2 4 ]
-"64
-[v _clothes clothes `S48  1 a 6 0 ]
-"52
-[v _clothes clothes `S48  1 a 6 6 ]
-"74
-} 12
-"76
+"89 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\tasks.c
 [v _check_wash check_wash `R(v  1 e 1 0 ]
 {
-"86
+"96
 [v _i i `i  1 a 2 0 ]
 [s S48 clothes_control 6 `ui 1 color 2 0 `ui 1 washing_cycles 2 2 `ui 1 state 2 4 ]
-"84
+"94
 [v _next_clothes next_clothes `S48  1 a 6 2 ]
-"106
+"114
 } 8
-"108
+"116
 [v _run_wash run_wash `R(v  1 e 1 0 ]
 {
-"135
+"141
 } 0
-"137
+"143
 [v _check_ironing check_ironing `R(v  1 e 1 0 ]
 {
-"158
-} 0
 "160
+} 0
+"162
 [v _run_ironing run_ironing `R(v  1 e 1 0 ]
 {
 [s S48 clothes_control 6 `ui 1 color 2 0 `ui 1 washing_cycles 2 2 `ui 1 state 2 4 ]
 [v _clothes_ironing clothes_ironing `S48  1 p 6 -6 ]
-"177
+"176
 } 0
-"46 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\timer.c
+"50 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [v _IRQ_Timer0 IRQ_Timer0 `IIH(v  1 e 1 0 ]
 {
-"78
+[s S48 clothes_control 6 `ui 1 color 2 0 `ui 1 washing_cycles 2 2 `ui 1 state 2 4 ]
+"97
+[v IRQ_Timer0@clothes_835 clothes `S48  1 a 6 22 ]
+"83
+[v IRQ_Timer0@clothes clothes `S48  1 a 6 16 ]
+"107
 } 0
-"11 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\scheduler.c
+"11 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\scheduler.c
 [v _scheduler scheduler `R(ui  1 e 2 0 ]
 {
 "18
@@ -380,13 +401,13 @@ FINISHED 4
 [v _divisor divisor `ui  1 p 2 -4 ]
 "25
 } 1
-"25 C:\Users\viniv\Desktop\Faculdade\S.O_Embarcados\ProjetoSOE.X\timer.c
+"33 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [v _controle_delay controle_delay `R(ui  1 e 2 0 ]
 {
-"27
+"34
 [v _i i `i  1 a 2 0 ]
 [v _flag flag `i  1 a 2 2 ]
-"44
+"48
 } 4
 "15 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `R(ui  1 e 2 0 ]
