@@ -4742,7 +4742,7 @@ void run_ironing(clothes_control_t clothes_ironing);
 
 
 #pragma config CCP2MX = PORTC
-#pragma config PBADEN = ON
+#pragma config PBADEN = OFF
 #pragma config LPT1OSC = OFF
 #pragma config MCLRE = ON
 

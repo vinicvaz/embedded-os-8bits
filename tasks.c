@@ -32,7 +32,6 @@ void config_tasks() {
 
 void color_clothes()
 {
-   while(1){
       clothes_control_t clothes;
       clothes.color = 0; //colorida
       clothes.washing_cycles = 1; //1 ciclo de lavagem
@@ -43,12 +42,10 @@ void color_clothes()
 
       INTCONbits.INT0IF = 0; //volta botão para 0
       ENABLE_INTERRUPTS();
-   }
 }
 
 void white_clothes()
 {
-   while(1){
       clothes_control_t clothes;
       clothes.color = 1; //roupa branca
       clothes.washing_cycles = 2; //2 ciclos de lavagem
@@ -58,7 +55,6 @@ void white_clothes()
       f_clothes.fila_size++;
       INTCON3bits.INT1IF = 0;
       ENABLE_INTERRUPTS();
-   }
 }
 /*void task_read_buttons() {
    while (1) {

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.20\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\embedded-os-8bits.production.sym \
   --cmf=dist/default/production\embedded-os-8bits.production.cmf -z \
-  -Q18F4520 -oC:\Users\Giulio\AppData\Local\Temp\s230.2 \
+  -Q18F4520 -oC:\Users\Giulio\AppData\Local\Temp\s6f4.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/embedded-os-8bits.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=03EAh-05FFh -pstack=STACK \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\Giulio\AppData\Local\Temp\s230.o \
+  C:\Users\Giulio\AppData\Local\Temp\s6f4.o \
   dist/default/production\embedded-os-8bits.production.o 
 
 Object code version is 3.11
@@ -32,7 +32,7 @@ Machine type is 18F4520
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Giulio\AppData\Local\Temp\s230.o
+C:\Users\Giulio\AppData\Local\Temp\s6f4.o
                 stack                               3EA      3EA      216      3EA       2
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
@@ -43,33 +43,33 @@ dist/default/production\embedded-os-8bits.production.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 temp                                  1        1       20        1       1
-                text18                              A96      A96       96        4       0
-                text17                              BC0      BC0       90        4       0
-                text16                              58E      58E      15E        4       0
-                text15                              6EC      6EC       E8        4       0
-                text14                              C50      C50       8E        4       0
-                text13                              DDC      DDC        6        4       0
-                text12                              9FA      9FA       9C        4       0
-                intcode_body                         14       14      3F2        4       0
-                text10                              B2C      B2C       94        4       0
-                text9                               8AC      8AC       AA        4       0
-                text8                               956      956       A4        4       0
-                text7                               406      406      188        4       0
-                text6                               DD6      DD6        6        4       0
-                text5                               DCA      DCA        C        4       0
-                text4                               DAE      DAE       10        4       0
-                text3                               7D4      7D4       D8        4       0
-                text2                               D34      D34       42        4       0
-                text1                               DBE      DBE        C        4       0
-                text0                               D76      D76       38        4       0
+                text18                              AA8      AA8       96        4       0
+                text17                              C60      C60       8C        4       0
+                text16                              5A4      5A4      15E        4       0
+                text15                              702      702       E8        4       0
+                text14                              BD2      BD2       8E        4       0
+                text13                              DEA      DEA        6        4       0
+                text12                              A10      A10       98        4       0
+                intcode_body                         14       14      408        4       0
+                text10                              B3E      B3E       94        4       0
+                text9                               8C2      8C2       AA        4       0
+                text8                               96C      96C       A4        4       0
+                text7                               41C      41C      188        4       0
+                text6                               DE4      DE4        6        4       0
+                text5                               DD8      DD8        C        4       0
+                text4                               DBC      DBC       10        4       0
+                text3                               7EA      7EA       D8        4       0
+                text2                               D42      D42       42        4       0
+                text1                               DCC      DCC        C        4       0
+                text0                               D84      D84       38        4       0
                 cstackCOMRAM                         21       21       10        1       1
                 bssBIGRAM                           1EA      1EA      200      1EA       1
                 bssBANK1                            100      100       EA      100       1
                 bssBANK0                             80       80       70       80       1
                 dataCOMRAM                           3B       3B        2        1       1
                 bssCOMRAM                            31       31        A        1       1
-                cinit                               CDE      CDE       56        4       0
-                idataCOMRAM                         DE2      DE2        2        4       0
+                cinit                               CEC      CEC       56        4       0
+                idataCOMRAM                         DF0      DF0        2        4       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -79,27 +79,27 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8        4         0
                 init                                  C        C        8         0
                 reset_vec                             0        0        4         0
-                text18                              A96      A96       96         0
-                text17                              BC0      BC0       90         0
-                text16                              58E      58E      15E         0
-                text15                              6EC      6EC       E8         0
-                text14                              C50      C50       8E         0
-                text13                              DDC      DDC        6         0
-                text12                              9FA      9FA       9C         0
-                intcode_body                         14       14      3F2         0
-                text10                              B2C      B2C       94         0
-                text9                               8AC      8AC       AA         0
-                text8                               956      956       A4         0
-                text7                               406      406      188         0
-                text6                               DD6      DD6        6         0
-                text5                               DCA      DCA        C         0
-                text4                               DAE      DAE       10         0
-                text3                               7D4      7D4       D8         0
-                text2                               D34      D34       42         0
-                text1                               DBE      DBE        C         0
-                text0                               D76      D76       38         0
-                cinit                               CDE      CDE       56         0
-                idataCOMRAM                         DE2      DE2        2         0
+                text18                              AA8      AA8       96         0
+                text17                              C60      C60       8C         0
+                text16                              5A4      5A4      15E         0
+                text15                              702      702       E8         0
+                text14                              BD2      BD2       8E         0
+                text13                              DEA      DEA        6         0
+                text12                              A10      A10       98         0
+                intcode_body                         14       14      408         0
+                text10                              B3E      B3E       94         0
+                text9                               8C2      8C2       AA         0
+                text8                               96C      96C       A4         0
+                text7                               41C      41C      188         0
+                text6                               DE4      DE4        6         0
+                text5                               DD8      DD8        C         0
+                text4                               DBC      DBC       10         0
+                text3                               7EA      7EA       D8         0
+                text2                               D42      D42       42         0
+                text1                               DCC      DCC        C         0
+                text0                               D84      D84       38         0
+                cinit                               CEC      CEC       56         0
+                idataCOMRAM                         DF0      DF0        2         0
 
         CLASS   CONST          
 
@@ -152,7 +152,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 temp                           000001  00003C  00003D         1       1  COMRAM  
-                intcode                        000008  000DDC  000DE4         4       0  CODE    
+                intcode                        000008  000DEA  000DF2         4       0  CODE    
                 bssBANK0                       000080  000070  0000F0        80       1  BANK0   
                 bssBANK1                       000100  0000EA  0001EA       100       1  BANK1   
                 bssBIGRAM                      0001EA  000200  0003EA       1EA       1  BIGRAM  
@@ -170,16 +170,16 @@ UNUSED ADDRESS RANGES
                          0000F0-0000FF               10
                          0003EA-0005FF              216
         CODE             000004-000007                4
-                         000DE4-007FFF             721C
+                         000DF2-007FFF             720E
         COMRAM           00003D-00007F               43
         CONST            000004-000007                4
-                         000DE4-007FFF             721C
+                         000DF2-007FFF             720E
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000DE4-007FFF             721C
+        MEDIUMCONST      000DF2-007FFF             720E
         RAM              0000F0-0000FF               10
                          0003EA-0005FF              100
         SFR              000F80-000FFF               80
-        SMALLCONST       000DE4-007FFF              100
+        SMALLCONST       000DF2-007FFF              100
 
                                   Symbol Table
 
@@ -252,7 +252,7 @@ __Hreset_vec             reset_vec    000004
 __Hrparam                rparam       000000
 __Hsfr                   sfr          000000
 __Hsmallconst            smallconst   000000
-__Hspace_0               (abs)        000DE4
+__Hspace_0               (abs)        000DF2
 __Hspace_1               (abs)        0003EA
 __Hspace_2               (abs)        000600
 __Hspace_4               (abs)        60000E
@@ -361,71 +361,71 @@ __Ltext6                 text6        000000
 __Ltext7                 text7        000000
 __Ltext8                 text8        000000
 __Ltext9                 text9        000000
-__S0                     (abs)        000DE4
+__S0                     (abs)        000DF2
 __S1                     (abs)        0003EA
 __S2                     (abs)        000600
 __S4                     (abs)        000000
 __S5                     (abs)        000000
 ___inthi_sp              stack        00049C
 ___intlo_sp              stack        00054E
-___lwmod                 text15       0006EC
+___lwmod                 text15       000702
 ___param_bank            (abs)        000000
 ___rparam_used           (abs)        000001
 ___sp                    stack        0003EA
-___wmul                  text18       000A96
+___wmul                  text18       000AA8
 __accesstop              (abs)        000080
 __activetblptr           (abs)        000000
-__end_of_IRQ_Timer0      intcode_body 000406
-__end_of___lwmod         text15       0007D4
-__end_of___wmul          text18       000B2C
-__end_of__initialization cinit        000D2E
-__end_of_check_ironing   text9        000956
-__end_of_check_wash      text7        00058E
-__end_of_color_clothes   text17       000C50
-__end_of_config_tasks    text5        000DD6
-__end_of_controle_delay  text16       0006EC
-__end_of_main            text0        000DAE
-__end_of_os_config       text2        000D76
-__end_of_os_start        text1        000DCA
-__end_of_rr_scheduler    text14       000CDE
-__end_of_run_ironing     text10       000BC0
-__end_of_run_wash        text8        0009FA
-__end_of_scheduler       text13       000DE2
-__end_of_setup_timer_0   text4        000DBE
-__end_of_task_create     text3        0008AC
-__end_of_task_idle       text6        000DDC
-__end_of_white_clothes   text12       000A96
-__initialization         cinit        000CDE
+__end_of_IRQ_Timer0      intcode_body 00041C
+__end_of___lwmod         text15       0007EA
+__end_of___wmul          text18       000B3E
+__end_of__initialization cinit        000D3C
+__end_of_check_ironing   text9        00096C
+__end_of_check_wash      text7        0005A4
+__end_of_color_clothes   text17       000CEC
+__end_of_config_tasks    text5        000DE4
+__end_of_controle_delay  text16       000702
+__end_of_main            text0        000DBC
+__end_of_os_config       text2        000D84
+__end_of_os_start        text1        000DD8
+__end_of_rr_scheduler    text14       000C60
+__end_of_run_ironing     text10       000BD2
+__end_of_run_wash        text8        000A10
+__end_of_scheduler       text13       000DF0
+__end_of_setup_timer_0   text4        000DCC
+__end_of_task_create     text3        0008C2
+__end_of_task_idle       text6        000DEA
+__end_of_white_clothes   text12       000AA8
+__initialization         cinit        000CEC
 __mediumconst            mediumconst  000000
 __pbssBANK0              bssBANK0     000080
 __pbssBANK1              bssBANK1     000100
 __pbssBIGRAM             bssBIGRAM    0001EA
 __pbssCOMRAM             bssCOMRAM    000031
-__pcinit                 cinit        000CDE
+__pcinit                 cinit        000CEC
 __pcstackCOMRAM          cstackCOMRAM 000021
 __pdataCOMRAM            dataCOMRAM   00003B
-__pidataCOMRAM           idataCOMRAM  000DE2
+__pidataCOMRAM           idataCOMRAM  000DF0
 __pintcode               intcode      000008
 __pintcode_body          intcode_body 000014
-__ptext0                 text0        000D76
-__ptext1                 text1        000DBE
-__ptext10                text10       000B2C
-__ptext12                text12       0009FA
-__ptext13                text13       000DDC
-__ptext14                text14       000C50
-__ptext15                text15       0006EC
-__ptext16                text16       00058E
-__ptext17                text17       000BC0
-__ptext18                text18       000A96
+__ptext0                 text0        000D84
+__ptext1                 text1        000DCC
+__ptext10                text10       000B3E
+__ptext12                text12       000A10
+__ptext13                text13       000DEA
+__ptext14                text14       000BD2
+__ptext15                text15       000702
+__ptext16                text16       0005A4
+__ptext17                text17       000C60
+__ptext18                text18       000AA8
 __ptext19                text19       000000
-__ptext2                 text2        000D34
-__ptext3                 text3        0007D4
-__ptext4                 text4        000DAE
-__ptext5                 text5        000DCA
-__ptext6                 text6        000DD6
-__ptext7                 text7        000406
-__ptext8                 text8        000956
-__ptext9                 text9        0008AC
+__ptext2                 text2        000D42
+__ptext3                 text3        0007EA
+__ptext4                 text4        000DBC
+__ptext5                 text5        000DD8
+__ptext6                 text6        000DE4
+__ptext7                 text7        00041C
+__ptext8                 text8        00096C
+__ptext9                 text9        0008C2
 __ramtop                 ramtop       000600
 __size_of_IRQ_Timer0     (abs)        000000
 __size_of___lwmod        (abs)        000000
@@ -448,30 +448,30 @@ __size_of_task_idle      (abs)        000000
 __size_of_white_clothes  (abs)        000000
 __smallconst             smallconst   000000
 __uDynamicHeap           bssBIGRAM    0001EA
-_check_ironing           text9        0008AC
-_check_wash              text7        000406
-_color_clothes           text17       000BC0
-_config_tasks            text5        000DCA
-_controle_delay          text16       00058E
+_check_ironing           text9        0008C2
+_check_wash              text7        00041C
+_color_clothes           text17       000C60
+_config_tasks            text5        000DD8
+_controle_delay          text16       0005A4
 _f_aptos                 bssBANK1     000100
 _f_clothes               bssBANK0     000080
 _i_machine               bssCOMRAM    000031
 _index                   bssCOMRAM    000039
-_main                    text0        000D76
-_os_config               text2        000D34
-_os_start                text1        000DBE
+_main                    text0        000D84
+_os_config               text2        000D42
+_os_start                text1        000DCC
 _quantum                 dataCOMRAM   00003B
-_rr_scheduler            text14       000C50
-_run_ironing             text10       000B2C
-_run_wash                text8        000956
-_scheduler               text13       000DDC
-_setup_timer_0           text4        000DAE
-_task_create             text3        0007D4
-_task_idle               text6        000DD6
+_rr_scheduler            text14       000BD2
+_run_ironing             text10       000B3E
+_run_wash                text8        00096C
+_scheduler               text13       000DEA
+_setup_timer_0           text4        000DBC
+_task_create             text3        0007EA
+_task_idle               text6        000DE4
 _w_machine               bssCOMRAM    000035
-_white_clothes           text12       0009FA
+_white_clothes           text12       000A10
 btemp                    temp         000001
-end_of_initialization    cinit        000D2E
+end_of_initialization    cinit        000D3C
 int_func                 intcode_body 000014
 intlevel0                text         000000
 intlevel1                text         000000
@@ -487,7 +487,7 @@ ltemp2                   temp         000009
 stackhi                  (abs)        0005FF
 stacklo                  (abs)        0003EA
 start                    init         00000C
-start_initialization     cinit        000CDE
+start_initialization     cinit        000CEC
 ttemp0                   temp         000001
 ttemp1                   temp         000004
 ttemp2                   temp         000007
@@ -724,7 +724,7 @@ Total ram usage:        0 bytes
 
  *************** function _check_wash *****************
  Defined at:
-		line 94 in file "tasks.c"
+		line 90 in file "tasks.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -755,7 +755,7 @@ Total ram usage:        0 bytes
 
  *************** function _run_wash *****************
  Defined at:
-		line 121 in file "tasks.c"
+		line 117 in file "tasks.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -785,7 +785,7 @@ Total ram usage:        0 bytes
 
  *************** function _check_ironing *****************
  Defined at:
-		line 148 in file "tasks.c"
+		line 144 in file "tasks.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -815,7 +815,7 @@ Total ram usage:        0 bytes
 
  *************** function _run_ironing *****************
  Defined at:
-		line 167 in file "tasks.c"
+		line 163 in file "tasks.c"
  Parameters:    Size  Location     Type
   clothes_iron    6  [STACK] struct clothes_control
  Auto vars:     Size  Location     Type
@@ -879,7 +879,7 @@ Total ram usage:       16 bytes
 
  *************** function _white_clothes *****************
  Defined at:
-		line 49 in file "tasks.c"
+		line 47 in file "tasks.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1090,54 +1090,54 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 timer.c
-		_setup_timer_0 		CODE           	0DAE	0000	17
-		_controle_delay		CODE           	058E	0000	351
-		_IRQ_Timer0    		CODE           	0008	0000	1015
+		_setup_timer_0 		CODE           	0DBC	0000	17
+		_controle_delay		CODE           	05A4	0000	351
+		_IRQ_Timer0    		CODE           	0008	0000	1037
 
-timer.c estimated size: 1383
+timer.c estimated size: 1405
 
 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\Umul16.c
-		___wmul        		CODE           	0A96	0000	151
+		___wmul        		CODE           	0AA8	0000	151
 
 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\Umul16.c estimated size: 151
 
 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\lwmod.c
-		___lwmod       		CODE           	06EC	0000	233
+		___lwmod       		CODE           	0702	0000	233
 
 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\lwmod.c estimated size: 233
 
 tasks.c
-		_check_wash    		CODE           	0406	0000	393
-		_color_clothes 		CODE           	0BC0	0000	145
-		_white_clothes 		CODE           	09FA	0000	157
-		_run_ironing   		CODE           	0B2C	0000	149
-		_run_wash      		CODE           	0956	0000	165
-		_check_ironing 		CODE           	08AC	0000	171
-		_config_tasks  		CODE           	0DCA	0000	13
+		_check_wash    		CODE           	041C	0000	393
+		_color_clothes 		CODE           	0C60	0000	141
+		_white_clothes 		CODE           	0A10	0000	153
+		_run_ironing   		CODE           	0B3E	0000	149
+		_run_wash      		CODE           	096C	0000	165
+		_check_ironing 		CODE           	08C2	0000	171
+		_config_tasks  		CODE           	0DD8	0000	13
 
-tasks.c estimated size: 1193
+tasks.c estimated size: 1185
 
 kernel.c
-		_task_create   		CODE           	07D4	0000	217
-		_os_config     		CODE           	0D34	0000	67
-		_os_start      		CODE           	0DBE	0000	13
-		_task_idle     		CODE           	0DD6	0000	7
+		_task_create   		CODE           	07EA	0000	217
+		_os_config     		CODE           	0D42	0000	67
+		_os_start      		CODE           	0DCC	0000	13
+		_task_idle     		CODE           	0DE4	0000	7
 
 kernel.c estimated size: 304
 
 shared
-		__initialization		CODE           	0CDE	0000	81
+		__initialization		CODE           	0CEC	0000	81
 
 shared estimated size: 81
 
 scheduler.c
-		_rr_scheduler  		CODE           	0C50	0000	143
-		_scheduler     		CODE           	0DDC	0000	7
+		_rr_scheduler  		CODE           	0BD2	0000	143
+		_scheduler     		CODE           	0DEA	0000	7
 
 scheduler.c estimated size: 150
 
 main.c
-		_main          		CODE           	0D76	0000	57
+		_main          		CODE           	0D84	0000	57
 
 main.c estimated size: 57
 

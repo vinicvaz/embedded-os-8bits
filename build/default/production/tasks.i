@@ -4796,7 +4796,6 @@ void config_tasks() {
 
 void color_clothes()
 {
-   while(1){
       clothes_control_t clothes;
       clothes.color = 0;
       clothes.washing_cycles = 1;
@@ -4807,12 +4806,10 @@ void color_clothes()
 
       INTCONbits.INT0IF = 0;
       INTCONbits.GIE = 1;
-   }
 }
 
 void white_clothes()
 {
-   while(1){
       clothes_control_t clothes;
       clothes.color = 1;
       clothes.washing_cycles = 2;
@@ -4822,9 +4819,8 @@ void white_clothes()
       f_clothes.fila_size++;
       INTCON3bits.INT1IF = 0;
       INTCONbits.GIE = 1;
-   }
 }
-# 94 "tasks.c"
+# 90 "tasks.c"
 void check_wash() {
    while (1) {
 

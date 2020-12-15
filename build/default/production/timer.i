@@ -4807,9 +4807,9 @@ void __attribute__((picinterrupt(("")))) IRQ_Timer0()
       }
    }
 
-      if (INTCONbits.INT0IF == 1)
+      if (INTCONbits.INT0IF == 1 && f_clothes.fila_size < 8)
       {
-         PORTDbits.RD4 = 1;
+
          color_clothes();
       }
 

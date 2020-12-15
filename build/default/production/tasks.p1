@@ -594,348 +594,328 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _color_clothes ]
 [f ]
 "35
-[; ;tasks.c: 35:    while(1){
-[e :U 292 ]
-{
-"36
-[; ;tasks.c: 36:       clothes_control_t clothes;
+[; ;tasks.c: 35:       clothes_control_t clothes;
 [v _clothes `S284 ~T0 @X0 1 a ]
-"37
-[; ;tasks.c: 37:       clothes.color = 0;
+"36
+[; ;tasks.c: 36:       clothes.color = 0;
 [e = . _clothes 0 -> -> 0 `i `ui ]
-"38
-[; ;tasks.c: 38:       clothes.washing_cycles = 1;
+"37
+[; ;tasks.c: 37:       clothes.washing_cycles = 1;
 [e = . _clothes 1 -> -> 1 `i `ui ]
-"39
-[; ;tasks.c: 39:       clothes.state = 0;
+"38
+[; ;tasks.c: 38:       clothes.state = 0;
 [e = . _clothes 2 -> -> 0 `i `ui ]
-"41
-[; ;tasks.c: 41:       f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
+"40
+[; ;tasks.c: 40:       f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
 [e = *U + &U . _f_clothes 0 * -> . _f_clothes 1 `ux -> -> # *U &U . _f_clothes 0 `ui `ux _clothes ]
-"42
-[; ;tasks.c: 42:       f_clothes.fila_size++;
+"41
+[; ;tasks.c: 41:       f_clothes.fila_size++;
 [e ++ . _f_clothes 1 -> -> 1 `i `ui ]
-"44
-[; ;tasks.c: 44:       INTCONbits.INT0IF = 0;
+"43
+[; ;tasks.c: 43:       INTCONbits.INT0IF = 0;
 [e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-"45
-[; ;tasks.c: 45:       INTCONbits.GIE = 1;
+"44
+[; ;tasks.c: 44:       INTCONbits.GIE = 1;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"46
-[; ;tasks.c: 46:    }
-}
-[e :U 291 ]
-[e $U 292  ]
-[e :U 293 ]
-"47
-[; ;tasks.c: 47: }
+"45
+[; ;tasks.c: 45: }
 [e :UE 290 ]
 }
-"49
-[; ;tasks.c: 49: void white_clothes()
+"47
+[; ;tasks.c: 47: void white_clothes()
 [v _white_clothes `(v ~T0 @X0 1 ef ]
-"50
-[; ;tasks.c: 50: {
+"48
+[; ;tasks.c: 48: {
 {
 [e :U _white_clothes ]
 [f ]
-"51
-[; ;tasks.c: 51:    while(1){
-[e :U 296 ]
-{
-"52
-[; ;tasks.c: 52:       clothes_control_t clothes;
+"49
+[; ;tasks.c: 49:       clothes_control_t clothes;
 [v _clothes `S284 ~T0 @X0 1 a ]
-"53
-[; ;tasks.c: 53:       clothes.color = 1;
+"50
+[; ;tasks.c: 50:       clothes.color = 1;
 [e = . _clothes 0 -> -> 1 `i `ui ]
-"54
-[; ;tasks.c: 54:       clothes.washing_cycles = 2;
+"51
+[; ;tasks.c: 51:       clothes.washing_cycles = 2;
 [e = . _clothes 1 -> -> 2 `i `ui ]
-"55
-[; ;tasks.c: 55:       clothes.state = 0;
+"52
+[; ;tasks.c: 52:       clothes.state = 0;
 [e = . _clothes 2 -> -> 0 `i `ui ]
-"57
-[; ;tasks.c: 57:       f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
+"54
+[; ;tasks.c: 54:       f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
 [e = *U + &U . _f_clothes 0 * -> . _f_clothes 1 `ux -> -> # *U &U . _f_clothes 0 `ui `ux _clothes ]
-"58
-[; ;tasks.c: 58:       f_clothes.fila_size++;
+"55
+[; ;tasks.c: 55:       f_clothes.fila_size++;
 [e ++ . _f_clothes 1 -> -> 1 `i `ui ]
-"59
-[; ;tasks.c: 59:       INTCON3bits.INT1IF = 0;
+"56
+[; ;tasks.c: 56:       INTCON3bits.INT1IF = 0;
 [e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-"60
-[; ;tasks.c: 60:       INTCONbits.GIE = 1;
+"57
+[; ;tasks.c: 57:       INTCONbits.GIE = 1;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"61
-[; ;tasks.c: 61:    }
+"58
+[; ;tasks.c: 58: }
+[e :UE 291 ]
 }
-[e :U 295 ]
-[e $U 296  ]
-[e :U 297 ]
-"62
-[; ;tasks.c: 62: }
-[e :UE 294 ]
-}
-"94
-[; ;tasks.c: 94: void check_wash() {
+"90
+[; ;tasks.c: 90: void check_wash() {
 [v _check_wash `(v ~T0 @X0 1 ef ]
 {
 [e :U _check_wash ]
 [f ]
+"91
+[; ;tasks.c: 91:    while (1) {
+[e :U 294 ]
+{
+"93
+[; ;tasks.c: 93:       if (w_machine.flag == 0 && f_clothes.fila_size > 0) {
+[e $ ! && == . _w_machine 1 -> -> 0 `i `ui > . _f_clothes 1 -> -> 0 `i `ui 296  ]
+{
 "95
-[; ;tasks.c: 95:    while (1) {
-[e :U 300 ]
-{
-"97
-[; ;tasks.c: 97:       if (w_machine.flag == 0 && f_clothes.fila_size > 0) {
-[e $ ! && == . _w_machine 1 -> -> 0 `i `ui > . _f_clothes 1 -> -> 0 `i `ui 302  ]
-{
-"99
-[; ;tasks.c: 99:          clothes_control_t next_clothes = f_clothes.clothes_waiting[0];
+[; ;tasks.c: 95:          clothes_control_t next_clothes = f_clothes.clothes_waiting[0];
 [v _next_clothes `S284 ~T0 @X0 1 a ]
 [e = _next_clothes *U + &U . _f_clothes 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _f_clothes 0 `ui `ux ]
-"101
-[; ;tasks.c: 101:          for (int i = 0; i < 8 - 1; i++) {
+"97
+[; ;tasks.c: 97:          for (int i = 0; i < 8 - 1; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i - -> 8 `i -> 1 `i 303  ]
-[e $U 304  ]
-[e :U 303 ]
+[e $ < _i - -> 8 `i -> 1 `i 297  ]
+[e $U 298  ]
+[e :U 297 ]
 {
-"102
-[; ;tasks.c: 102:             f_clothes.clothes_waiting[i] = f_clothes.clothes_waiting[i + 1];
+"98
+[; ;tasks.c: 98:             f_clothes.clothes_waiting[i] = f_clothes.clothes_waiting[i + 1];
 [e = *U + &U . _f_clothes 0 * -> -> _i `ui `ux -> -> # *U &U . _f_clothes 0 `ui `ux *U + &U . _f_clothes 0 * -> -> + _i -> 1 `i `ui `ux -> -> # *U &U . _f_clothes 0 `ui `ux ]
-"103
-[; ;tasks.c: 103:          }
+"99
+[; ;tasks.c: 99:          }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i - -> 8 `i -> 1 `i 303  ]
-[e :U 304 ]
+[e $ < _i - -> 8 `i -> 1 `i 297  ]
+[e :U 298 ]
 }
-"105
-[; ;tasks.c: 105:          f_clothes.fila_size--;
+"101
+[; ;tasks.c: 101:          f_clothes.fila_size--;
 [e -- . _f_clothes 1 -> -> 1 `i `ui ]
-"106
-[; ;tasks.c: 106:          f_clothes.clothes_washing = next_clothes;
+"102
+[; ;tasks.c: 102:          f_clothes.clothes_washing = next_clothes;
 [e = . _f_clothes 2 _next_clothes ]
-"107
-[; ;tasks.c: 107:          w_machine.flag = 1;
+"103
+[; ;tasks.c: 103:          w_machine.flag = 1;
 [e = . _w_machine 1 -> -> 1 `i `ui ]
-"108
-[; ;tasks.c: 108:          PORTDbits.RD4 = ~PORTDbits.RD4;
+"104
+[; ;tasks.c: 104:          PORTDbits.RD4 = ~PORTDbits.RD4;
 [e = . . _PORTDbits 0 4 -> ~ -> . . _PORTDbits 0 4 `i `uc ]
-"111
-[; ;tasks.c: 111:          next_clothes.state = 0;
+"107
+[; ;tasks.c: 107:          next_clothes.state = 0;
 [e = . _next_clothes 2 -> -> 0 `i `ui ]
+"108
+[; ;tasks.c: 108:          run_wash();
+[e ( _run_wash ..  ]
+"109
+[; ;tasks.c: 109:       }
+}
+[e :U 296 ]
+"111
+[; ;tasks.c: 111:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 0) {
+[e $ ! && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 0 `i `ui 300  ]
+{
 "112
 [; ;tasks.c: 112:          run_wash();
 [e ( _run_wash ..  ]
 "113
 [; ;tasks.c: 113:       }
 }
-[e :U 302 ]
+[e :U 300 ]
+"114
+[; ;tasks.c: 114:    }
+}
+[e :U 293 ]
+[e $U 294  ]
+[e :U 295 ]
 "115
-[; ;tasks.c: 115:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 0) {
-[e $ ! && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 0 `i `ui 306  ]
-{
-"116
-[; ;tasks.c: 116:          run_wash();
-[e ( _run_wash ..  ]
+[; ;tasks.c: 115: }
+[e :UE 292 ]
+}
 "117
-[; ;tasks.c: 117:       }
-}
-[e :U 306 ]
-"118
-[; ;tasks.c: 118:    }
-}
-[e :U 299 ]
-[e $U 300  ]
-[e :U 301 ]
-"119
-[; ;tasks.c: 119: }
-[e :UE 298 ]
-}
-"121
-[; ;tasks.c: 121: void run_wash()
+[; ;tasks.c: 117: void run_wash()
 [v _run_wash `(v ~T0 @X0 1 ef ]
-"122
-[; ;tasks.c: 122: {
+"118
+[; ;tasks.c: 118: {
 {
 [e :U _run_wash ]
 [f ]
-"123
-[; ;tasks.c: 123:    if (w_machine.counter < 10000) {
-[e $ ! < . _w_machine 0 -> -> 10000 `i `ui 308  ]
+"119
+[; ;tasks.c: 119:    if (w_machine.counter < 10000) {
+[e $ ! < . _w_machine 0 -> -> 10000 `i `ui 302  ]
 {
-"124
-[; ;tasks.c: 124:       PORTCbits.RC4 = 1;
+"120
+[; ;tasks.c: 120:       PORTCbits.RC4 = 1;
 [e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-"125
-[; ;tasks.c: 125:       PORTCbits.RC5 = 1;
+"121
+[; ;tasks.c: 121:       PORTCbits.RC5 = 1;
 [e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
-"126
-[; ;tasks.c: 126:       PORTDbits.RD2 = 1;
+"122
+[; ;tasks.c: 122:       PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"127
-[; ;tasks.c: 127:       w_machine.counter++;
+"123
+[; ;tasks.c: 123:       w_machine.counter++;
 [e ++ . _w_machine 0 -> -> 1 `i `ui ]
+"124
+[; ;tasks.c: 124:    }
+}
+[e :U 302 ]
+"125
+[; ;tasks.c: 125:    if (w_machine.counter >= 10000 && f_clothes.clothes_washing.washing_cycles == 1)
+[e $ ! && >= . _w_machine 0 -> -> 10000 `i `ui == . . _f_clothes 2 1 -> -> 1 `i `ui 303  ]
+"127
+[; ;tasks.c: 127:    {
+{
 "128
-[; ;tasks.c: 128:    }
-}
-[e :U 308 ]
-"129
-[; ;tasks.c: 129:    if (w_machine.counter >= 10000 && f_clothes.clothes_washing.washing_cycles == 1)
-[e $ ! && >= . _w_machine 0 -> -> 10000 `i `ui == . . _f_clothes 2 1 -> -> 1 `i `ui 309  ]
-"131
-[; ;tasks.c: 131:    {
-{
-"132
-[; ;tasks.c: 132:       PORTCbits.RC4 = 0;
+[; ;tasks.c: 128:       PORTCbits.RC4 = 0;
 [e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-"133
-[; ;tasks.c: 133:       PORTCbits.RC5 = 0;
+"129
+[; ;tasks.c: 129:       PORTCbits.RC5 = 0;
 [e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
-"135
-[; ;tasks.c: 135:       PORTDbits.RD2 = 0;
+"131
+[; ;tasks.c: 131:       PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"136
-[; ;tasks.c: 136:       f_clothes.clothes_washing.state = 1;
+"132
+[; ;tasks.c: 132:       f_clothes.clothes_washing.state = 1;
 [e = . . _f_clothes 2 2 -> -> 1 `i `ui ]
-"137
-[; ;tasks.c: 137:       w_machine.counter = 0;
+"133
+[; ;tasks.c: 133:       w_machine.counter = 0;
 [e = . _w_machine 0 -> -> 0 `i `ui ]
-"138
-[; ;tasks.c: 138:       w_machine.flag = 1;
+"134
+[; ;tasks.c: 134:       w_machine.flag = 1;
 [e = . _w_machine 1 -> -> 1 `i `ui ]
-"139
-[; ;tasks.c: 139:       i_machine.flag = 0;
+"135
+[; ;tasks.c: 135:       i_machine.flag = 0;
 [e = . _i_machine 1 -> -> 0 `i `ui ]
-"140
-[; ;tasks.c: 140:    }
+"136
+[; ;tasks.c: 136:    }
 }
-[e :U 309 ]
-"141
-[; ;tasks.c: 141:    if (w_machine.counter >= 10000 && f_clothes.clothes_washing.washing_cycles > 1) {
-[e $ ! && >= . _w_machine 0 -> -> 10000 `i `ui > . . _f_clothes 2 1 -> -> 1 `i `ui 310  ]
+[e :U 303 ]
+"137
+[; ;tasks.c: 137:    if (w_machine.counter >= 10000 && f_clothes.clothes_washing.washing_cycles > 1) {
+[e $ ! && >= . _w_machine 0 -> -> 10000 `i `ui > . . _f_clothes 2 1 -> -> 1 `i `ui 304  ]
 {
-"142
-[; ;tasks.c: 142:       PORTDbits.RD2 = 0;
+"138
+[; ;tasks.c: 138:       PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"143
-[; ;tasks.c: 143:       f_clothes.clothes_washing.washing_cycles--;
+"139
+[; ;tasks.c: 139:       f_clothes.clothes_washing.washing_cycles--;
 [e -- . . _f_clothes 2 1 -> -> 1 `i `ui ]
-"144
-[; ;tasks.c: 144:       w_machine.counter = 0;
+"140
+[; ;tasks.c: 140:       w_machine.counter = 0;
 [e = . _w_machine 0 -> -> 0 `i `ui ]
-"145
-[; ;tasks.c: 145:    }
+"141
+[; ;tasks.c: 141:    }
 }
-[e :U 310 ]
-"146
-[; ;tasks.c: 146: }
-[e :UE 307 ]
+[e :U 304 ]
+"142
+[; ;tasks.c: 142: }
+[e :UE 301 ]
 }
-"148
-[; ;tasks.c: 148: void check_ironing() {
+"144
+[; ;tasks.c: 144: void check_ironing() {
 [v _check_ironing `(v ~T0 @X0 1 ef ]
 {
 [e :U _check_ironing ]
 [f ]
+"145
+[; ;tasks.c: 145:    while (1) {
+[e :U 307 ]
+{
+"146
+[; ;tasks.c: 146:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 1 && i_machine.flag == 0) {
+[e $ ! && && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 0 `i `ui 309  ]
+{
 "149
-[; ;tasks.c: 149:    while (1) {
-[e :U 313 ]
-{
-"150
-[; ;tasks.c: 150:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 1 && i_machine.flag == 0) {
-[e $ ! && && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 0 `i `ui 315  ]
-{
-"153
-[; ;tasks.c: 153:          f_clothes.clothes_ironing = f_clothes.clothes_washing;
+[; ;tasks.c: 149:          f_clothes.clothes_ironing = f_clothes.clothes_washing;
 [e = . _f_clothes 3 . _f_clothes 2 ]
-"154
-[; ;tasks.c: 154:          w_machine.flag = 0;
+"150
+[; ;tasks.c: 150:          w_machine.flag = 0;
 [e = . _w_machine 1 -> -> 0 `i `ui ]
-"155
-[; ;tasks.c: 155:          i_machine.flag = 1;
+"151
+[; ;tasks.c: 151:          i_machine.flag = 1;
 [e = . _i_machine 1 -> -> 1 `i `ui ]
-"156
-[; ;tasks.c: 156:          run_ironing(f_clothes.clothes_ironing);
+"152
+[; ;tasks.c: 152:          run_ironing(f_clothes.clothes_ironing);
 [e ( _run_ironing (1 . _f_clothes 3 ]
-"157
-[; ;tasks.c: 157:       }
+"153
+[; ;tasks.c: 153:       }
 }
-[e :U 315 ]
-"159
-[; ;tasks.c: 159:       if (f_clothes.clothes_washing.state == 1 && i_machine.flag == 1) {
-[e $ ! && == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 1 `i `ui 316  ]
+[e :U 309 ]
+"155
+[; ;tasks.c: 155:       if (f_clothes.clothes_washing.state == 1 && i_machine.flag == 1) {
+[e $ ! && == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 1 `i `ui 310  ]
 {
-"162
-[; ;tasks.c: 162:          run_ironing(f_clothes.clothes_ironing);
+"158
+[; ;tasks.c: 158:          run_ironing(f_clothes.clothes_ironing);
 [e ( _run_ironing (1 . _f_clothes 3 ]
+"159
+[; ;tasks.c: 159:       }
+}
+[e :U 310 ]
+"160
+[; ;tasks.c: 160:    }
+}
+[e :U 306 ]
+[e $U 307  ]
+[e :U 308 ]
+"161
+[; ;tasks.c: 161: }
+[e :UE 305 ]
+}
 "163
-[; ;tasks.c: 163:       }
-}
-[e :U 316 ]
-"164
-[; ;tasks.c: 164:    }
-}
-[e :U 312 ]
-[e $U 313  ]
-[e :U 314 ]
-"165
-[; ;tasks.c: 165: }
-[e :UE 311 ]
-}
-"167
-[; ;tasks.c: 167: void run_ironing(clothes_control_t clothes_ironing) {
+[; ;tasks.c: 163: void run_ironing(clothes_control_t clothes_ironing) {
 [v _run_ironing `(v ~T0 @X0 1 ef1`S284 ]
 {
 [e :U _run_ironing ]
 [v _clothes_ironing `S284 ~T0 @X0 1 r1 ]
 [f ]
-"168
-[; ;tasks.c: 168:    if (i_machine.counter < 10000) {
-[e $ ! < . _i_machine 0 -> -> 10000 `i `ui 318  ]
+"164
+[; ;tasks.c: 164:    if (i_machine.counter < 10000) {
+[e $ ! < . _i_machine 0 -> -> 10000 `i `ui 312  ]
 {
-"169
-[; ;tasks.c: 169:       PORTDbits.RD3 = 1;
+"165
+[; ;tasks.c: 165:       PORTDbits.RD3 = 1;
 [e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"170
-[; ;tasks.c: 170:       i_machine.counter++;
+"166
+[; ;tasks.c: 166:       i_machine.counter++;
 [e ++ . _i_machine 0 -> -> 1 `i `ui ]
-"171
-[; ;tasks.c: 171:    }
+"167
+[; ;tasks.c: 167:    }
 }
-[e :U 318 ]
-"173
-[; ;tasks.c: 173:    if (i_machine.counter >= 10000) {
-[e $ ! >= . _i_machine 0 -> -> 10000 `i `ui 319  ]
+[e :U 312 ]
+"169
+[; ;tasks.c: 169:    if (i_machine.counter >= 10000) {
+[e $ ! >= . _i_machine 0 -> -> 10000 `i `ui 313  ]
 {
-"174
-[; ;tasks.c: 174:       PORTDbits.RD3 = 0;
+"170
+[; ;tasks.c: 170:       PORTDbits.RD3 = 0;
 [e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
-"175
-[; ;tasks.c: 175:       i_machine.flag = 0;
+"171
+[; ;tasks.c: 171:       i_machine.flag = 0;
 [e = . _i_machine 1 -> -> 0 `i `ui ]
-"176
-[; ;tasks.c: 176:       i_machine.counter = 0;
+"172
+[; ;tasks.c: 172:       i_machine.counter = 0;
 [e = . _i_machine 0 -> -> 0 `i `ui ]
-"177
-[; ;tasks.c: 177:       f_clothes.clothes_washing.state = 2;
+"173
+[; ;tasks.c: 173:       f_clothes.clothes_washing.state = 2;
 [e = . . _f_clothes 2 2 -> -> 2 `i `ui ]
-"178
-[; ;tasks.c: 178:       f_clothes.clothes_finished[f_clothes.clothes_finished_size] = clothes_ironing;
+"174
+[; ;tasks.c: 174:       f_clothes.clothes_finished[f_clothes.clothes_finished_size] = clothes_ironing;
 [e = *U + &U . _f_clothes 4 * -> . _f_clothes 5 `ux -> -> # *U &U . _f_clothes 4 `ui `ux _clothes_ironing ]
-"179
-[; ;tasks.c: 179:       f_clothes.clothes_finished_size++;
+"175
+[; ;tasks.c: 175:       f_clothes.clothes_finished_size++;
 [e ++ . _f_clothes 5 -> -> 1 `i `ui ]
-"180
-[; ;tasks.c: 180:    }
+"176
+[; ;tasks.c: 176:    }
 }
-[e :U 319 ]
-"181
-[; ;tasks.c: 181: }
-[e :UE 317 ]
+[e :U 313 ]
+"177
+[; ;tasks.c: 177: }
+[e :UE 311 ]
 }

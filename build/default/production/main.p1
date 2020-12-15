@@ -480,7 +480,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24
 [p x CCP2MX = PORTC ]
 "25
-[p x PBADEN = ON ]
+[p x PBADEN = OFF ]
 "26
 [p x LPT1OSC = OFF ]
 "27

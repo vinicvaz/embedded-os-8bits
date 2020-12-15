@@ -76,29 +76,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./scheduler.h
 [; ;./scheduler.h: 11: u_int scheduler();
 [v _scheduler `(ui ~T0 @X0 0 e? ]
-"638 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 638:     struct {
-[s S24 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S24 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"648
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 648:     struct {
-[s S25 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S25 . PSP0 PSP1 PSP2 PSP3 PSP4 PSP5 PSP6 PSP7 ]
-"658
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 658:     struct {
-[s S26 :5 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S26 . . P1B P1C P1D ]
-"664
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 664:     struct {
-[s S27 :7 `uc 1 :1 `uc 1 ]
-[n S27 . . SS2 ]
-"637
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 637: typedef union {
-[u S23 `S24 1 `S25 1 `S26 1 `S27 1 ]
-[n S23 . . . . . ]
-"669
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 669: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
-[v _PORTDbits `VS23 ~T0 @X0 0 e@3971 ]
+"66 ./types.h
+[; ;./types.h: 66: {
+[s S284 `ui 1 `ui 1 `ui 1 ]
+[n S284 clothes_control color washing_cycles state ]
+"76
+[; ;./types.h: 76: {
+[s S285 `S284 -> 8 `i `ui 1 `S284 1 `S284 1 `S284 -> 8 `i `ui 1 ]
+[n S285 fila_clothes clothes_waiting fila_size clothes_washing clothes_ironing clothes_finished clothes_finished_size ]
+"14 timer.c
+[; ;timer.c: 14: extern fila_clothes_t f_clothes;
+[v _f_clothes `S285 ~T0 @X0 0 e ]
 "20 ./tasks.h
 [; ;./tasks.h: 20: void color_clothes();
 [v _color_clothes `(v ~T0 @X0 0 e? ]
@@ -117,17 +105,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6557
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6557: extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
 [v _INTCON3bits `VS262 ~T0 @X0 0 e@4080 ]
-"66 ./types.h
-[; ;./types.h: 66: {
-[s S284 `ui 1 `ui 1 `ui 1 ]
-[n S284 clothes_control color washing_cycles state ]
-"76
-[; ;./types.h: 76: {
-[s S285 `S284 -> 8 `i `ui 1 `S284 1 `S284 1 `S284 -> 8 `i `ui 1 ]
-[n S285 fila_clothes clothes_waiting fila_size clothes_washing clothes_ironing clothes_finished clothes_finished_size ]
-"14 timer.c
-[; ;timer.c: 14: extern fila_clothes_t f_clothes;
-[v _f_clothes `S285 ~T0 @X0 0 e ]
 "21 ./tasks.h
 [; ;./tasks.h: 21: void white_clothes();
 [v _white_clothes `(v ~T0 @X0 0 e? ]
@@ -820,14 +797,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 295 ]
 "76
-[; ;timer.c: 76:       if (INTCONbits.INT0IF == 1)
-[e $ ! == -> . . _INTCONbits 0 1 `i -> 1 `i 330  ]
+[; ;timer.c: 76:       if (INTCONbits.INT0IF == 1 && f_clothes.fila_size < 8)
+[e $ ! && == -> . . _INTCONbits 0 1 `i -> 1 `i < . _f_clothes 1 -> -> 8 `i `ui 330  ]
 "77
 [; ;timer.c: 77:       {
 {
-"78
-[; ;timer.c: 78:          PORTDbits.RD4 = 1;
-[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
 "79
 [; ;timer.c: 79:          color_clothes();
 [e ( _color_clothes ..  ]
