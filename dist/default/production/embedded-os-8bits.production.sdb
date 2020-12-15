@@ -27,7 +27,7 @@ WAITING_SEM 2
 WAITING_DELAY 3
 FINISHED 4
 ]
-"38 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
+"32 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [e E2558 . `uc
 READY 0
 RUNNING 1
@@ -93,23 +93,27 @@ FINISHED 4
 [v _rr_scheduler rr_scheduler `R(ui  1 e 2 0 ]
 "21 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\tasks.c
 [v _config_tasks config_tasks `R(v  1 e 1 0 ]
-"96
-[v _check_wash check_wash `R(v  1 e 1 0 ]
-"123
-[v _run_wash run_wash `R(v  1 e 1 0 ]
-"150
-[v _check_ironing check_ironing `R(v  1 e 1 0 ]
-"169
-[v _run_ironing run_ironing `R(v  1 e 1 0 ]
-"23 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
-[v _setup_timer_0 setup_timer_0 `R(v  1 e 1 0 ]
 "33
+[v _color_clothes color_clothes `R(v  1 e 1 0 ]
+"49
+[v _white_clothes white_clothes `R(v  1 e 1 0 ]
+"94
+[v _check_wash check_wash `R(v  1 e 1 0 ]
+"121
+[v _run_wash run_wash `R(v  1 e 1 0 ]
+"148
+[v _check_ironing check_ironing `R(v  1 e 1 0 ]
+"167
+[v _run_ironing run_ironing `R(v  1 e 1 0 ]
+"17 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
+[v _setup_timer_0 setup_timer_0 `R(v  1 e 1 0 ]
+"27
 [v _controle_delay controle_delay `R(ui  1 e 2 0 ]
-"50
+"44
 [v _IRQ_Timer0 IRQ_Timer0 `IIH(v  1 e 1 0 ]
 "14 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits/dispatcher.h
 [v _index index `i  1 e 2 0 ]
-[s S418 . 1 `uc 1 RC0 1 0 :1:0 
+[s S576 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -119,7 +123,7 @@ FINISHED 4
 `uc 1 RC7 1 0 :1:7 
 ]
 "497 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
-[s S576 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S585 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 SCK 1 0 :1:3 
@@ -128,7 +132,7 @@ FINISHED 4
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S585 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S594 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SCL 1 0 :1:3 
@@ -137,16 +141,16 @@ FINISHED 4
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S594 . 1 `uc 1 T1CKI 1 0 :1:0 
+[s S603 . 1 `uc 1 T1CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 ]
-[s S598 . 1 `uc 1 . 1 0 :1:0 
+[s S607 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[u S602 . 1 `S418 1 . 1 0 `S576 1 . 1 0 `S585 1 . 1 0 `S594 1 . 1 0 `S598 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES602  1 e 1 @3970 ]
+[u S611 . 1 `S576 1 . 1 0 `S585 1 . 1 0 `S594 1 . 1 0 `S603 1 . 1 0 `S607 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES611  1 e 1 @3970 ]
 [s S378 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
@@ -157,7 +161,7 @@ FINISHED 4
 `uc 1 RD7 1 0 :1:7 
 ]
 "669
-[s S514 . 1 `uc 1 PSP0 1 0 :1:0 
+[s S523 . 1 `uc 1 PSP0 1 0 :1:0 
 `uc 1 PSP1 1 0 :1:1 
 `uc 1 PSP2 1 0 :1:2 
 `uc 1 PSP3 1 0 :1:3 
@@ -166,17 +170,17 @@ FINISHED 4
 `uc 1 PSP6 1 0 :1:6 
 `uc 1 PSP7 1 0 :1:7 
 ]
-[s S523 . 1 `uc 1 . 1 0 :5:0 
+[s S532 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 P1B 1 0 :1:5 
 `uc 1 P1C 1 0 :1:6 
 `uc 1 P1D 1 0 :1:7 
 ]
-[s S528 . 1 `uc 1 . 1 0 :7:0 
+[s S537 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 SS2 1 0 :1:7 
 ]
-[u S531 . 1 `S378 1 . 1 0 `S514 1 . 1 0 `S523 1 . 1 0 `S528 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES531  1 e 1 @3971 ]
-[s S449 . 1 `uc 1 TRISB0 1 0 :1:0 
+[u S540 . 1 `S378 1 . 1 0 `S523 1 . 1 0 `S532 1 . 1 0 `S537 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES540  1 e 1 @3971 ]
+[s S409 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -186,7 +190,7 @@ FINISHED 4
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1731
-[s S458 . 1 `uc 1 RB0 1 0 :1:0 
+[s S418 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -195,20 +199,8 @@ FINISHED 4
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
-[u S467 . 1 `S449 1 . 1 0 `S458 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES467  1 e 1 @3987 ]
-[s S409 . 1 `uc 1 TRISC0 1 0 :1:0 
-`uc 1 TRISC1 1 0 :1:1 
-`uc 1 TRISC2 1 0 :1:2 
-`uc 1 TRISC3 1 0 :1:3 
-`uc 1 TRISC4 1 0 :1:4 
-`uc 1 TRISC5 1 0 :1:5 
-`uc 1 TRISC6 1 0 :1:6 
-`uc 1 TRISC7 1 0 :1:7 
-]
-"1953
 [u S427 . 1 `S409 1 . 1 0 `S418 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES427  1 e 1 @3988 ]
+[v _TRISBbits TRISBbits `VES427  1 e 1 @3987 ]
 [s S369 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
@@ -310,7 +302,7 @@ FINISHED 4
 [v _w_machine w_machine `S59  1 e 4 0 ]
 "19
 [v _i_machine i_machine `S59  1 e 4 0 ]
-"21 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
+"15 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [v _quantum quantum `i  1 e 2 0 ]
 "21 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\main.c
 [v _main main `R(v  1 e 1 0 ]
@@ -339,58 +331,61 @@ FINISHED 4
 [v _func func `*.37R(v  1 p 2 -4 ]
 "63
 } 46
-"23 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
+"17 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [v _setup_timer_0 setup_timer_0 `R(v  1 e 1 0 ]
 {
-"31
+"25
 } 0
 "21 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\tasks.c
 [v _config_tasks config_tasks `R(v  1 e 1 0 ]
 {
-"38
+"31
 } 0
 "118 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\kernel.c
 [v _task_idle task_idle `R(v  1 e 1 0 ]
 {
 "126
 } 0
-"96 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\tasks.c
+"94 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\tasks.c
 [v _check_wash check_wash `R(v  1 e 1 0 ]
 {
-"103
+"101
 [v _i i `i  1 a 2 0 ]
 [s S48 clothes_control 6 `ui 1 color 2 0 `ui 1 washing_cycles 2 2 `ui 1 state 2 4 ]
-"101
+"99
 [v _next_clothes next_clothes `S48  1 a 6 2 ]
-"121
+"119
 } 8
-"123
+"121
 [v _run_wash run_wash `R(v  1 e 1 0 ]
 {
-"148
+"146
 } 0
-"150
+"148
 [v _check_ironing check_ironing `R(v  1 e 1 0 ]
 {
-"167
+"165
 } 0
-"169
+"167
 [v _run_ironing run_ironing `R(v  1 e 1 0 ]
 {
 [s S48 clothes_control 6 `ui 1 color 2 0 `ui 1 washing_cycles 2 2 `ui 1 state 2 4 ]
 [v _clothes_ironing clothes_ironing `S48  1 p 6 -6 ]
-"183
+"181
 } 0
-"50 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
+"44 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [v _IRQ_Timer0 IRQ_Timer0 `IIH(v  1 e 1 0 ]
 {
-[s S48 clothes_control 6 `ui 1 color 2 0 `ui 1 washing_cycles 2 2 `ui 1 state 2 4 ]
-"96
-[v IRQ_Timer0@clothes_883 clothes `S48  1 a 6 22 ]
-"82
-[v IRQ_Timer0@clothes clothes `S48  1 a 6 16 ]
-"106
+"86
 } 0
+"49 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\tasks.c
+[v _white_clothes white_clothes `R(v  1 e 1 0 ]
+{
+[s S48 clothes_control 6 `ui 1 color 2 0 `ui 1 washing_cycles 2 2 `ui 1 state 2 4 ]
+"52
+[v _clothes clothes `S48  1 a 6 0 ]
+"62
+} 6
 "11 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\scheduler.c
 [v _scheduler scheduler `R(ui  1 e 2 0 ]
 {
@@ -413,14 +408,22 @@ FINISHED 4
 [v _divisor divisor `ui  1 p 2 -4 ]
 "25
 } 1
-"33 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
+"27 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\timer.c
 [v _controle_delay controle_delay `R(ui  1 e 2 0 ]
 {
-"34
+"28
 [v _i i `i  1 a 2 0 ]
 [v _flag flag `i  1 a 2 2 ]
-"48
+"42
 } 4
+"33 C:\Users\Giulio\Desktop\repoSO\embedded-os-8bits\tasks.c
+[v _color_clothes color_clothes `R(v  1 e 1 0 ]
+{
+[s S48 clothes_control 6 `ui 1 color 2 0 `ui 1 washing_cycles 2 2 `ui 1 state 2 4 ]
+"36
+[v _clothes clothes `S48  1 a 6 0 ]
+"47
+} 6
 "15 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `R(ui  1 e 2 0 ]
 {

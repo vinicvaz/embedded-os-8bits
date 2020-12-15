@@ -19,42 +19,47 @@ u_int flag = 0;
 //u_int flag_wash = 0;
 
 void config_tasks() {
-   TRISDbits.RD0 = 1; // colorido
-   TRISDbits.RD1 = 1; // branco
+   //TRISDbits.RD0 = 1; // colorido
+   //TRISDbits.RD1 = 1; // branco
    TRISDbits.RD2 = 0; // maquina
    TRISDbits.RD3 = 0; // ferro de passar
    TRISDbits.RD4 = 0; // tudo ligado
  
-   TRISBbits.TRISB0 = 0;
-   TRISBbits.TRISB1 = 0;
+   TRISBbits.TRISB0 = 0; // botão roupa colorida
+   TRISBbits.TRISB1 = 0; // botão roupa branca
 
 }
 
-/*void __interrupt() read_buttons() {
-   if (INTCONbits.INT0IF == 1 && f_clothes.fila_size < MAX_CLOTHES) {
+void color_clothes()
+{
+   while(1){
       clothes_control_t clothes;
-      clothes.color = 0;
-      clothes.washing_cycles = 1;
-      clothes.state = 0;
+      clothes.color = 0; //colorida
+      clothes.washing_cycles = 1; //1 ciclo de lavagem
+      clothes.state = 0; //roupa está suja
 
       f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
       f_clothes.fila_size++;
 
-      INTCONbits.INT0IF = 0;
+      INTCONbits.INT0IF = 0; //volta botão para 0
+      ENABLE_INTERRUPTS();
    }
+}
 
-   if (INTCON3bits.INT1IF == 1 && f_clothes.fila_size < MAX_CLOTHES) {
+void white_clothes()
+{
+   while(1){
       clothes_control_t clothes;
-      clothes.color = 1;
-      clothes.washing_cycles = 2;
-      clothes.state = 0;
+      clothes.color = 1; //roupa branca
+      clothes.washing_cycles = 2; //2 ciclos de lavagem
+      clothes.state = 0; //roupa está suja
 
       f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
       f_clothes.fila_size++;
       INTCON3bits.INT1IF = 0;
+      ENABLE_INTERRUPTS();
    }
-}*/
-
+}
 /*void task_read_buttons() {
    while (1) {
       if (PORTDbits.RD0 == 0 && PORTDbits.RD1 == 0) {

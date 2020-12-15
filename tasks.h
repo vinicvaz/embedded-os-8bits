@@ -17,6 +17,8 @@
 
 // Tasks novas
 void config_tasks();
+void color_clothes();
+void white_clothes();
 //void task_read_buttons();
 void check_wash();
 void run_wash(); //clothes_control_t clothes_washing

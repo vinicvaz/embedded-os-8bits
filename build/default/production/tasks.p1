@@ -14,21 +14,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2175
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 2175: extern volatile TRISDbits_t TRISDbits __attribute__((address(0xF95)));
 [v _TRISDbits `VS72 ~T0 @X0 0 e@3989 ]
-"1932
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 1932:     struct {
-[s S67 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S67 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-"1942
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 1942:     struct {
-[s S68 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S68 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
-"1931
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 1931: typedef union {
-[u S66 `S67 1 `S68 1 ]
-[n S66 . . . ]
-"1953
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 1953: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
-[v _TRISCbits `VS66 ~T0 @X0 0 e@3988 ]
 "1710
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 1710:     struct {
 [s S61 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -44,13 +29,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1731
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 1731: extern volatile TRISBbits_t TRISBbits __attribute__((address(0xF93)));
 [v _TRISBbits `VS60 ~T0 @X0 0 e@3987 ]
-"14 ./resources.h
-[; ;./resources.h: 14: {
-[s S288 `ui 1 `ui 1 ]
-[n S288 machine counter flag ]
-"16 tasks.c
-[; ;tasks.c: 16: extern machine_t w_machine;
-[v _w_machine `S288 ~T0 @X0 0 e ]
 "66 ./types.h
 [; ;./types.h: 66: {
 [s S284 `ui 1 `ui 1 `ui 1 ]
@@ -62,6 +40,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15 tasks.c
 [; ;tasks.c: 15: extern fila_clothes_t f_clothes;
 [v _f_clothes `S285 ~T0 @X0 0 e ]
+"6698 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6698:     struct {
+[s S270 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S270 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"6708
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6708:     struct {
+[s S271 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S271 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"6718
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6718:     struct {
+[s S272 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S272 . . GIEL GIEH ]
+"6697
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6697: typedef union {
+[u S269 `S270 1 `S271 1 `S272 1 ]
+[n S269 . . . . ]
+"6724
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6724: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
+[v _INTCONbits `VS269 ~T0 @X0 0 e@4082 ]
+"6536
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6536:     struct {
+[s S263 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S263 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
+"6546
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6546:     struct {
+[s S264 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S264 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
+"6535
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6535: typedef union {
+[u S262 `S263 1 `S264 1 ]
+[n S262 . . . ]
+"6557
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6557: extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
+[v _INTCON3bits `VS262 ~T0 @X0 0 e@4080 ]
+"14 ./resources.h
+[; ;./resources.h: 14: {
+[s S288 `ui 1 `ui 1 ]
+[n S288 machine counter flag ]
+"16 tasks.c
+[; ;tasks.c: 16: extern machine_t w_machine;
+[v _w_machine `S288 ~T0 @X0 0 e ]
 "638 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 638:     struct {
 [s S24 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -85,8 +104,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "669
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 669: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
 [v _PORTDbits `VS23 ~T0 @X0 0 e@3971 ]
-"22 ./tasks.h
-[; ;./tasks.h: 22: void run_wash();
+"24 ./tasks.h
+[; ;./tasks.h: 24: void run_wash();
 [v _run_wash `(v ~T0 @X0 0 e? ]
 "456 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 456:     struct {
@@ -118,8 +137,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17 tasks.c
 [; ;tasks.c: 17: extern machine_t i_machine;
 [v _i_machine `S288 ~T0 @X0 0 e ]
-"24 ./tasks.h
-[; ;./tasks.h: 24: void run_ironing(clothes_control_t clothes_ironing);
+"26 ./tasks.h
+[; ;./tasks.h: 26: void run_ironing(clothes_control_t clothes_ironing);
 [v _run_ironing `(v ~T0 @X0 0 ef1`S284 ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 54: __asm("PORTA equ 0F80h");
@@ -547,12 +566,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _config_tasks ]
 [f ]
-"22
-[; ;tasks.c: 22:    TRISDbits.RD0 = 1;
-[e = . . _TRISDbits 1 0 -> -> 1 `i `uc ]
-"23
-[; ;tasks.c: 23:    TRISDbits.RD1 = 1;
-[e = . . _TRISDbits 1 1 -> -> 1 `i `uc ]
 "24
 [; ;tasks.c: 24:    TRISDbits.RD2 = 0;
 [e = . . _TRISDbits 1 2 -> -> 0 `i `uc ]
@@ -562,299 +575,367 @@ Version 4.0 HI-TECH Software Intermediate Code
 "26
 [; ;tasks.c: 26:    TRISDbits.RD4 = 0;
 [e = . . _TRISDbits 1 4 -> -> 0 `i `uc ]
-"27
-[; ;tasks.c: 27:    TRISCbits.RC0 = 0;
-[e = . . _TRISCbits 1 0 -> -> 0 `i `uc ]
 "28
-[; ;tasks.c: 28:    TRISCbits.RC1 = 0;
-[e = . . _TRISCbits 1 1 -> -> 0 `i `uc ]
-"29
-[; ;tasks.c: 29:    TRISCbits.RC2 = 0;
-[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
-"30
-[; ;tasks.c: 30:    TRISCbits.RC3 = 0;
-[e = . . _TRISCbits 1 3 -> -> 0 `i `uc ]
-"31
-[; ;tasks.c: 31:    TRISCbits.RC4 = 0;
-[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
-"32
-[; ;tasks.c: 32:    TRISCbits.RC5 = 0;
-[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
-"33
-[; ;tasks.c: 33:    TRISCbits.RC6 = 0;
-[e = . . _TRISCbits 1 6 -> -> 0 `i `uc ]
-"34
-[; ;tasks.c: 34:    TRISCbits.RC7 = 0;
-[e = . . _TRISCbits 1 7 -> -> 0 `i `uc ]
-"35
-[; ;tasks.c: 35:    TRISBbits.TRISB0 = 0;
+[; ;tasks.c: 28:    TRISBbits.TRISB0 = 0;
 [e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
-"36
-[; ;tasks.c: 36:    TRISBbits.TRISB1 = 0;
+"29
+[; ;tasks.c: 29:    TRISBbits.TRISB1 = 0;
 [e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-"38
-[; ;tasks.c: 38: }
+"31
+[; ;tasks.c: 31: }
 [e :UE 289 ]
 }
-"96
-[; ;tasks.c: 96: void check_wash() {
-[v _check_wash `(v ~T0 @X0 1 ef ]
+"33
+[; ;tasks.c: 33: void color_clothes()
+[v _color_clothes `(v ~T0 @X0 1 ef ]
+"34
+[; ;tasks.c: 34: {
 {
-[e :U _check_wash ]
+[e :U _color_clothes ]
 [f ]
-"97
-[; ;tasks.c: 97:    while (1) {
+"35
+[; ;tasks.c: 35:    while(1){
 [e :U 292 ]
 {
-"99
-[; ;tasks.c: 99:       if (w_machine.flag == 0 && f_clothes.fila_size > 0) {
-[e $ ! && == . _w_machine 1 -> -> 0 `i `ui > . _f_clothes 1 -> -> 0 `i `ui 294  ]
-{
-"101
-[; ;tasks.c: 101:          clothes_control_t next_clothes = f_clothes.clothes_waiting[0];
-[v _next_clothes `S284 ~T0 @X0 1 a ]
-[e = _next_clothes *U + &U . _f_clothes 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _f_clothes 0 `ui `ux ]
-"103
-[; ;tasks.c: 103:          for (int i = 0; i < 8 - 1; i++) {
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i - -> 8 `i -> 1 `i 295  ]
-[e $U 296  ]
-[e :U 295 ]
-{
-"104
-[; ;tasks.c: 104:             f_clothes.clothes_waiting[i] = f_clothes.clothes_waiting[i + 1];
-[e = *U + &U . _f_clothes 0 * -> -> _i `ui `ux -> -> # *U &U . _f_clothes 0 `ui `ux *U + &U . _f_clothes 0 * -> -> + _i -> 1 `i `ui `ux -> -> # *U &U . _f_clothes 0 `ui `ux ]
-"105
-[; ;tasks.c: 105:          }
-}
-[e ++ _i -> 1 `i ]
-[e $ < _i - -> 8 `i -> 1 `i 295  ]
-[e :U 296 ]
-}
-"107
-[; ;tasks.c: 107:          f_clothes.fila_size--;
-[e -- . _f_clothes 1 -> -> 1 `i `ui ]
-"108
-[; ;tasks.c: 108:          f_clothes.clothes_washing = next_clothes;
-[e = . _f_clothes 2 _next_clothes ]
-"109
-[; ;tasks.c: 109:          w_machine.flag = 1;
-[e = . _w_machine 1 -> -> 1 `i `ui ]
-"110
-[; ;tasks.c: 110:          PORTDbits.RD4 = ~PORTDbits.RD4;
-[e = . . _PORTDbits 0 4 -> ~ -> . . _PORTDbits 0 4 `i `uc ]
-"113
-[; ;tasks.c: 113:          next_clothes.state = 0;
-[e = . _next_clothes 2 -> -> 0 `i `ui ]
-"114
-[; ;tasks.c: 114:          run_wash();
-[e ( _run_wash ..  ]
-"115
-[; ;tasks.c: 115:       }
-}
-[e :U 294 ]
-"117
-[; ;tasks.c: 117:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 0) {
-[e $ ! && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 0 `i `ui 298  ]
-{
-"118
-[; ;tasks.c: 118:          run_wash();
-[e ( _run_wash ..  ]
-"119
-[; ;tasks.c: 119:       }
-}
-[e :U 298 ]
-"120
-[; ;tasks.c: 120:    }
+"36
+[; ;tasks.c: 36:       clothes_control_t clothes;
+[v _clothes `S284 ~T0 @X0 1 a ]
+"37
+[; ;tasks.c: 37:       clothes.color = 0;
+[e = . _clothes 0 -> -> 0 `i `ui ]
+"38
+[; ;tasks.c: 38:       clothes.washing_cycles = 1;
+[e = . _clothes 1 -> -> 1 `i `ui ]
+"39
+[; ;tasks.c: 39:       clothes.state = 0;
+[e = . _clothes 2 -> -> 0 `i `ui ]
+"41
+[; ;tasks.c: 41:       f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
+[e = *U + &U . _f_clothes 0 * -> . _f_clothes 1 `ux -> -> # *U &U . _f_clothes 0 `ui `ux _clothes ]
+"42
+[; ;tasks.c: 42:       f_clothes.fila_size++;
+[e ++ . _f_clothes 1 -> -> 1 `i `ui ]
+"44
+[; ;tasks.c: 44:       INTCONbits.INT0IF = 0;
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+"45
+[; ;tasks.c: 45:       INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"46
+[; ;tasks.c: 46:    }
 }
 [e :U 291 ]
 [e $U 292  ]
 [e :U 293 ]
-"121
-[; ;tasks.c: 121: }
+"47
+[; ;tasks.c: 47: }
 [e :UE 290 ]
 }
-"123
-[; ;tasks.c: 123: void run_wash()
+"49
+[; ;tasks.c: 49: void white_clothes()
+[v _white_clothes `(v ~T0 @X0 1 ef ]
+"50
+[; ;tasks.c: 50: {
+{
+[e :U _white_clothes ]
+[f ]
+"51
+[; ;tasks.c: 51:    while(1){
+[e :U 296 ]
+{
+"52
+[; ;tasks.c: 52:       clothes_control_t clothes;
+[v _clothes `S284 ~T0 @X0 1 a ]
+"53
+[; ;tasks.c: 53:       clothes.color = 1;
+[e = . _clothes 0 -> -> 1 `i `ui ]
+"54
+[; ;tasks.c: 54:       clothes.washing_cycles = 2;
+[e = . _clothes 1 -> -> 2 `i `ui ]
+"55
+[; ;tasks.c: 55:       clothes.state = 0;
+[e = . _clothes 2 -> -> 0 `i `ui ]
+"57
+[; ;tasks.c: 57:       f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
+[e = *U + &U . _f_clothes 0 * -> . _f_clothes 1 `ux -> -> # *U &U . _f_clothes 0 `ui `ux _clothes ]
+"58
+[; ;tasks.c: 58:       f_clothes.fila_size++;
+[e ++ . _f_clothes 1 -> -> 1 `i `ui ]
+"59
+[; ;tasks.c: 59:       INTCON3bits.INT1IF = 0;
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+"60
+[; ;tasks.c: 60:       INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"61
+[; ;tasks.c: 61:    }
+}
+[e :U 295 ]
+[e $U 296  ]
+[e :U 297 ]
+"62
+[; ;tasks.c: 62: }
+[e :UE 294 ]
+}
+"94
+[; ;tasks.c: 94: void check_wash() {
+[v _check_wash `(v ~T0 @X0 1 ef ]
+{
+[e :U _check_wash ]
+[f ]
+"95
+[; ;tasks.c: 95:    while (1) {
+[e :U 300 ]
+{
+"97
+[; ;tasks.c: 97:       if (w_machine.flag == 0 && f_clothes.fila_size > 0) {
+[e $ ! && == . _w_machine 1 -> -> 0 `i `ui > . _f_clothes 1 -> -> 0 `i `ui 302  ]
+{
+"99
+[; ;tasks.c: 99:          clothes_control_t next_clothes = f_clothes.clothes_waiting[0];
+[v _next_clothes `S284 ~T0 @X0 1 a ]
+[e = _next_clothes *U + &U . _f_clothes 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _f_clothes 0 `ui `ux ]
+"101
+[; ;tasks.c: 101:          for (int i = 0; i < 8 - 1; i++) {
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i - -> 8 `i -> 1 `i 303  ]
+[e $U 304  ]
+[e :U 303 ]
+{
+"102
+[; ;tasks.c: 102:             f_clothes.clothes_waiting[i] = f_clothes.clothes_waiting[i + 1];
+[e = *U + &U . _f_clothes 0 * -> -> _i `ui `ux -> -> # *U &U . _f_clothes 0 `ui `ux *U + &U . _f_clothes 0 * -> -> + _i -> 1 `i `ui `ux -> -> # *U &U . _f_clothes 0 `ui `ux ]
+"103
+[; ;tasks.c: 103:          }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i - -> 8 `i -> 1 `i 303  ]
+[e :U 304 ]
+}
+"105
+[; ;tasks.c: 105:          f_clothes.fila_size--;
+[e -- . _f_clothes 1 -> -> 1 `i `ui ]
+"106
+[; ;tasks.c: 106:          f_clothes.clothes_washing = next_clothes;
+[e = . _f_clothes 2 _next_clothes ]
+"107
+[; ;tasks.c: 107:          w_machine.flag = 1;
+[e = . _w_machine 1 -> -> 1 `i `ui ]
+"108
+[; ;tasks.c: 108:          PORTDbits.RD4 = ~PORTDbits.RD4;
+[e = . . _PORTDbits 0 4 -> ~ -> . . _PORTDbits 0 4 `i `uc ]
+"111
+[; ;tasks.c: 111:          next_clothes.state = 0;
+[e = . _next_clothes 2 -> -> 0 `i `ui ]
+"112
+[; ;tasks.c: 112:          run_wash();
+[e ( _run_wash ..  ]
+"113
+[; ;tasks.c: 113:       }
+}
+[e :U 302 ]
+"115
+[; ;tasks.c: 115:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 0) {
+[e $ ! && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 0 `i `ui 306  ]
+{
+"116
+[; ;tasks.c: 116:          run_wash();
+[e ( _run_wash ..  ]
+"117
+[; ;tasks.c: 117:       }
+}
+[e :U 306 ]
+"118
+[; ;tasks.c: 118:    }
+}
+[e :U 299 ]
+[e $U 300  ]
+[e :U 301 ]
+"119
+[; ;tasks.c: 119: }
+[e :UE 298 ]
+}
+"121
+[; ;tasks.c: 121: void run_wash()
 [v _run_wash `(v ~T0 @X0 1 ef ]
-"124
-[; ;tasks.c: 124: {
+"122
+[; ;tasks.c: 122: {
 {
 [e :U _run_wash ]
 [f ]
-"125
-[; ;tasks.c: 125:    if (w_machine.counter < 10000) {
-[e $ ! < . _w_machine 0 -> -> 10000 `i `ui 300  ]
+"123
+[; ;tasks.c: 123:    if (w_machine.counter < 10000) {
+[e $ ! < . _w_machine 0 -> -> 10000 `i `ui 308  ]
 {
-"126
-[; ;tasks.c: 126:       PORTCbits.RC4 = 1;
+"124
+[; ;tasks.c: 124:       PORTCbits.RC4 = 1;
 [e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
-"127
-[; ;tasks.c: 127:       PORTCbits.RC5 = 1;
+"125
+[; ;tasks.c: 125:       PORTCbits.RC5 = 1;
 [e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
-"128
-[; ;tasks.c: 128:       PORTDbits.RD2 = 1;
+"126
+[; ;tasks.c: 126:       PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"129
-[; ;tasks.c: 129:       w_machine.counter++;
+"127
+[; ;tasks.c: 127:       w_machine.counter++;
 [e ++ . _w_machine 0 -> -> 1 `i `ui ]
-"130
-[; ;tasks.c: 130:    }
+"128
+[; ;tasks.c: 128:    }
 }
-[e :U 300 ]
+[e :U 308 ]
+"129
+[; ;tasks.c: 129:    if (w_machine.counter >= 10000 && f_clothes.clothes_washing.washing_cycles == 1)
+[e $ ! && >= . _w_machine 0 -> -> 10000 `i `ui == . . _f_clothes 2 1 -> -> 1 `i `ui 309  ]
 "131
-[; ;tasks.c: 131:    if (w_machine.counter >= 10000 && f_clothes.clothes_washing.washing_cycles == 1)
-[e $ ! && >= . _w_machine 0 -> -> 10000 `i `ui == . . _f_clothes 2 1 -> -> 1 `i `ui 301  ]
-"133
-[; ;tasks.c: 133:    {
+[; ;tasks.c: 131:    {
 {
-"134
-[; ;tasks.c: 134:       PORTCbits.RC4 = 0;
+"132
+[; ;tasks.c: 132:       PORTCbits.RC4 = 0;
 [e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-"135
-[; ;tasks.c: 135:       PORTCbits.RC5 = 0;
+"133
+[; ;tasks.c: 133:       PORTCbits.RC5 = 0;
 [e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
-"137
-[; ;tasks.c: 137:       PORTDbits.RD2 = 0;
+"135
+[; ;tasks.c: 135:       PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"138
-[; ;tasks.c: 138:       f_clothes.clothes_washing.state = 1;
+"136
+[; ;tasks.c: 136:       f_clothes.clothes_washing.state = 1;
 [e = . . _f_clothes 2 2 -> -> 1 `i `ui ]
-"139
-[; ;tasks.c: 139:       w_machine.counter = 0;
+"137
+[; ;tasks.c: 137:       w_machine.counter = 0;
 [e = . _w_machine 0 -> -> 0 `i `ui ]
-"140
-[; ;tasks.c: 140:       w_machine.flag = 1;
+"138
+[; ;tasks.c: 138:       w_machine.flag = 1;
 [e = . _w_machine 1 -> -> 1 `i `ui ]
-"141
-[; ;tasks.c: 141:       i_machine.flag = 0;
+"139
+[; ;tasks.c: 139:       i_machine.flag = 0;
 [e = . _i_machine 1 -> -> 0 `i `ui ]
-"142
-[; ;tasks.c: 142:    }
+"140
+[; ;tasks.c: 140:    }
 }
-[e :U 301 ]
-"143
-[; ;tasks.c: 143:    if (w_machine.counter >= 10000 && f_clothes.clothes_washing.washing_cycles > 1) {
-[e $ ! && >= . _w_machine 0 -> -> 10000 `i `ui > . . _f_clothes 2 1 -> -> 1 `i `ui 302  ]
+[e :U 309 ]
+"141
+[; ;tasks.c: 141:    if (w_machine.counter >= 10000 && f_clothes.clothes_washing.washing_cycles > 1) {
+[e $ ! && >= . _w_machine 0 -> -> 10000 `i `ui > . . _f_clothes 2 1 -> -> 1 `i `ui 310  ]
 {
-"144
-[; ;tasks.c: 144:       PORTDbits.RD2 = 0;
+"142
+[; ;tasks.c: 142:       PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"145
-[; ;tasks.c: 145:       f_clothes.clothes_washing.washing_cycles--;
+"143
+[; ;tasks.c: 143:       f_clothes.clothes_washing.washing_cycles--;
 [e -- . . _f_clothes 2 1 -> -> 1 `i `ui ]
-"146
-[; ;tasks.c: 146:       w_machine.counter = 0;
+"144
+[; ;tasks.c: 144:       w_machine.counter = 0;
 [e = . _w_machine 0 -> -> 0 `i `ui ]
-"147
-[; ;tasks.c: 147:    }
+"145
+[; ;tasks.c: 145:    }
 }
-[e :U 302 ]
+[e :U 310 ]
+"146
+[; ;tasks.c: 146: }
+[e :UE 307 ]
+}
 "148
-[; ;tasks.c: 148: }
-[e :UE 299 ]
-}
-"150
-[; ;tasks.c: 150: void check_ironing() {
+[; ;tasks.c: 148: void check_ironing() {
 [v _check_ironing `(v ~T0 @X0 1 ef ]
 {
 [e :U _check_ironing ]
 [f ]
-"151
-[; ;tasks.c: 151:    while (1) {
-[e :U 305 ]
+"149
+[; ;tasks.c: 149:    while (1) {
+[e :U 313 ]
 {
-"152
-[; ;tasks.c: 152:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 1 && i_machine.flag == 0) {
-[e $ ! && && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 0 `i `ui 307  ]
+"150
+[; ;tasks.c: 150:       if (w_machine.flag == 1 && f_clothes.clothes_washing.state == 1 && i_machine.flag == 0) {
+[e $ ! && && == . _w_machine 1 -> -> 1 `i `ui == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 0 `i `ui 315  ]
 {
-"155
-[; ;tasks.c: 155:          f_clothes.clothes_ironing = f_clothes.clothes_washing;
+"153
+[; ;tasks.c: 153:          f_clothes.clothes_ironing = f_clothes.clothes_washing;
 [e = . _f_clothes 3 . _f_clothes 2 ]
-"156
-[; ;tasks.c: 156:          w_machine.flag = 0;
+"154
+[; ;tasks.c: 154:          w_machine.flag = 0;
 [e = . _w_machine 1 -> -> 0 `i `ui ]
-"157
-[; ;tasks.c: 157:          i_machine.flag = 1;
+"155
+[; ;tasks.c: 155:          i_machine.flag = 1;
 [e = . _i_machine 1 -> -> 1 `i `ui ]
-"158
-[; ;tasks.c: 158:          run_ironing(f_clothes.clothes_ironing);
+"156
+[; ;tasks.c: 156:          run_ironing(f_clothes.clothes_ironing);
 [e ( _run_ironing (1 . _f_clothes 3 ]
+"157
+[; ;tasks.c: 157:       }
+}
+[e :U 315 ]
 "159
-[; ;tasks.c: 159:       }
-}
-[e :U 307 ]
-"161
-[; ;tasks.c: 161:       if (f_clothes.clothes_washing.state == 1 && i_machine.flag == 1) {
-[e $ ! && == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 1 `i `ui 308  ]
+[; ;tasks.c: 159:       if (f_clothes.clothes_washing.state == 1 && i_machine.flag == 1) {
+[e $ ! && == . . _f_clothes 2 2 -> -> 1 `i `ui == . _i_machine 1 -> -> 1 `i `ui 316  ]
 {
-"164
-[; ;tasks.c: 164:          run_ironing(f_clothes.clothes_ironing);
+"162
+[; ;tasks.c: 162:          run_ironing(f_clothes.clothes_ironing);
 [e ( _run_ironing (1 . _f_clothes 3 ]
+"163
+[; ;tasks.c: 163:       }
+}
+[e :U 316 ]
+"164
+[; ;tasks.c: 164:    }
+}
+[e :U 312 ]
+[e $U 313  ]
+[e :U 314 ]
 "165
-[; ;tasks.c: 165:       }
+[; ;tasks.c: 165: }
+[e :UE 311 ]
 }
-[e :U 308 ]
-"166
-[; ;tasks.c: 166:    }
-}
-[e :U 304 ]
-[e $U 305  ]
-[e :U 306 ]
 "167
-[; ;tasks.c: 167: }
-[e :UE 303 ]
-}
-"169
-[; ;tasks.c: 169: void run_ironing(clothes_control_t clothes_ironing) {
+[; ;tasks.c: 167: void run_ironing(clothes_control_t clothes_ironing) {
 [v _run_ironing `(v ~T0 @X0 1 ef1`S284 ]
 {
 [e :U _run_ironing ]
 [v _clothes_ironing `S284 ~T0 @X0 1 r1 ]
 [f ]
-"170
-[; ;tasks.c: 170:    if (i_machine.counter < 10000) {
-[e $ ! < . _i_machine 0 -> -> 10000 `i `ui 310  ]
+"168
+[; ;tasks.c: 168:    if (i_machine.counter < 10000) {
+[e $ ! < . _i_machine 0 -> -> 10000 `i `ui 318  ]
 {
-"171
-[; ;tasks.c: 171:       PORTDbits.RD3 = 1;
+"169
+[; ;tasks.c: 169:       PORTDbits.RD3 = 1;
 [e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"172
-[; ;tasks.c: 172:       i_machine.counter++;
+"170
+[; ;tasks.c: 170:       i_machine.counter++;
 [e ++ . _i_machine 0 -> -> 1 `i `ui ]
+"171
+[; ;tasks.c: 171:    }
+}
+[e :U 318 ]
 "173
-[; ;tasks.c: 173:    }
-}
-[e :U 310 ]
-"175
-[; ;tasks.c: 175:    if (i_machine.counter >= 10000) {
-[e $ ! >= . _i_machine 0 -> -> 10000 `i `ui 311  ]
+[; ;tasks.c: 173:    if (i_machine.counter >= 10000) {
+[e $ ! >= . _i_machine 0 -> -> 10000 `i `ui 319  ]
 {
-"176
-[; ;tasks.c: 176:       PORTDbits.RD3 = 0;
+"174
+[; ;tasks.c: 174:       PORTDbits.RD3 = 0;
 [e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
-"177
-[; ;tasks.c: 177:       i_machine.flag = 0;
+"175
+[; ;tasks.c: 175:       i_machine.flag = 0;
 [e = . _i_machine 1 -> -> 0 `i `ui ]
-"178
-[; ;tasks.c: 178:       i_machine.counter = 0;
+"176
+[; ;tasks.c: 176:       i_machine.counter = 0;
 [e = . _i_machine 0 -> -> 0 `i `ui ]
-"179
-[; ;tasks.c: 179:       f_clothes.clothes_washing.state = 2;
+"177
+[; ;tasks.c: 177:       f_clothes.clothes_washing.state = 2;
 [e = . . _f_clothes 2 2 -> -> 2 `i `ui ]
-"180
-[; ;tasks.c: 180:       f_clothes.clothes_finished[f_clothes.clothes_finished_size] = clothes_ironing;
+"178
+[; ;tasks.c: 178:       f_clothes.clothes_finished[f_clothes.clothes_finished_size] = clothes_ironing;
 [e = *U + &U . _f_clothes 4 * -> . _f_clothes 5 `ux -> -> # *U &U . _f_clothes 4 `ui `ux _clothes_ironing ]
-"181
-[; ;tasks.c: 181:       f_clothes.clothes_finished_size++;
+"179
+[; ;tasks.c: 179:       f_clothes.clothes_finished_size++;
 [e ++ . _f_clothes 5 -> -> 1 `i `ui ]
-"182
-[; ;tasks.c: 182:    }
+"180
+[; ;tasks.c: 180:    }
 }
-[e :U 311 ]
-"183
-[; ;tasks.c: 183: }
-[e :UE 309 ]
+[e :U 319 ]
+"181
+[; ;tasks.c: 181: }
+[e :UE 317 ]
 }

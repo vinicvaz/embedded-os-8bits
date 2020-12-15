@@ -56,8 +56,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./scheduler.h
 [; ;./scheduler.h: 11: u_int scheduler();
 [v _scheduler `(ui ~T0 @X0 0 e? ]
-[v F2641 `(v ~T0 @X0 0 tf ]
-[v F2644 `(v ~T0 @X0 0 tf ]
+[v F2643 `(v ~T0 @X0 0 tf ]
+[v F2646 `(v ~T0 @X0 0 tf ]
 "6174 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6174:     struct {
 [s S262 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -115,7 +115,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17 ./kernel.h
 [; ;./kernel.h: 17: void task_idle();
 [v _task_idle `(v ~T0 @X0 0 e? ]
-[v F2650 `(v ~T0 @X0 0 tf ]
+[v F2652 `(v ~T0 @X0 0 tf ]
 "19 ./tasks.h
 [; ;./tasks.h: 19: void config_tasks();
 [v _config_tasks `(v ~T0 @X0 0 e? ]
@@ -639,7 +639,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "50
 [; ;kernel.c: 50: void task_create(u_int prior, task_ptr func)
-[v _task_create `(v ~T0 @X0 1 ef2`ui`*F2641 ]
+[v _task_create `(v ~T0 @X0 1 ef2`ui`*F2643 ]
 "51
 [; ;kernel.c: 51: {
 {
@@ -647,7 +647,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50
 [; ;kernel.c: 50: void task_create(u_int prior, task_ptr func)
 [v _prior `ui ~T0 @X0 1 r1 ]
-[v _func `*F2644 ~T0 @X0 1 r2 ]
+[v _func `*F2646 ~T0 @X0 1 r2 ]
 "51
 [; ;kernel.c: 51: {
 [f ]
@@ -746,7 +746,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _setup_timer_0 ..  ]
 "109
 [; ;kernel.c: 109:    task_create(0, &task_idle);
-[e ( _task_create (2 , -> -> 0 `i `ui -> &U _task_idle `*F2650 ]
+[e ( _task_create (2 , -> -> 0 `i `ui -> &U _task_idle `*F2652 ]
 "112
 [; ;kernel.c: 112:    config_tasks();
 [e ( _config_tasks ..  ]

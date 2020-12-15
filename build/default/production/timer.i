@@ -4711,6 +4711,8 @@ typedef struct fila_clothes
 # 5 "./tasks.h" 2
 # 19 "./tasks.h"
 void config_tasks();
+void color_clothes();
+void white_clothes();
 
 void check_wash();
 void run_wash();
@@ -4718,69 +4720,12 @@ void check_ironing();
 void run_ironing(clothes_control_t clothes_ironing);
 # 8 "timer.c" 2
 
-# 1 "./kernel.h" 1
-# 12 "./kernel.h"
-uint8_t get_task_id();
-void task_delay(u_int ms);
-void task_create(u_int prior, task_ptr func);
-void os_start();
-void os_config();
-void task_idle();
-void task_yield();
-
-
-u_int who();
-# 9 "timer.c" 2
-
-# 1 "./mm.h" 1
-# 23 "./mm.h"
-typedef union _SALLOC
-{
- u_char byte;
- struct _BITS
- {
-  unsigned count:7;
-  unsigned alloc:1;
- }bits;
-}SALLOC;
-
-
-
-
-
-
-
-
-#pragma udata _SRAM_ALLOC
-
-
-
-u_char* SRAMalloc(u_char nBytes);
-void SRAMfree(u_char* pSRAM);
-void SRAMInitHeap(void);
-     u_char _SRAMmerge(SALLOC * pSegA);
-# 10 "timer.c" 2
-
-
-
-# 1 "./resources.h" 1
-# 13 "./resources.h"
-typedef struct machine
-{
-    u_int counter;
-    u_int flag;
-
-} machine_t;
-# 13 "timer.c" 2
-
-
-
 # 1 "./timer.h" 1
 # 12 "./timer.h"
 void setup_timer_0();
 void __attribute__((picinterrupt(("")))) IRQ_Timer0();
 u_int controle_delay();
-# 16 "timer.c" 2
+# 9 "timer.c" 2
 
 # 1 "./dispatcher.h" 1
 # 10 "./dispatcher.h"
@@ -4795,7 +4740,8 @@ u_int prior_scheduler();
 
 extern fila_aptos_t f_aptos;
 int index;
-# 17 "timer.c" 2
+# 10 "timer.c" 2
+
 
 
 extern fila_aptos_t f_aptos;
@@ -4829,7 +4775,8 @@ u_int controle_delay() {
    return flag;
 }
 
-void __attribute__((picinterrupt(("")))) IRQ_Timer0() {
+void __attribute__((picinterrupt(("")))) IRQ_Timer0()
+{
 
    INTCONbits.GIE = 0;
 
@@ -4859,30 +4806,15 @@ void __attribute__((picinterrupt(("")))) IRQ_Timer0() {
          do { f_aptos.task_running = scheduler(); if (f_aptos.ready_queue[f_aptos.task_running].task_stack.size == 0) { TOS = f_aptos.ready_queue[f_aptos.task_running].task_func; } else { f_aptos.ready_queue[f_aptos.task_running].task_state = RUNNING; WREG = f_aptos.ready_queue[f_aptos.task_running].w_reg; BSR = f_aptos.ready_queue[f_aptos.task_running].bsr_reg; STATUS = f_aptos.ready_queue[f_aptos.task_running].status_reg; index = f_aptos.ready_queue[f_aptos.task_running].task_stack.size - 1; STKPTR = 0; while(index) { __asm("PUSH"); TOS = f_aptos.ready_queue[f_aptos.task_running].task_stack.stack[index]; index--; } } INTCONbits.GIE = 1;} while (0);;
       }
    }
-   if (INTCONbits.INT0IF == 1 && f_clothes.fila_size < 8)
-   {
-      clothes_control_t clothes;
-      clothes.color = 0;
-      clothes.washing_cycles = 1;
-      clothes.state = 0;
 
-      f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
-      f_clothes.fila_size++;
+      if (INTCONbits.INT0IF == 1)
+      {
+         PORTDbits.RD4 = 1;
+         color_clothes();
+      }
 
-      INTCONbits.INT0IF = 0;
-      INTCONbits.GIE = 1;
-   }
-
-   if (INTCON3bits.INT1IF == 1 && f_clothes.fila_size < 8)
-   {
-      clothes_control_t clothes;
-      clothes.color = 1;
-      clothes.washing_cycles = 2;
-      clothes.state = 0;
-
-      f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
-      f_clothes.fila_size++;
-      INTCON3bits.INT1IF = 0;
-      INTCONbits.GIE = 1;
-   }
+      if (INTCON3bits.INT1IF == 1 && f_clothes.fila_size < 8)
+      {
+         white_clothes();
+      }
 }

@@ -4752,6 +4752,8 @@ u_int controle_delay();
 # 1 "./tasks.h" 1
 # 19 "./tasks.h"
 void config_tasks();
+void color_clothes();
+void white_clothes();
 
 void check_wash();
 void run_wash();

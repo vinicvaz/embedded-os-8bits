@@ -36,14 +36,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14
 [; ;./kernel.h: 14: void task_create(u_int prior, task_ptr func);
 [v _task_create `(v ~T0 @X0 0 ef2`ui`*F2605 ]
-"23 ./tasks.h
-[; ;./tasks.h: 23: void check_ironing();
+"25 ./tasks.h
+[; ;./tasks.h: 25: void check_ironing();
 [v _check_ironing `(v ~T0 @X0 0 e? ]
-[v F2643 `(v ~T0 @X0 0 tf ]
-"21
-[; ;./tasks.h: 21: void check_wash();
-[v _check_wash `(v ~T0 @X0 0 e? ]
 [v F2645 `(v ~T0 @X0 0 tf ]
+"23
+[; ;./tasks.h: 23: void check_wash();
+[v _check_wash `(v ~T0 @X0 0 e? ]
+[v F2647 `(v ~T0 @X0 0 tf ]
 "15 ./kernel.h
 [; ;./kernel.h: 15: void os_start();
 [v _os_start `(v ~T0 @X0 0 e? ]
@@ -553,10 +553,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _os_config ..  ]
 "35
 [; ;main.c: 35:    task_create(2, &check_ironing);
-[e ( _task_create (2 , -> -> 2 `i `ui -> &U _check_ironing `*F2643 ]
+[e ( _task_create (2 , -> -> 2 `i `ui -> &U _check_ironing `*F2645 ]
 "36
 [; ;main.c: 36:    task_create(2, &check_wash);
-[e ( _task_create (2 , -> -> 2 `i `ui -> &U _check_wash `*F2645 ]
+[e ( _task_create (2 , -> -> 2 `i `ui -> &U _check_wash `*F2647 ]
 "39
 [; ;main.c: 39:    os_start();
 [e ( _os_start ..  ]

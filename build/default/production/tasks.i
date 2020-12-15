@@ -4711,6 +4711,8 @@ typedef struct fila_clothes
 # 5 "./tasks.h" 2
 # 19 "./tasks.h"
 void config_tasks();
+void color_clothes();
+void white_clothes();
 
 void check_wash();
 void run_wash();
@@ -4781,24 +4783,48 @@ u_int flag = 0;
 
 
 void config_tasks() {
-   TRISDbits.RD0 = 1;
-   TRISDbits.RD1 = 1;
+
+
    TRISDbits.RD2 = 0;
    TRISDbits.RD3 = 0;
    TRISDbits.RD4 = 0;
-   TRISCbits.RC0 = 0;
-   TRISCbits.RC1 = 0;
-   TRISCbits.RC2 = 0;
-   TRISCbits.RC3 = 0;
-   TRISCbits.RC4 = 0;
-   TRISCbits.RC5 = 0;
-   TRISCbits.RC6 = 0;
-   TRISCbits.RC7 = 0;
+
    TRISBbits.TRISB0 = 0;
    TRISBbits.TRISB1 = 0;
 
 }
-# 96 "tasks.c"
+
+void color_clothes()
+{
+   while(1){
+      clothes_control_t clothes;
+      clothes.color = 0;
+      clothes.washing_cycles = 1;
+      clothes.state = 0;
+
+      f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
+      f_clothes.fila_size++;
+
+      INTCONbits.INT0IF = 0;
+      INTCONbits.GIE = 1;
+   }
+}
+
+void white_clothes()
+{
+   while(1){
+      clothes_control_t clothes;
+      clothes.color = 1;
+      clothes.washing_cycles = 2;
+      clothes.state = 0;
+
+      f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
+      f_clothes.fila_size++;
+      INTCON3bits.INT1IF = 0;
+      INTCONbits.GIE = 1;
+   }
+}
+# 94 "tasks.c"
 void check_wash() {
    while (1) {
 

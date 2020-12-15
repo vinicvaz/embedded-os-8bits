@@ -36,8 +36,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6258
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6258: extern volatile unsigned char TMR0L __attribute__((address(0xFD6)));
 [v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
-"38 timer.c
-[; ;timer.c: 38:       if (f_aptos.ready_queue[i].task_state == WAITING_DELAY) {
+"32 timer.c
+[; ;timer.c: 32:       if (f_aptos.ready_queue[i].task_state == WAITING_DELAY) {
 [c E2558 0 1 2 3 4 .. ]
 [n E2558 . READY RUNNING WAITING_SEM WAITING_DELAY FINISHED  ]
 [v F2576 `(v ~T0 @X0 0 tf ]
@@ -53,8 +53,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./types.h: 58: {
 [s S283 `S282 -> 5 `i `ui 1 `ui 1 ]
 [n S283 fila_aptos ready_queue ready_queue_size task_running ]
-"19 timer.c
-[; ;timer.c: 19: extern fila_aptos_t f_aptos;
+"13 timer.c
+[; ;timer.c: 13: extern fila_aptos_t f_aptos;
 [v _f_aptos `S283 ~T0 @X0 0 e ]
 [t ~ __interrupt . k ]
 [t T42 __interrupt ]
@@ -76,17 +76,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./scheduler.h
 [; ;./scheduler.h: 11: u_int scheduler();
 [v _scheduler `(ui ~T0 @X0 0 e? ]
-"66 ./types.h
-[; ;./types.h: 66: {
-[s S284 `ui 1 `ui 1 `ui 1 ]
-[n S284 clothes_control color washing_cycles state ]
-"76
-[; ;./types.h: 76: {
-[s S285 `S284 -> 8 `i `ui 1 `S284 1 `S284 1 `S284 -> 8 `i `ui 1 ]
-[n S285 fila_clothes clothes_waiting fila_size clothes_washing clothes_ironing clothes_finished clothes_finished_size ]
-"20 timer.c
-[; ;timer.c: 20: extern fila_clothes_t f_clothes;
-[v _f_clothes `S285 ~T0 @X0 0 e ]
+"638 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 638:     struct {
+[s S24 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S24 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"648
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 648:     struct {
+[s S25 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S25 . PSP0 PSP1 PSP2 PSP3 PSP4 PSP5 PSP6 PSP7 ]
+"658
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 658:     struct {
+[s S26 :5 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S26 . . P1B P1C P1D ]
+"664
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 664:     struct {
+[s S27 :7 `uc 1 :1 `uc 1 ]
+[n S27 . . SS2 ]
+"637
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 637: typedef union {
+[u S23 `S24 1 `S25 1 `S26 1 `S27 1 ]
+[n S23 . . . . . ]
+"669
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 669: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
+[v _PORTDbits `VS23 ~T0 @X0 0 e@3971 ]
+"20 ./tasks.h
+[; ;./tasks.h: 20: void color_clothes();
+[v _color_clothes `(v ~T0 @X0 0 e? ]
 "6536 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6536:     struct {
 [s S263 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -102,6 +117,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6557
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 6557: extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
 [v _INTCON3bits `VS262 ~T0 @X0 0 e@4080 ]
+"66 ./types.h
+[; ;./types.h: 66: {
+[s S284 `ui 1 `ui 1 `ui 1 ]
+[n S284 clothes_control color washing_cycles state ]
+"76
+[; ;./types.h: 76: {
+[s S285 `S284 -> 8 `i `ui 1 `S284 1 `S284 1 `S284 -> 8 `i `ui 1 ]
+[n S285 fila_clothes clothes_waiting fila_size clothes_washing clothes_ironing clothes_finished clothes_finished_size ]
+"14 timer.c
+[; ;timer.c: 14: extern fila_clothes_t f_clothes;
+[v _f_clothes `S285 ~T0 @X0 0 e ]
+"21 ./tasks.h
+[; ;./tasks.h: 21: void white_clothes();
+[v _white_clothes `(v ~T0 @X0 0 e? ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4520.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -519,135 +548,137 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14 ./dispatcher.h
 [; ;./dispatcher.h: 14: int index;
 [v _index `i ~T0 @X0 1 e ]
-"21 timer.c
-[; ;timer.c: 21: int quantum = 12;
+"15 timer.c
+[; ;timer.c: 15: int quantum = 12;
 [v _quantum `i ~T0 @X0 1 e ]
 [i _quantum
 -> 12 `i
 ]
-"23
-[; ;timer.c: 23: void setup_timer_0() {
+"17
+[; ;timer.c: 17: void setup_timer_0() {
 [v _setup_timer_0 `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup_timer_0 ]
 [f ]
-"25
-[; ;timer.c: 25:    INTCONbits.TMR0IE = 1;
+"19
+[; ;timer.c: 19:    INTCONbits.TMR0IE = 1;
 [e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"26
-[; ;timer.c: 26:    INTCONbits.PEIE = 1;
+"20
+[; ;timer.c: 20:    INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"27
-[; ;timer.c: 27:    T0CONbits.T0CS = 0;
+"21
+[; ;timer.c: 21:    T0CONbits.T0CS = 0;
 [e = . . _T0CONbits 0 3 -> -> 0 `i `uc ]
-"28
-[; ;timer.c: 28:    T0CONbits.PSA = 0;
+"22
+[; ;timer.c: 22:    T0CONbits.PSA = 0;
 [e = . . _T0CONbits 0 1 -> -> 0 `i `uc ]
-"29
-[; ;timer.c: 29:    T0CONbits.T0PS = 0b111;
+"23
+[; ;timer.c: 23:    T0CONbits.T0PS = 0b111;
 [e = . . _T0CONbits 0 0 -> -> 7 `i `uc ]
-"30
-[; ;timer.c: 30:    TMR0L = 0;
+"24
+[; ;timer.c: 24:    TMR0L = 0;
 [e = _TMR0L -> -> 0 `i `uc ]
-"31
-[; ;timer.c: 31: }
-[e :UE 289 ]
+"25
+[; ;timer.c: 25: }
+[e :UE 286 ]
 }
-"33
-[; ;timer.c: 33: u_int controle_delay() {
+"27
+[; ;timer.c: 27: u_int controle_delay() {
 [v _controle_delay `(ui ~T0 @X0 1 ef ]
 {
 [e :U _controle_delay ]
 [f ]
-"34
-[; ;timer.c: 34:    int i, flag = 0;
+"28
+[; ;timer.c: 28:    int i, flag = 0;
 [v _i `i ~T0 @X0 1 a ]
 [v _flag `i ~T0 @X0 1 a ]
 [e = _flag -> 0 `i ]
-"37
-[; ;timer.c: 37:    for (i = 0; i < f_aptos.ready_queue_size; i++) {
+"31
+[; ;timer.c: 31:    for (i = 0; i < f_aptos.ready_queue_size; i++) {
 {
 [e = _i -> 0 `i ]
-[e $U 294  ]
-[e :U 291 ]
+[e $U 291  ]
+[e :U 288 ]
 {
-"38
-[; ;timer.c: 38:       if (f_aptos.ready_queue[i].task_state == WAITING_DELAY) {
-[e $ ! == -> . *U + &U . _f_aptos 0 * -> -> _i `ui `ux -> -> # *U &U . _f_aptos 0 `ui `ux 1 `ui -> . `E2558 3 `ui 295  ]
+"32
+[; ;timer.c: 32:       if (f_aptos.ready_queue[i].task_state == WAITING_DELAY) {
+[e $ ! == -> . *U + &U . _f_aptos 0 * -> -> _i `ui `ux -> -> # *U &U . _f_aptos 0 `ui `ux 1 `ui -> . `E2558 3 `ui 292  ]
 {
-"39
-[; ;timer.c: 39:          f_aptos.ready_queue[i].delay--;
+"33
+[; ;timer.c: 33:          f_aptos.ready_queue[i].delay--;
 [e -- . *U + &U . _f_aptos 0 * -> -> _i `ui `ux -> -> # *U &U . _f_aptos 0 `ui `ux 8 -> -> 1 `i `ui ]
-"40
-[; ;timer.c: 40:          if (f_aptos.ready_queue[i].delay == 0) {
-[e $ ! == . *U + &U . _f_aptos 0 * -> -> _i `ui `ux -> -> # *U &U . _f_aptos 0 `ui `ux 8 -> -> 0 `i `ui 296  ]
+"34
+[; ;timer.c: 34:          if (f_aptos.ready_queue[i].delay == 0) {
+[e $ ! == . *U + &U . _f_aptos 0 * -> -> _i `ui `ux -> -> # *U &U . _f_aptos 0 `ui `ux 8 -> -> 0 `i `ui 293  ]
 {
-"41
-[; ;timer.c: 41:             f_aptos.ready_queue[i].task_state = READY;
+"35
+[; ;timer.c: 35:             f_aptos.ready_queue[i].task_state = READY;
 [e = . *U + &U . _f_aptos 0 * -> -> _i `ui `ux -> -> # *U &U . _f_aptos 0 `ui `ux 1 . `E2558 0 ]
-"42
-[; ;timer.c: 42:             flag = 1;
+"36
+[; ;timer.c: 36:             flag = 1;
 [e = _flag -> 1 `i ]
-"43
-[; ;timer.c: 43:          }
+"37
+[; ;timer.c: 37:          }
 }
-[e :U 296 ]
-"44
-[; ;timer.c: 44:       }
+[e :U 293 ]
+"38
+[; ;timer.c: 38:       }
 }
-[e :U 295 ]
-"45
-[; ;timer.c: 45:    }
+[e :U 292 ]
+"39
+[; ;timer.c: 39:    }
 }
 [e ++ _i -> 1 `i ]
-[e :U 294 ]
-[e $ < -> _i `ui . _f_aptos 1 291  ]
-[e :U 292 ]
+[e :U 291 ]
+[e $ < -> _i `ui . _f_aptos 1 288  ]
+[e :U 289 ]
 }
-"47
-[; ;timer.c: 47:    return flag;
+"41
+[; ;timer.c: 41:    return flag;
 [e ) -> _flag `ui ]
-[e $UE 290  ]
-"48
-[; ;timer.c: 48: }
-[e :UE 290 ]
+[e $UE 287  ]
+"42
+[; ;timer.c: 42: }
+[e :UE 287 ]
 }
 [v $root$_IRQ_Timer0 `(v ~T0 @X0 0 e ]
-"50
-[; ;timer.c: 50: void __attribute__((picinterrupt(("")))) IRQ_Timer0() {
+"44
+[; ;timer.c: 44: void __attribute__((picinterrupt(("")))) IRQ_Timer0()
 [v _IRQ_Timer0 `(v ~T42 @X0 1 ef ]
+"45
+[; ;timer.c: 45: {
 {
 [e :U _IRQ_Timer0 ]
 [f ]
-"52
-[; ;timer.c: 52:    INTCONbits.GIE = 0;
+"47
+[; ;timer.c: 47:    INTCONbits.GIE = 0;
 [e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-"54
-[; ;timer.c: 54:    if (INTCONbits.TMR0IF)
-[e $ ! != -> . . _INTCONbits 0 2 `i -> 0 `i 298  ]
-"55
-[; ;timer.c: 55:    {
+"49
+[; ;timer.c: 49:    if (INTCONbits.TMR0IF)
+[e $ ! != -> . . _INTCONbits 0 2 `i -> 0 `i 295  ]
+"50
+[; ;timer.c: 50:    {
 {
-"56
-[; ;timer.c: 56:       INTCONbits.TMR0IF = 0;
+"51
+[; ;timer.c: 51:       INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"57
-[; ;timer.c: 57:       TMR0L = 0;
+"52
+[; ;timer.c: 52:       TMR0L = 0;
 [e = _TMR0L -> -> 0 `i `uc ]
-"61
-[; ;timer.c: 61:       quantum--;
+"56
+[; ;timer.c: 56:       quantum--;
 [e -- _quantum -> 1 `i ]
-"62
-[; ;timer.c: 62:       if (quantum == 0)
-[e $ ! == _quantum -> 0 `i 299  ]
-"63
-[; ;timer.c: 63:       {
+"57
+[; ;timer.c: 57:       if (quantum == 0)
+[e $ ! == _quantum -> 0 `i 296  ]
+"58
+[; ;timer.c: 58:       {
 {
-"65
-[; ;timer.c: 65:          do { if (f_aptos.ready_queue[f_aptos.task_running].task_stack.size > 0) { index = 0; f_aptos.ready_queue[f_aptos.task_running].task_state = READY; f_aptos.ready_queue[f_aptos.task_running].w_reg = WREG; f_aptos.ready_queue[f_aptos.task_running].bsr_reg = BSR; f_aptos.ready_queue[f_aptos.task_running].status_reg = STATUS; f_aptos.ready_queue[f_aptos.task_running].task_stack.size = 0; do { f_aptos.ready_queue[f_aptos.task_running].task_stack.stack[index] = TOS; index++; __asm("POP"); } while (STKPTR); } else { f_aptos.ready_queue[f_aptos.task_running].task_state = READY; } } while (0);;
-[e :U 302 ]
+"60
+[; ;timer.c: 60:          do { if (f_aptos.ready_queue[f_aptos.task_running].task_stack.size > 0) { index = 0; f_aptos.ready_queue[f_aptos.task_running].task_state = READY; f_aptos.ready_queue[f_aptos.task_running].w_reg = WREG; f_aptos.ready_queue[f_aptos.task_running].bsr_reg = BSR; f_aptos.ready_queue[f_aptos.task_running].status_reg = STATUS; f_aptos.ready_queue[f_aptos.task_running].task_stack.size = 0; do { f_aptos.ready_queue[f_aptos.task_running].task_stack.stack[index] = TOS; index++; __asm("POP"); } while (STKPTR); } else { f_aptos.ready_queue[f_aptos.task_running].task_state = READY; } } while (0);;
+[e :U 299 ]
 {
-[e $ ! > . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 0 `i `ui 303  ]
+[e $ ! > . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 0 `i `ui 300  ]
 {
 [e = _index -> 0 `i ]
 [e = . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 1 . `E2558 0 ]
@@ -655,34 +686,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 5 _BSR ]
 [e = . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 7 _STATUS ]
 [e = . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 0 `i `ui ]
-[e :U 306 ]
-{
-[e = *U + &U . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 0 * -> -> _index `ui `ux -> -> # *U &U . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 0 `ui `ux -> _TOS `uc ]
-[e ++ _index -> 1 `i ]
-[; <" POP ;# ">
-}
-[e $ != -> _STKPTR `i -> 0 `i 306  ]
-[e :U 305 ]
-}
-[e $U 307  ]
 [e :U 303 ]
 {
+[e = *U + &U . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 0 * -> -> _index `ui `ux -> -> # *U &U . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 0 `ui `ux -> _TOS `uc ]
+[e ++ _index -> 1 `i ]
+[; <" POP ;# ">
+}
+[e $ != -> _STKPTR `i -> 0 `i 303  ]
+[e :U 302 ]
+}
+[e $U 304  ]
+[e :U 300 ]
+{
 [e = . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 1 . `E2558 0 ]
 }
-[e :U 307 ]
+[e :U 304 ]
 }
-[e :U 301 ]
-"67
-[; ;timer.c: 67:          do { f_aptos.task_running = scheduler(); if (f_aptos.ready_queue[f_aptos.task_running].task_stack.size == 0) { TOS = f_aptos.ready_queue[f_aptos.task_running].task_func; } else { f_aptos.ready_queue[f_aptos.task_running].task_state = RUNNING; WREG = f_aptos.ready_queue[f_aptos.task_running].w_reg; BSR = f_aptos.ready_queue[f_aptos.task_running].bsr_reg; STATUS = f_aptos.ready_queue[f_aptos.task_running].status_reg; index = f_aptos.ready_queue[f_aptos.task_running].task_stack.size - 1; STKPTR = 0; while(index) { __asm("PUSH"); TOS = f_aptos.ready_queue[f_aptos.task_running].task_stack.stack[index]; index--; } } INTCONbits.GIE = 1;} while (0);;
-[e :U 310 ]
+[e :U 298 ]
+"62
+[; ;timer.c: 62:          do { f_aptos.task_running = scheduler(); if (f_aptos.ready_queue[f_aptos.task_running].task_stack.size == 0) { TOS = f_aptos.ready_queue[f_aptos.task_running].task_func; } else { f_aptos.ready_queue[f_aptos.task_running].task_state = RUNNING; WREG = f_aptos.ready_queue[f_aptos.task_running].w_reg; BSR = f_aptos.ready_queue[f_aptos.task_running].bsr_reg; STATUS = f_aptos.ready_queue[f_aptos.task_running].status_reg; index = f_aptos.ready_queue[f_aptos.task_running].task_stack.size - 1; STKPTR = 0; while(index) { __asm("PUSH"); TOS = f_aptos.ready_queue[f_aptos.task_running].task_stack.stack[index]; index--; } } INTCONbits.GIE = 1;} while (0);;
+[e :U 307 ]
 {
 [e = . _f_aptos 2 ( _scheduler ..  ]
-[e $ ! == . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 0 `i `ui 311  ]
+[e $ ! == . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 0 `i `ui 308  ]
 {
 [e = _TOS -> . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 3 `um ]
 }
-[e $U 312  ]
-[e :U 311 ]
+[e $U 309  ]
+[e :U 308 ]
 {
 [e = . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 1 . `E2558 1 ]
 [e = _WREG . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 6 ]
@@ -690,39 +721,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _STATUS . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 7 ]
 [e = _index -> - . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 1 `i `ui `i ]
 [e = _STKPTR -> -> 0 `i `uc ]
-[e $U 313  ]
-[e :U 314 ]
+[e $U 310  ]
+[e :U 311 ]
 {
 [; <" PUSH ;# ">
 [e = _TOS -> *U + &U . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 0 * -> -> _index `ui `ux -> -> # *U &U . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 0 `ui `ux `um ]
 [e -- _index -> 1 `i ]
 }
-[e :U 313 ]
-[e $ != _index -> 0 `i 314  ]
-[e :U 315 ]
-}
+[e :U 310 ]
+[e $ != _index -> 0 `i 311  ]
 [e :U 312 ]
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 }
 [e :U 309 ]
-"68
-[; ;timer.c: 68:          quantum = 12;
-[e = _quantum -> 12 `i ]
-"69
-[; ;timer.c: 69:       }
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 }
-[e :U 299 ]
-"72
-[; ;timer.c: 72:       if (controle_delay() && 0 == 1)
-[e $ ! && != ( _controle_delay ..  -> -> 0 `i `ui == -> 0 `i -> 1 `i 316  ]
-"73
-[; ;timer.c: 73:       {
+[e :U 306 ]
+"63
+[; ;timer.c: 63:          quantum = 12;
+[e = _quantum -> 12 `i ]
+"64
+[; ;timer.c: 64:       }
+}
+[e :U 296 ]
+"67
+[; ;timer.c: 67:       if (controle_delay() && 0 == 1)
+[e $ ! && != ( _controle_delay ..  -> -> 0 `i `ui == -> 0 `i -> 1 `i 313  ]
+"68
+[; ;timer.c: 68:       {
 {
-"75
-[; ;timer.c: 75:          do { if (f_aptos.ready_queue[f_aptos.task_running].task_stack.size > 0) { index = 0; f_aptos.ready_queue[f_aptos.task_running].task_state = READY; f_aptos.ready_queue[f_aptos.task_running].w_reg = WREG; f_aptos.ready_queue[f_aptos.task_running].bsr_reg = BSR; f_aptos.ready_queue[f_aptos.task_running].status_reg = STATUS; f_aptos.ready_queue[f_aptos.task_running].task_stack.size = 0; do { f_aptos.ready_queue[f_aptos.task_running].task_stack.stack[index] = TOS; index++; __asm("POP"); } while (STKPTR); } else { f_aptos.ready_queue[f_aptos.task_running].task_state = READY; } } while (0);;
-[e :U 319 ]
+"70
+[; ;timer.c: 70:          do { if (f_aptos.ready_queue[f_aptos.task_running].task_stack.size > 0) { index = 0; f_aptos.ready_queue[f_aptos.task_running].task_state = READY; f_aptos.ready_queue[f_aptos.task_running].w_reg = WREG; f_aptos.ready_queue[f_aptos.task_running].bsr_reg = BSR; f_aptos.ready_queue[f_aptos.task_running].status_reg = STATUS; f_aptos.ready_queue[f_aptos.task_running].task_stack.size = 0; do { f_aptos.ready_queue[f_aptos.task_running].task_stack.stack[index] = TOS; index++; __asm("POP"); } while (STKPTR); } else { f_aptos.ready_queue[f_aptos.task_running].task_state = READY; } } while (0);;
+[e :U 316 ]
 {
-[e $ ! > . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 0 `i `ui 320  ]
+[e $ ! > . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 0 `i `ui 317  ]
 {
 [e = _index -> 0 `i ]
 [e = . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 1 . `E2558 0 ]
@@ -730,34 +761,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 5 _BSR ]
 [e = . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 7 _STATUS ]
 [e = . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 0 `i `ui ]
-[e :U 323 ]
+[e :U 320 ]
 {
 [e = *U + &U . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 0 * -> -> _index `ui `ux -> -> # *U &U . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 0 `ui `ux -> _TOS `uc ]
 [e ++ _index -> 1 `i ]
 [; <" POP ;# ">
 }
-[e $ != -> _STKPTR `i -> 0 `i 323  ]
-[e :U 322 ]
+[e $ != -> _STKPTR `i -> 0 `i 320  ]
+[e :U 319 ]
 }
-[e $U 324  ]
-[e :U 320 ]
+[e $U 321  ]
+[e :U 317 ]
 {
 [e = . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 1 . `E2558 0 ]
 }
-[e :U 324 ]
+[e :U 321 ]
 }
-[e :U 318 ]
-"77
-[; ;timer.c: 77:          do { f_aptos.task_running = scheduler(); if (f_aptos.ready_queue[f_aptos.task_running].task_stack.size == 0) { TOS = f_aptos.ready_queue[f_aptos.task_running].task_func; } else { f_aptos.ready_queue[f_aptos.task_running].task_state = RUNNING; WREG = f_aptos.ready_queue[f_aptos.task_running].w_reg; BSR = f_aptos.ready_queue[f_aptos.task_running].bsr_reg; STATUS = f_aptos.ready_queue[f_aptos.task_running].status_reg; index = f_aptos.ready_queue[f_aptos.task_running].task_stack.size - 1; STKPTR = 0; while(index) { __asm("PUSH"); TOS = f_aptos.ready_queue[f_aptos.task_running].task_stack.stack[index]; index--; } } INTCONbits.GIE = 1;} while (0);;
-[e :U 327 ]
+[e :U 315 ]
+"72
+[; ;timer.c: 72:          do { f_aptos.task_running = scheduler(); if (f_aptos.ready_queue[f_aptos.task_running].task_stack.size == 0) { TOS = f_aptos.ready_queue[f_aptos.task_running].task_func; } else { f_aptos.ready_queue[f_aptos.task_running].task_state = RUNNING; WREG = f_aptos.ready_queue[f_aptos.task_running].w_reg; BSR = f_aptos.ready_queue[f_aptos.task_running].bsr_reg; STATUS = f_aptos.ready_queue[f_aptos.task_running].status_reg; index = f_aptos.ready_queue[f_aptos.task_running].task_stack.size - 1; STKPTR = 0; while(index) { __asm("PUSH"); TOS = f_aptos.ready_queue[f_aptos.task_running].task_stack.stack[index]; index--; } } INTCONbits.GIE = 1;} while (0);;
+[e :U 324 ]
 {
 [e = . _f_aptos 2 ( _scheduler ..  ]
-[e $ ! == . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 0 `i `ui 328  ]
+[e $ ! == . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 0 `i `ui 325  ]
 {
 [e = _TOS -> . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 3 `um ]
 }
-[e $U 329  ]
-[e :U 328 ]
+[e $U 326  ]
+[e :U 325 ]
 {
 [e = . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 1 . `E2558 1 ]
 [e = _WREG . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 6 ]
@@ -765,98 +796,59 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _STATUS . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 7 ]
 [e = _index -> - . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 1 -> -> 1 `i `ui `i ]
 [e = _STKPTR -> -> 0 `i `uc ]
-[e $U 330  ]
-[e :U 331 ]
+[e $U 327  ]
+[e :U 328 ]
 {
 [; <" PUSH ;# ">
 [e = _TOS -> *U + &U . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 0 * -> -> _index `ui `ux -> -> # *U &U . . *U + &U . _f_aptos 0 * -> . _f_aptos 2 `ux -> -> # *U &U . _f_aptos 0 `ui `ux 4 0 `ui `ux `um ]
 [e -- _index -> 1 `i ]
 }
-[e :U 330 ]
-[e $ != _index -> 0 `i 331  ]
-[e :U 332 ]
-}
+[e :U 327 ]
+[e $ != _index -> 0 `i 328  ]
 [e :U 329 ]
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 }
 [e :U 326 ]
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+}
+[e :U 323 ]
+"73
+[; ;timer.c: 73:       }
+}
+[e :U 313 ]
+"74
+[; ;timer.c: 74:    }
+}
+[e :U 295 ]
+"76
+[; ;timer.c: 76:       if (INTCONbits.INT0IF == 1)
+[e $ ! == -> . . _INTCONbits 0 1 `i -> 1 `i 330  ]
+"77
+[; ;timer.c: 77:       {
+{
 "78
-[; ;timer.c: 78:       }
-}
-[e :U 316 ]
+[; ;timer.c: 78:          PORTDbits.RD4 = 1;
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
 "79
-[; ;timer.c: 79:    }
-}
-[e :U 298 ]
+[; ;timer.c: 79:          color_clothes();
+[e ( _color_clothes ..  ]
 "80
-[; ;timer.c: 80:    if (INTCONbits.INT0IF == 1 && f_clothes.fila_size < 8)
-[e $ ! && == -> . . _INTCONbits 0 1 `i -> 1 `i < . _f_clothes 1 -> -> 8 `i `ui 333  ]
-"81
-[; ;timer.c: 81:    {
-{
+[; ;timer.c: 80:       }
+}
+[e :U 330 ]
 "82
-[; ;timer.c: 82:       clothes_control_t clothes;
-[v _clothes `S284 ~T0 @X0 1 a ]
+[; ;timer.c: 82:       if (INTCON3bits.INT1IF == 1 && f_clothes.fila_size < 8)
+[e $ ! && == -> . . _INTCON3bits 0 0 `i -> 1 `i < . _f_clothes 1 -> -> 8 `i `ui 331  ]
 "83
-[; ;timer.c: 83:       clothes.color = 0;
-[e = . _clothes 0 -> -> 0 `i `ui ]
-"84
-[; ;timer.c: 84:       clothes.washing_cycles = 1;
-[e = . _clothes 1 -> -> 1 `i `ui ]
-"85
-[; ;timer.c: 85:       clothes.state = 0;
-[e = . _clothes 2 -> -> 0 `i `ui ]
-"87
-[; ;timer.c: 87:       f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
-[e = *U + &U . _f_clothes 0 * -> . _f_clothes 1 `ux -> -> # *U &U . _f_clothes 0 `ui `ux _clothes ]
-"88
-[; ;timer.c: 88:       f_clothes.fila_size++;
-[e ++ . _f_clothes 1 -> -> 1 `i `ui ]
-"90
-[; ;timer.c: 90:       INTCONbits.INT0IF = 0;
-[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-"91
-[; ;timer.c: 91:       INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"92
-[; ;timer.c: 92:    }
-}
-[e :U 333 ]
-"94
-[; ;timer.c: 94:    if (INTCON3bits.INT1IF == 1 && f_clothes.fila_size < 8)
-[e $ ! && == -> . . _INTCON3bits 0 0 `i -> 1 `i < . _f_clothes 1 -> -> 8 `i `ui 334  ]
-"95
-[; ;timer.c: 95:    {
+[; ;timer.c: 83:       {
 {
-"96
-[; ;timer.c: 96:       clothes_control_t clothes;
-[v _clothes `S284 ~T0 @X0 1 a ]
-"97
-[; ;timer.c: 97:       clothes.color = 1;
-[e = . _clothes 0 -> -> 1 `i `ui ]
-"98
-[; ;timer.c: 98:       clothes.washing_cycles = 2;
-[e = . _clothes 1 -> -> 2 `i `ui ]
-"99
-[; ;timer.c: 99:       clothes.state = 0;
-[e = . _clothes 2 -> -> 0 `i `ui ]
-"101
-[; ;timer.c: 101:       f_clothes.clothes_waiting[f_clothes.fila_size] = clothes;
-[e = *U + &U . _f_clothes 0 * -> . _f_clothes 1 `ux -> -> # *U &U . _f_clothes 0 `ui `ux _clothes ]
-"102
-[; ;timer.c: 102:       f_clothes.fila_size++;
-[e ++ . _f_clothes 1 -> -> 1 `i `ui ]
-"103
-[; ;timer.c: 103:       INTCON3bits.INT1IF = 0;
-[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-"104
-[; ;timer.c: 104:       INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"105
-[; ;timer.c: 105:    }
+"84
+[; ;timer.c: 84:          white_clothes();
+[e ( _white_clothes ..  ]
+"85
+[; ;timer.c: 85:       }
 }
-[e :U 334 ]
-"106
-[; ;timer.c: 106: }
-[e :UE 297 ]
+[e :U 331 ]
+"86
+[; ;timer.c: 86: }
+[e :UE 294 ]
 }
